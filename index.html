@@ -1,239 +1,890 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moulo Oholo - Devops | Datacom Engineer | Developer | SOC Analyst</title>
+  <title>Moulo Oholo - TianSemi</title>
+
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
   <link rel="stylesheet" href="./assets/css/style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
+    rel="stylesheet">
 </head>
-<body id="top" class="dark_theme">
 
+<body id="top" class="dark_theme">
   <header class="header" data-header>
     <div class="container">
       <h1 class="h1 logo">
         <a href="#">Moulo<span>.</span></a>
       </h1>
+
       <div class="navbar-actions">
+
         <select name="language" id="lang">
-          <option value="fr">Fr</option>
           <option value="en">En</option>
+          <option value="ar">Fr</option>
         </select>
-        <button class="theme-btn" aria-label="Changer le thème" title="Changer le thème" data-theme-btn>
+
+        <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
           <span class="icon"></span>
         </button>
+
       </div>
-      <button class="nav-toggle-btn" aria-label="Ouvrir le menu" title="Ouvrir le menu" data-nav-toggle-btn>
+
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
         <span class="one"></span>
         <span class="two"></span>
         <span class="three"></span>
       </button>
+
       <nav class="navbar" data-navbar>
         <ul class="navbar-list">
-          <li><a href="#home" class="navbar-link">Accueil</a></li>
-          <li><a href="#about" class="navbar-link">À propos</a></li>
-          <li><a href="#skills" class="navbar-link">Compétences</a></li>
-          <li><a href="#portfolio" class="navbar-link">Expériences</a></li>
-          <li><a href="#contact" class="navbar-link">Contact</a></li>
+
+          <li>
+            <a href="#home" class="navbar-link">Home.</a>
+          </li>
+
+          <li>
+            <a href="#about" class="navbar-link">About.</a>
+          </li>
+
+          <li>
+            <a href="#skills" class="navbar-link">Skills.</a>
+          </li>
+
+          <li>
+            <a href="#portfolio" class="navbar-link">Portfolio.</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link">Contact.</a>
+          </li>
+
         </ul>
       </nav>
+
     </div>
   </header>
+
+
+
+
 
   <main>
     <article class="container">
 
-      <!-- Hero / Présentation -->
       <section class="hero" id="home">
+
+        <figure class="hero-banner">
+
+          <picture>
+            <source srcset="./assets/images/hero-banner.png" media="(min-width: 768px)">
+            <source srcset="./assets/images/hero-banner-md.png" media="(min-width: 500px)">
+            <img src="./assets/images/hero-banner-sm.png" alt="A man in a blue shirt with a happy expression"
+              class="w-100">
+          </picture>
+
+        </figure>
+
         <div class="hero-content">
-          <h2 class="h2 hero-title">Devops | Datacom Engineer | Developer | SOC Analyst</h2>
-          <p class="hero-subtitle">Bienvenue sur mon site portfolio ! Je suis passionné par les technologies, la cybersécurité, l’ingénierie des réseaux et le développement logiciel.</p>
-          <a href="#contact" class="btn btn-primary">Me contacter</a>
+
+          <h2 class="h2 hero-title">We Design & Build Creative Products</h2>
+
+          <a href="#contact" class="btn btn-primary">Get in touch</a>
+
         </div>
+
         <ul class="hero-social-list">
+
           <li>
-            <a href="https://www.linkedin.com/in/moulo-oholo-jean-noel-32a92523a" class="hero-social-link" target="_blank">
-              <ion-icon name="logo-linkedin"></ion-icon>
-              <div class="tooltip">LinkedIn</div>
+            <a href="#" class="hero-social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+
+              <div class="tooltip">Facebook</div>
             </a>
           </li>
-          <!-- Ajoutez vos autres réseaux sociaux si besoin -->
+
+          <li>
+            <a href="#" class="hero-social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+
+              <div class="tooltip">Twitter</div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="hero-social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+
+              <div class="tooltip">Linkedin</div>
+            </a>
+          </li>
+
         </ul>
-        <a href="#about" class="scroll-down">En savoir plus</a>
+
+        <a href="#stats" class="scroll-down">Scroll</a>
+
       </section>
 
-      <!-- Statistiques / Chiffres-clés -->
+
+
+
+
+      <!-- 
+        - #STATS
+      -->
+
       <section class="stats" id="stats">
         <ul class="stats-list">
+
           <li>
-            <div class="stats-card">
-              <div class="card-icon"><img src="./assets/images/stats-card_icon-1.png" alt="Badge"></div>
-              <h2 class="h2 card-title">4+ <strong>Années d’Expérience</strong></h2>
-            </div>
+            <a href="#" class="stats-card">
+
+              <div class="card-icon">
+                <img src="./assets/images/stats-card_icon-1.png" alt="Badge icon">
+              </div>
+
+              <h2 class="h2 card-title">
+                12+ <strong>Years of Experience</strong>
+              </h2>
+
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+
+            </a>
           </li>
+
           <li>
-            <div class="stats-card">
-              <div class="card-icon"><img src="./assets/images/stats-card_icon-2.png" alt="Projet"></div>
-              <h2 class="h2 card-title">10+ <strong>Projets accomplis</strong></h2>
-            </div>
+            <a href="#" class="stats-card">
+
+              <div class="card-icon">
+                <img src="./assets/images/stats-card_icon-2.png" alt="Checkmark icon">
+              </div>
+
+              <h2 class="h2 card-title">
+                230+ <strong>Completed Projects</strong>
+              </h2>
+
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+
+            </a>
           </li>
+
+          <li>
+            <a href="#" class="stats-card">
+
+              <div class="card-icon">
+                <img src="./assets/images/stats-card_icon-3.png" alt="Peoples rating icon">
+              </div>
+
+              <h2 class="h2 card-title">
+                95+ <strong>Happy Clients</strong>
+              </h2>
+
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+
+            </a>
+          </li>
+
         </ul>
       </section>
 
-      <!-- À propos -->
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
       <section class="about" id="about">
+
         <figure class="about-banner">
-          <img src="./assets/images/about-banner.png" alt="À propos de Moulo" class="w-100">
+          <img src="./assets/images/about-banner.png" alt="A man in a alice blue shirt with a thinking expression"
+            class="w-100">
         </figure>
+
         <div class="about-content section-content">
-          <p class="section-subtitle">À propos de moi</p>
-          <h2 class="h3 section-title">Expert Devops, Réseaux, Développement et Sécurité</h2>
+
+          <p class="section-subtitle">About me</p>
+
+          <h2 class="h3 section-title">Need a Creative Product? I can Help You!</h2>
+
           <p class="section-text">
-            Ingénieur DevOps, Datacom, développeur et analyste SOC, j’ai acquis une solide expérience dans la gestion d’infrastructures IT, l’automatisation, la cybersécurité et le développement fullstack.<br>
-            Je collabore avec les entreprises dans leur transformation digitale, le déploiement de solutions robustes, la sécurisation des systèmes et l'optimisation des processus.<br>
-            Curieux, rigoureux et orienté résultats, j’aime travailler sur des projets innovants où l’excellence et le partage sont des valeurs clés.<br>
-            <br>
-            <b>Mes domaines d’expertise :</b><br>
-            DevOps, Cloud, Automatisation, Networking, SOC, Sécurité, Développement Web, Datacom, Administration Systèmes.
+            Hi! I’m Jack Reacher, and I’m a developer who has passion for building clean web applications with intuitive
+            functionalities. I enjoy the process of turning ideas into reality using creative solutions. I’m always
+            curious about
+            learning new skills, tools, and concepts. In addition to working on various solo full stack projects, I have
+            worked with
+            creative teams, which involves daily stand-ups and communications, source control, and project management.
           </p>
+
           <div class="btn-group">
-            <a href="#contact" class="btn btn-secondary">Collaborer avec moi</a>
-            <a href="https://www.linkedin.com/in/moulo-oholo-jean-noel-32a92523a" class="btn btn-primary" target="_blank">Voir mon profil LinkedIn</a>
+            <button class="btn btn-secondary">Hire me</button>
+
+            <button class="btn btn-primary">Download cv</button>
           </div>
+
         </div>
+
       </section>
 
-      <!-- Compétences -->
+
+
+
+
+      <!-- 
+        - #SKILLS
+      -->
+
       <section class="skills" id="skills">
+
         <div class="skills-content section-content">
-          <p class="section-subtitle">Compétences & Outils</p>
-          <h2 class="h3 section-title">Mes compétences professionnelles</h2>
+
+          <p class="section-subtitle">My skills</p>
+
+          <h2 class="h3 section-title">What My Programming Skills Included?</h2>
+
           <p class="section-text">
-            <b>Compétences techniques :</b>
-            <ul>
-              <li>DevOps : CI/CD, Docker, Kubernetes, Ansible, Terraform, GitLab-CI</li>
-              <li>Réseaux : Datacom, Routing, Switching, Firewalls, SD-WAN</li>
-              <li>Développement : Python, Bash, Shell, JavaScript, HTML/CSS, API REST</li>
-              <li>Sécurité : SIEM, SOC, Suricata, Fortinet, Audit, Analyse de logs</li>
-              <li>Cloud : AWS, Azure</li>
-              <li>Supervision : Zabbix, Grafana, Prometheus</li>
-            </ul>
-            <b>Soft skills :</b> Esprit d’équipe, adaptabilité, gestion de projet, communication, résolution de problèmes.
+            I develop simple, intuitive and responsive user interface that helps users get things done with less effort
+            and time
+            with those technologies.
           </p>
-          <h3>Outils principaux</h3>
-          <ul>
-            <li>Terraform, Ansible, Git, GitHub, Jenkins, Docker, Kubernetes</li>
-            <li>Fortinet, Cisco, Palo Alto, Ubiquiti, AWS, Azure</li>
-            <li>Linux, Windows Server, Zabbix, Grafana</li>
-          </ul>
+
+          <div class="skills-toggle" data-toggle-box>
+            <button class="toggle-btn active" data-toggle-btn>Skills</button>
+
+            <button class="toggle-btn" data-toggle-btn>Tools</button>
+          </div>
+
         </div>
+
+        <div class="skills-box" data-skills-box>
+
+          <ul class="skills-list">
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">HTML5</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/html5.png" alt="HTML5 logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">CSS3</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/css3.png" alt="CSS3 logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">JavaScript</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/javascript.png" alt="JavaScript logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">TypeScript</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/typescript.png" alt="TypeScript logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">jQuery</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/jquery.png" alt="jQuery logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Bootstrap</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/bootstrap.png" alt="Bootstrap logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Angular</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/angular.png" alt="Angular logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">React</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/react.png" alt="React logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Vue</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/vue.png" alt="Vue logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Firebase</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/firebase.png" alt="Firebase logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">PugJs</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/pugjs.png" alt="PugJs logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">SASS</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/sass.png" alt="SASS logo">
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+          <ul class="tools-list">
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Ajax</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/ajax.png" alt="Ajax logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Gulp</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/gulp.png" alt="Gulp logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Webpack</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/webpack.png" alt="Webpack logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Git</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/git.png" alt="Git logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Npm</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/npm.png" alt="Npm logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Command Line</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/command.png" alt="Command Line logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">VS Code</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/vs-code.png" alt="VS Code logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Trello</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/trello.png" alt="Trello logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">ClickUp</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/clickup.png" alt="ClickUp logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Slack</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/slack.png" alt="Slack logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Photoshop</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/photoshop.png" alt="Photoshop logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Adobe XD</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/adobe-xd.png" alt="Adobe XD logo">
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+
       </section>
 
-      <!-- Expériences professionnelles -->
+
+
+
+
+      <!-- 
+        - #PROJECTS
+      -->
+
       <section class="project" id="portfolio">
+
         <ul class="project-list">
+
           <li>
             <div class="project-content section-content">
-              <p class="section-subtitle">Expériences</p>
-              <h2 class="h3 section-title">Parcours professionnel</h2>
+
+              <p class="section-subtitle">My Works</p>
+
+              <h2 class="h3 section-title">See My Works Which Will Amaze You!</h2>
+
               <p class="section-text">
-                <b>Devops / Datacom Engineer / Developer / SOC Analyst</b><br>
-                - Plusieurs années d’expérience dans des environnements variés : opérateurs télécoms, entreprises IT, intégrateurs réseau, sociétés de cybersécurité.<br>
-                - Pilotage et réalisation de projets d’automatisation, migration cloud, mise en place de plateformes DevOps, monitoring et supervision avancée.<br>
-                - Sécurité opérationnelle : analyse d’incidents, déploiement de solutions SOC/SIEM, gestion des vulnérabilités et conformité.<br>
-                - Développement d’outils et scripts pour simplifier les tâches, automatiser les processus et renforcer la sécurité.<br>
-                <br>
-                Pour plus de détails, consultez mon <a href="https://www.linkedin.com/in/moulo-oholo-jean-noel-32a92523a" target="_blank">profil LinkedIn</a>.
+                We develop the best quality website that serves for the long-term. Well-documented, clean, easy and
+                elegant interface
+                helps any non-technical clients.
               </p>
+
             </div>
           </li>
+
+          <li>
+            <a href="#" class="project-card">
+
+              <figure class="card-banner">
+                <img src="./assets/images/project-1.png" class="w-100" alt="A macintosh on a yellow background.">
+              </figure>
+
+              <div class="card-content">
+                <h3 class="h4 card-title">Lorem Ipsum Dolor 01</h3>
+
+                <time class="publish-date" datetime="2022-04">April 2022</time>
+              </div>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="project-card">
+
+              <figure class="card-banner">
+                <img src="./assets/images/project-2.png" class="w-100" alt="On a Blue background, a Wacom and a mouse.">
+              </figure>
+
+              <div class="card-content">
+                <h3 class="h4 card-title">Lorem Ipsum Dolor 02</h3>
+
+                <time class="publish-date" datetime="2022-04">April 2022</time>
+              </div>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="project-card">
+
+              <figure class="card-banner">
+                <img src="./assets/images/project-3.png" class="w-100"
+                  alt="A Cassette tape on a mellow apricot background.">
+              </figure>
+
+              <div class="card-content">
+                <h3 class="h4 card-title">Lorem Ipsum Dolor 03</h3>
+
+                <time class="publish-date" datetime="2022-04">April 2022</time>
+              </div>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="project-card">
+
+              <figure class="card-banner">
+                <img src="./assets/images/project-4.png" class="w-100"
+                  alt="Blue digital watch on a dark liver background.">
+              </figure>
+
+              <div class="card-content">
+                <h3 class="h4 card-title">Lorem Ipsum Dolor 04</h3>
+
+                <time class="publish-date" datetime="2022-04">April 2022</time>
+              </div>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="project-card">
+
+              <figure class="card-banner">
+                <img src="./assets/images/project-5.png" class="w-100"
+                  alt="On a dark liver background, Airport luggage car carrying a luggage.">
+              </figure>
+
+              <div class="card-content">
+                <h3 class="h4 card-title">Lorem Ipsum Dolor 05</h3>
+
+                <time class="publish-date" datetime="2022-04">April 2022</time>
+              </div>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="project-card">
+
+              <figure class="card-banner">
+                <img src="./assets/images/project-6.png" class="w-100"
+                  alt="On a yellow background, a digital watch and a glass.">
+              </figure>
+
+              <div class="card-content">
+                <h3 class="h4 card-title">Lorem Ipsum Dolor 06</h3>
+
+                <time class="publish-date" datetime="2022-04">April 2022</time>
+              </div>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="project-card">
+
+              <figure class="card-banner">
+                <img src="./assets/images/project-7.png" class="w-100"
+                  alt="A fujifilm instant camera on a dark electric blue background.">
+              </figure>
+
+              <div class="card-content">
+                <h3 class="h4 card-title">Lorem Ipsum Dolor 07</h3>
+
+                <time class="publish-date" datetime="2022-04">April 2022</time>
+              </div>
+
+            </a>
+          </li>
+
+          <li>
+            <button class="load-more">Load more work</button>
+          </li>
+
         </ul>
+
       </section>
 
-      <!-- Contact -->
+
+
+
+
+      <!-- 
+        - #CONTACT
+      -->
+
       <section class="contact" id="contact">
+
         <div class="contact-content section-content">
+
           <p class="section-subtitle">Contact</p>
-          <h2 class="h3 section-title">Un projet ? Discutons-en !</h2>
+
+          <h2 class="h3 section-title">Have You Any Project? Please Drop a Message</h2>
+
           <p class="section-text">
-            Je suis disponible pour échanger sur vos besoins, opportunités, ou tout projet autour des réseaux, DevOps, développement ou cybersécurité.<br>
-            Remplissez le formulaire ci-dessous, ou contactez-moi sur LinkedIn.
+            Get in touch and let me know how i can help. Fill out the form and i’ll be in touch as soon as possible.
           </p>
+
           <ul class="contact-list">
+
             <li class="contact-list-item">
-              <div class="contact-item-icon"><ion-icon name="location-outline"></ion-icon></div>
-              <div class="wrapper">
-                <h3 class="h4 contact-item-title">Localisation :</h3>
-                <address class="contact-info">France / International</address>
+
+              <div class="contact-item-icon">
+                <ion-icon name="location-outline"></ion-icon>
               </div>
+
+              <div class="wrapper">
+                <h3 class="h4 contact-item-title">Address:</h3>
+
+                <address class="contact-info">
+                  941 Saqrqorish Road, alandalos, grnata, wa 47122-4194
+                </address>
+              </div>
+
             </li>
+
             <li class="contact-list-item">
-              <div class="contact-item-icon"><ion-icon name="mail-outline"></ion-icon></div>
-              <div class="wrapper">
-                <h3 class="h4 contact-item-title">Email :</h3>
-                <a href="mailto:contact@tiansemi.com" class="contact-info">contact@tiansemi.com</a>
+
+              <div class="contact-item-icon">
+                <ion-icon name="call-outline"></ion-icon>
               </div>
+
+              <div class="wrapper">
+                <h3 class="h4 contact-item-title">Phone:</h3>
+
+                <a href="tel:01234567789" class="contact-info">(01) 234 567 789</a>
+
+                <a href="tel:09765432200" class="contact-info">(09) 765 432 200</a>
+              </div>
+
             </li>
+
             <li class="contact-list-item">
-              <div class="contact-item-icon"><ion-icon name="logo-linkedin"></ion-icon></div>
-              <div class="wrapper">
-                <h3 class="h4 contact-item-title">LinkedIn :</h3>
-                <a href="https://www.linkedin.com/in/moulo-oholo-jean-noel-32a92523a" class="contact-info" target="_blank">Profil LinkedIn</a>
+
+              <div class="contact-item-icon">
+                <ion-icon name="mail-outline"></ion-icon>
               </div>
+
+              <div class="wrapper">
+                <h3 class="h4 contact-item-title">Email:</h3>
+
+                <a href="mailto:info@jack.com" class="contact-info">info@jack.com</a>
+
+                <a href="mailto:support@jack.com" class="contact-info">support@jack.com</a>
+              </div>
+
             </li>
+
+            <li>
+              <ul class="contac-social-list">
+
+                <li>
+                  <a href="#" class="contact-social-link">
+                    <div class="tooltip">Facebook</div>
+
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="contact-social-link">
+                    <div class="tooltip">Twitter</div>
+
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="contact-social-link">
+                    <div class="tooltip">Linkedin</div>
+
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="contact-social-link">
+                    <div class="tooltip">Youtube</div>
+
+                    <ion-icon name="logo-youtube"></ion-icon>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+
           </ul>
+
         </div>
+
         <form action="" class="contact-form">
+
           <div class="form-wrapper">
-            <label for="name" class="form-label">Nom</label>
+
+            <label for="name" class="form-label">Name</label>
+
             <div class="input-wrapper">
-              <input type="text" name="name" id="name" required placeholder="Votre nom" class="input-field">
+
+              <input type="text" name="name" id="name" required placeholder="e.g John Doe" class="input-field">
+
               <ion-icon name="person-circle"></ion-icon>
+
             </div>
+
           </div>
+
           <div class="form-wrapper">
+
             <label for="email" class="form-label">Email</label>
+
             <div class="input-wrapper">
-              <input type="email" name="email" id="email" required placeholder="Votre email" class="input-field">
+
+              <input type="email" name="email" id="email" required placeholder="e.g johndoe@mail.com"
+                class="input-field">
+
               <ion-icon name="mail"></ion-icon>
+
             </div>
+
           </div>
+
           <div class="form-wrapper">
-            <label for="message" class="form-label">Message</label>
+
+            <label for="phone" class="form-label">Phone</label>
+
             <div class="input-wrapper">
-              <textarea name="message" id="message" required placeholder="Votre message..." class="input-field"></textarea>
-              <ion-icon name="chatbubbles"></ion-icon>
+
+              <input type="tel" name="phone" id="phone" required placeholder="Phone Number" class="input-field">
+
+              <ion-icon name="call"></ion-icon>
+
             </div>
+
           </div>
-          <button type="submit" class="btn btn-primary">Envoyer</button>
+
+          <div class="form-wrapper">
+
+            <label for="message" class="form-label">Message</label>
+
+            <div class="input-wrapper">
+
+              <textarea name="message" id="message" required placeholder="Write message..."
+                class="input-field"></textarea>
+
+              <ion-icon name="chatbubbles"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send</button>
+
         </form>
+
       </section>
+
     </article>
   </main>
 
+
+
+
   <footer class="footer">
     <div class="container">
+
       <p class="h1 logo">
-        <a href="#">Oholo<span>.</span></a>
+        <a href="#">
+          Jack<span>.</span>
+        </a>
       </p>
+
       <p class="copyright">
-        &copy; 2025 Moulo Oholo. Tous droits réservés.
+        &copy; 2022 <a href="#">codewithsadee</a>. All rights reserved
       </p>
+
     </div>
   </footer>
 
-  <a href="#top" class="go-top" data-go-top title="Retour en haut">
+
+
+  <a href="#top" class="go-top" data-go-top title="Go to Top">
     <ion-icon name="arrow-up"></ion-icon>
   </a>
 
+
+
   <script src="./assets/js/script.js"></script>
+
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <!--https://tiansemi-github-io-ef0f9.firebaseapp.com/__/auth/handler-->
-</body>
-</html>
 
+</body>
+
+</html>
