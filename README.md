@@ -7,6 +7,7 @@ If you edit files and open them directly with the file:// protocol some browsers
 Windows (PowerShell):
 
 ```powershell
+npm install firebase
 # from the repo root
 python -m http.server 8000
 # then open http://localhost:8000 in your browser

@@ -111,7 +111,10 @@ const translations = {
     "years-exp": "Years of Experience",
     "completed-projects": "Completed Projects",
     "happy-clients": "Happy Clients",
-    "copyright": "All rights reserved"
+    "copyright": "All rights reserved",
+    "btn-signin": "Sign in with Google",
+    "welcome-user": "Welcome",
+    "btn-signout": "Sign Out"
   },
   fr: {
     "navbar-home": "Accueil.",
@@ -154,7 +157,10 @@ const translations = {
     "years-exp": "Années d'Expérience",
     "completed-projects": "Projets Réalisés",
     "happy-clients": "Clients Satisfaits",
-    "copyright": "Tous droits réservés"
+    "copyright": "Tous droits réservés",
+    "btn-signin": "Se connecter avec Google",
+    "welcome-user": "Bienvenue",
+    "btn-signout": "Se déconnecter"
   }
 };
 
@@ -168,6 +174,9 @@ function applyTranslations(lang) {
     const text = translations[lang] && translations[lang][key];
     if (text === undefined) return;
 
+    // Skip welcome-user as it's handled by Firebase auth system
+    if (key === 'welcome-user') return;
+
     // If the node is an input or textarea, set placeholder
     if (node instanceof HTMLInputElement || node instanceof HTMLTextAreaElement) {
       node.placeholder = text;
@@ -178,6 +187,17 @@ function applyTranslations(lang) {
     const attr = node.getAttribute('data-i18n-attr');
     if (attr) {
       node.setAttribute(attr, text);
+      return;
+    }
+
+    // Handle buttons with icons - preserve HTML structure
+    if (node.querySelector('ion-icon')) {
+      const icon = node.querySelector('ion-icon');
+      const span = node.querySelector('span') || document.createElement('span');
+      span.textContent = text;
+      node.innerHTML = '';
+      node.appendChild(icon);
+      node.appendChild(span);
       return;
     }
 
@@ -203,10 +223,7 @@ function updateLanguage(lang) {
   applyTranslations(lang);
 }
 
-// Add event listener for language change
-langSelector.addEventListener('change', (e) => {
-  document.documentElement.lang = e.target.value;
-});
+// (Removed duplicate event listener: see DOMContentLoaded block for correct handler)
 
 // Initialize with current language
 // Language detection helper
@@ -242,4 +259,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Apply initial translations
   updateLanguage(initialLang);
+  
+  // Restore user interface after language change
+  setTimeout(() => {
+    if (typeof window.restoreUserInterface === 'function') {
+      window.restoreUserInterface();
+    }
+  }, 100);
 });
+
+// Override updateLanguage to restore user interface
+const originalUpdateLanguage = updateLanguage;
+updateLanguage = function(lang) {
+  originalUpdateLanguage(lang);
+  
+  // Restore user interface after translation
+  setTimeout(() => {
+    if (typeof window.restoreUserInterface === 'function') {
+      window.restoreUserInterface();
+    }
+  }, 50);
+};

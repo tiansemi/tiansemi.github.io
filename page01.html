@@ -1,53 +1,77 @@
 <!DOCTYPE html>
-<html lang="en" class="hydrated">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moulo Oholo - Devops | Datacom Engineer | Developer | SOC Analyst</title>
+  <title>Moulo Oholo - TianSemi</title>
 
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
   <link rel="stylesheet" href="./assets/css/style.css">
-
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&amp;family=Roboto:wght@400;700&amp;family=Saira+Stencil+One&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
     rel="stylesheet">
 </head>
 
-<body id="top" class="light_theme">
-
-  <header class="header" data-header="">
+<body id="top" class="dark_theme">
+  <header class="header" data-header>
     <div class="container">
-
       <h1 class="h1 logo">
         <a href="#">Moulo<span>.</span></a>
       </h1>
-
       <div class="navbar-actions">
+        
+        <!-- Login UI -->
+        <div id="login-ui" class="auth-section">
+          <button onclick="loginWithGoogle()" class="btn-auth" data-i18n="btn-signin">
+            <ion-icon name="logo-google"></ion-icon>
+            <span>Sign in with Google</span>
+          </button>
+        </div>
+
+        <!-- Protected content for logged-in users -->
+        <div id="protected-content" class="auth-section user-profile" style="display: none;">
+          <div class="user-dropdown">
+            <div class="user-trigger" onclick="toggleUserDropdown()">
+              <img src="" alt="User Avatar" class="user-avatar" style="display: none;">
+              <div class="user-info">
+                <span class="welcome-user"></span>
+              </div>
+              <ion-icon name="chevron-down-outline" class="dropdown-arrow"></ion-icon>
+            </div>
+            <div class="user-dropdown-menu" id="user-dropdown-menu">
+              <button onclick="signOut()" class="dropdown-item" data-i18n="btn-signout">
+                <ion-icon name="log-out-outline"></ion-icon>
+                <span>Sign Out</span>
+              </button>
+            </div>
+          </div>
+        </div>
 
         <select name="language" id="lang">
           <option value="en">En</option>
           <option value="fr">Fr</option>
         </select>
 
-        <button class="theme-btn active" aria-label="Change Theme" title="Change Theme" data-theme-btn="">
+        <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
           <span class="icon"></span>
         </button>
 
       </div>
 
-      <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn="">
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
         <span class="one"></span>
         <span class="two"></span>
         <span class="three"></span>
       </button>
 
-      <nav class="navbar" data-navbar="">
-  <ul class="navbar-list">
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
 
           <li>
             <a href="#home" class="navbar-link" data-i18n="navbar-home">Home.</a>
@@ -107,7 +131,7 @@
 
           <li>
             <a href="#" class="hero-social-link">
-              <ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon>
+              <ion-icon name="logo-facebook"></ion-icon>
 
               <div class="tooltip">Facebook</div>
             </a>
@@ -115,7 +139,7 @@
 
           <li>
             <a href="#" class="hero-social-link">
-              <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+              <ion-icon name="logo-twitter"></ion-icon>
 
               <div class="tooltip">Twitter</div>
             </a>
@@ -123,7 +147,7 @@
 
           <li>
             <a href="#" class="hero-social-link">
-              <ion-icon name="logo-linkedin" role="img" class="md hydrated" aria-label="logo linkedin"></ion-icon>
+              <ion-icon name="logo-linkedin"></ion-icon>
 
               <div class="tooltip">Linkedin</div>
             </a>
@@ -154,11 +178,10 @@
               </div>
 
               <h2 class="h2 card-title">
-                  12+ <strong data-i18n="years-exp">Years of Experience</strong>
+                12+ <strong data-i18n="years-exp">Years of Experience</strong>
               </h2>
 
-              <ion-icon name="chevron-forward-outline" role="img" class="md hydrated"
-                aria-label="chevron forward outline"></ion-icon>
+              <ion-icon name="chevron-forward-outline"></ion-icon>
 
             </a>
           </li>
@@ -174,8 +197,7 @@
                 230+ <strong data-i18n="completed-projects">Completed Projects</strong>
               </h2>
 
-              <ion-icon name="chevron-forward-outline" role="img" class="md hydrated"
-                aria-label="chevron forward outline"></ion-icon>
+              <ion-icon name="chevron-forward-outline"></ion-icon>
 
             </a>
           </li>
@@ -191,8 +213,7 @@
                 95+ <strong data-i18n="happy-clients">Happy Clients</strong>
               </h2>
 
-              <ion-icon name="chevron-forward-outline" role="img" class="md hydrated"
-                aria-label="chevron forward outline"></ion-icon>
+              <ion-icon name="chevron-forward-outline"></ion-icon>
 
             </a>
           </li>
@@ -221,12 +242,19 @@
 
           <h2 class="h3 section-title" data-i18n="about-title">Need a Creative Product? I can Help You!</h2>
 
-          <p class="section-text" data-i18n="about-text">Hi! I’m Moulo Oholo, and I’m a developer who has passion for building clean web applications with intuitive functionalities. I enjoy the process of turning ideas into reality using creative solutions. I’m always curious about learning new skills, tools, and concepts. In addition to working on various solo full stack projects, I have worked with creative teams, which involves daily stand-ups and communications, source control, and project management.</p>
+          <p class="section-text" data-i18n="about-text">
+            Hi! I’m Moulo Oholo, and I’m a developer who has passion for building clean web applications with intuitive
+            functionalities. I enjoy the process of turning ideas into reality using creative solutions. I’m always
+            curious about
+            learning new skills, tools, and concepts. In addition to working on various solo full stack projects, I have
+            worked with
+            creative teams, which involves daily stand-ups and communications, source control, and project management.
+          </p>
 
           <div class="btn-group">
             <button class="btn btn-secondary" data-i18n="btn-hire">Hire me</button>
 
-            <button class="btn btn-primary" data-i18n="btn-cv">Download CV</button>
+            <button class="btn btn-primary" data-i18n="btn-cv">Download cv</button>
           </div>
 
         </div>
@@ -247,9 +275,13 @@
 
           <p class="section-subtitle" data-i18n="skills-subtitle">My skills</p>
 
-          <h2 class="h3 section-title" data-i18n="skills-title">What Are My Programming Skills?</h2>
+          <h2 class="h3 section-title" data-i18n="skills-title">What My Programming Skills Included?</h2>
 
-          <p class="section-text" data-i18n="skills-text">I build simple, intuitive and responsive user interfaces that help users accomplish their tasks with less effort and time using modern web technologies.</p>
+          <p class="section-text" data-i18n="skills-text">
+            I develop simple, intuitive and responsive user interface that helps users get things done with less effort
+            and time
+            with those technologies.
+          </p>
 
           <div class="skills-toggle" data-toggle-box>
             <button class="toggle-btn active" data-toggle-btn data-i18n="skills-btn">Skills</button>
@@ -259,7 +291,7 @@
 
         </div>
 
-        <div class="skills-box" data-skills-box="">
+        <div class="skills-box" data-skills-box>
 
           <ul class="skills-list">
 
@@ -532,7 +564,11 @@
 
               <h2 class="h3 section-title" data-i18n="portfolio-title">See My Works Which Will Amaze You!</h2>
 
-              <p class="section-text" data-i18n="portfolio-text">We develop the best quality website that serves for the long-term. Well-documented, clean, easy and elegant interface helps any non-technical clients.</p>
+              <p class="section-text" data-i18n="portfolio-text">
+                We develop the best quality website that serves for the long-term. Well-documented, clean, easy and
+                elegant interface
+                helps any non-technical clients.
+              </p>
 
             </div>
           </li>
@@ -655,7 +691,7 @@
           </li>
 
           <li>
-            <button class="load-more" data-i18n="load-more">Load more</button>
+            <button class="load-more" data-i18n="load-more">Load more work</button>
           </li>
 
         </ul>
@@ -678,15 +714,16 @@
 
           <h2 class="h3 section-title" data-i18n="contact-title">Have You Any Project? Please Drop a Message</h2>
 
-          <p class="section-text" data-i18n="contact-desc">Get in touch and let me know how i can help. Fill out the form and i’ll be in touch as soon as possible.</p>
+          <p class="section-text" data-i18n="contact-desc">
+            Get in touch and let me know how i can help. Fill out the form and i’ll be in touch as soon as possible.
+          </p>
 
           <ul class="contact-list">
 
             <li class="contact-list-item">
 
               <div class="contact-item-icon">
-                <ion-icon name="location-outline" role="img" class="md hydrated"
-                  aria-label="location outline"></ion-icon>
+                <ion-icon name="location-outline"></ion-icon>
               </div>
 
               <div class="wrapper">
@@ -702,7 +739,7 @@
             <li class="contact-list-item">
 
               <div class="contact-item-icon">
-                <ion-icon name="call-outline" role="img" class="md hydrated" aria-label="call outline"></ion-icon>
+                <ion-icon name="call-outline"></ion-icon>
               </div>
 
               <div class="wrapper">
@@ -718,7 +755,7 @@
             <li class="contact-list-item">
 
               <div class="contact-item-icon">
-                <ion-icon name="mail-outline" role="img" class="md hydrated" aria-label="mail outline"></ion-icon>
+                <ion-icon name="mail-outline"></ion-icon>
               </div>
 
               <div class="wrapper">
@@ -738,7 +775,7 @@
                   <a href="#" class="contact-social-link">
                     <div class="tooltip">Facebook</div>
 
-                    <ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon>
+                    <ion-icon name="logo-facebook"></ion-icon>
                   </a>
                 </li>
 
@@ -746,7 +783,7 @@
                   <a href="#" class="contact-social-link">
                     <div class="tooltip">Twitter</div>
 
-                    <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+                    <ion-icon name="logo-twitter"></ion-icon>
                   </a>
                 </li>
 
@@ -754,7 +791,7 @@
                   <a href="#" class="contact-social-link">
                     <div class="tooltip">Linkedin</div>
 
-                    <ion-icon name="logo-linkedin" role="img" class="md hydrated" aria-label="logo linkedin"></ion-icon>
+                    <ion-icon name="logo-linkedin"></ion-icon>
                   </a>
                 </li>
 
@@ -762,7 +799,7 @@
                   <a href="#" class="contact-social-link">
                     <div class="tooltip">Youtube</div>
 
-                    <ion-icon name="logo-youtube" role="img" class="md hydrated" aria-label="logo youtube"></ion-icon>
+                    <ion-icon name="logo-youtube"></ion-icon>
                   </a>
                 </li>
 
@@ -781,9 +818,9 @@
 
             <div class="input-wrapper">
 
-              <input type="text" name="name" id="name" required="" placeholder="e.g John Doe" class="input-field" data-i18n="placeholder-name">
+              <input type="text" name="name" id="name" required placeholder="e.g John Doe" class="input-field" data-i18n="placeholder-name">
 
-              <ion-icon name="person-circle" role="img" class="md hydrated" aria-label="person circle"></ion-icon>
+              <ion-icon name="person-circle"></ion-icon>
 
             </div>
 
@@ -795,9 +832,9 @@
 
             <div class="input-wrapper">
 
-              <input type="email" name="email" id="email" required="" placeholder="e.g johndoe@mail.com" class="input-field" data-i18n="placeholder-email">
+              <input type="email" name="email" id="email" required placeholder="e.g johndoe@mail.com" class="input-field" data-i18n="placeholder-email">
 
-              <ion-icon name="mail" role="img" class="md hydrated" aria-label="mail"></ion-icon>
+              <ion-icon name="mail"></ion-icon>
 
             </div>
 
@@ -809,9 +846,9 @@
 
             <div class="input-wrapper">
 
-              <input type="tel" name="phone" id="phone" required="" placeholder="Phone Number" class="input-field" data-i18n="placeholder-phone">
+              <input type="tel" name="phone" id="phone" required placeholder="Phone Number" class="input-field" data-i18n="placeholder-phone">
 
-              <ion-icon name="call" role="img" class="md hydrated" aria-label="call"></ion-icon>
+              <ion-icon name="call"></ion-icon>
 
             </div>
 
@@ -823,9 +860,9 @@
 
             <div class="input-wrapper">
 
-              <textarea name="message" id="message" required="" placeholder="Write message..." class="input-field" data-i18n="placeholder-message"></textarea>
+              <textarea name="message" id="message" required placeholder="Write message..." class="input-field" data-i18n="placeholder-message"></textarea>
 
-              <ion-icon name="chatbubbles" role="img" class="md hydrated" aria-label="chatbubbles"></ion-icon>
+              <ion-icon name="chatbubbles"></ion-icon>
 
             </div>
 
@@ -853,7 +890,7 @@
       </p>
 
       <p class="copyright">
-        © 2022 <a href="#">codewithsadee</a>. All rights reserved
+        &copy; 2022 <a href="#">codewithsadee</a>. All rights reserved
       </p>
 
     </div>
@@ -861,19 +898,17 @@
 
 
 
-  <a href="#top" class="go-top" data-go-top="" title="Go to Top">
-    <ion-icon name="arrow-up" role="img" class="md hydrated" aria-label="arrow up"></ion-icon>
+  <a href="#top" class="go-top" data-go-top title="Go to Top">
+    <ion-icon name="arrow-up"></ion-icon>
   </a>
 
 
 
   <script src="./assets/js/script.js"></script>
+  <script type="module" src="./assets/js/firebase.js"></script>
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
-
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 

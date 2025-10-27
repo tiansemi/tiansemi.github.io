@@ -10,7 +10,7 @@
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
   <link rel="stylesheet" href="./assets/css/style.css">
-
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -24,8 +24,34 @@
       <h1 class="h1 logo">
         <a href="#">Moulo<span>.</span></a>
       </h1>
-
       <div class="navbar-actions">
+        
+        <!-- Login UI -->
+        <div id="login-ui" class="auth-section">
+          <button onclick="loginWithGoogle()" class="btn-auth" data-i18n="btn-signin">
+            <ion-icon name="logo-google"></ion-icon>
+            <span>Sign in with Google</span>
+          </button>
+        </div>
+
+        <!-- Protected content for logged-in users -->
+        <div id="protected-content" class="auth-section user-profile" style="display: none;">
+          <div class="user-dropdown">
+            <div class="user-trigger" onclick="toggleUserDropdown()">
+              <img src="" alt="User Avatar" class="user-avatar" style="display: none;">
+              <div class="user-info">
+                <span class="welcome-user"></span>
+              </div>
+              <ion-icon name="chevron-down-outline" class="dropdown-arrow"></ion-icon>
+            </div>
+            <div class="user-dropdown-menu" id="user-dropdown-menu">
+              <button onclick="signOut()" class="dropdown-item" data-i18n="btn-signout">
+                <ion-icon name="log-out-outline"></ion-icon>
+                <span>Sign Out</span>
+              </button>
+            </div>
+          </div>
+        </div>
 
         <select name="language" id="lang">
           <option value="en">En</option>
@@ -879,6 +905,7 @@
 
 
   <script src="./assets/js/script.js"></script>
+  <script type="module" src="./assets/js/firebase.js"></script>
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

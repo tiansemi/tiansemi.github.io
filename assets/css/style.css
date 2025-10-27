@@ -1,19 +1,3 @@
-/*-----------------------------------*\
- * style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
- * #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
 
   /**
@@ -334,12 +318,218 @@ body.active { overflow: hidden; }
   width: 45px;
 }
 
-.navbar-actions option {
-  background: var(--bg-primary);
-  color: var(--color-primary);
-}
+  .navbar-actions option {
+    background: var(--bg-primary);
+    color: var(--color-primary);
+  }
 
-.theme-btn {
+  /* Authentication Styles */
+  .auth-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn-auth {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--bg-secondary);
+    color: var(--color-primary);
+    border: 1px solid var(--color-secondary);
+    border-radius: var(--radius-4);
+    font-size: var(--fs-7);
+    font-weight: var(--fw-400);
+    cursor: pointer;
+    transition: var(--transition-1);
+    text-transform: none;
+  }
+
+  .btn-auth:hover {
+    background: var(--color-primary);
+    color: var(--bg-primary);
+    border-color: var(--color-primary);
+  }
+
+  .btn-auth ion-icon {
+    font-size: 16px;
+  }
+
+  /* User Profile Styles */
+  .user-profile {
+    display: flex;
+    padding: 0;
+    position: relative;
+  }
+
+  /* User Dropdown */
+  .user-dropdown {
+    position: relative;
+    display: flex;
+  }
+
+  .user-trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: var(--radius-4);
+    transition: var(--transition-1);
+    background: transparent;
+    border: none;
+    color: var(--color-primary);
+  }
+
+  .user-trigger:hover {
+    background: var(--bg-secondary);
+  }
+
+  .user-trigger.active {
+    background: var(--bg-secondary);
+  }
+
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--raw-seinna);
+  }
+
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .welcome-user {
+    font-size: var(--fs-7);
+    color: var(--color-primary);
+    font-weight: var(--fw-400);
+    line-height: 1.2;
+  }
+
+  .welcome-user strong {
+    color: var(--raw-seinna);
+    font-weight: var(--fw-700);
+  }
+
+  .dropdown-arrow {
+    font-size: 14px;
+    color: var(--color-secondary);
+    transition: var(--transition-1);
+    margin-left: 5px;
+  }
+
+  .user-trigger.active .dropdown-arrow {
+    transform: rotate(180deg);
+    color: var(--raw-seinna);
+  }
+
+  /* Dropdown Menu */
+  .user-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--bg-secondary);
+    border: 1px solid var(--color-secondary);
+    border-radius: var(--radius-4);
+    box-shadow: var(--shadow-1);
+    min-width: 140px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition-1);
+    z-index: 10;
+    margin-top: 5px;
+  }
+
+  .user-dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 12px;
+    background: transparent;
+    border: none;
+    color: var(--color-primary);
+    font-size: var(--fs-7);
+    cursor: pointer;
+    transition: var(--transition-1);
+    text-align: left;
+  }
+
+  .dropdown-item:hover {
+    background: var(--scarlet);
+    color: var(--white);
+  }
+
+  .dropdown-item:first-child {
+    border-radius: var(--radius-4) var(--radius-4) 0 0;
+  }
+
+  .dropdown-item:last-child {
+    border-radius: 0 0 var(--radius-4) var(--radius-4);
+  }
+
+  .dropdown-item:only-child {
+    border-radius: var(--radius-4);
+  }
+
+  .dropdown-item ion-icon {
+    font-size: 16px;
+  }
+
+  /* Mobile responsive adjustments */
+  @media (max-width: 550px) {
+    .user-trigger {
+      padding: 4px 8px;
+      gap: 8px;
+    }
+    
+    .user-avatar {
+      width: 28px;
+      height: 28px;
+    }
+    
+    .welcome-user {
+      font-size: var(--fs-7);
+    }
+    
+    .dropdown-arrow {
+      font-size: 12px;
+    }
+    
+    .user-dropdown-menu {
+      min-width: 120px;
+    }
+    
+    .dropdown-item {
+      padding: 8px 10px;
+      font-size: 12px;
+    }
+    
+    .dropdown-item ion-icon {
+      font-size: 14px;
+    }
+    
+    .btn-auth {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+    
+    .btn-auth ion-icon {
+      font-size: 14px;
+    }
+  }.theme-btn {
   padding: 4px;
   width: 48px;
   background: var(--bg-secondary);
@@ -1077,6 +1267,37 @@ textarea.input-field {
   .header { padding-block: 30px; }
 
   .header.active { padding-block: 15px; }
+
+  /* Enhanced auth styles for larger screens */
+  .user-trigger {
+    padding: 8px 16px;
+  }
+
+  .user-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .welcome-user {
+    font-size: var(--fs-6);
+  }
+
+  .dropdown-arrow {
+    font-size: 16px;
+  }
+
+  .user-dropdown-menu {
+    min-width: 160px;
+  }
+
+  .dropdown-item {
+    padding: 12px 16px;
+    font-size: var(--fs-6);
+  }
+
+  .dropdown-item ion-icon {
+    font-size: 18px;
+  }
 
   .navbar-actions {
     order: 1;
