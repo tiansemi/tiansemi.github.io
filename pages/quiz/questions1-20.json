@@ -91,7 +91,7 @@
     "optionsFr": ["au1", "Si au1 est supprimé, utiliser au2", "au2 puis au1 si au2 est supprimé", "au2"],
     "explanationEN": "The most recently configured scheme takes precedence: au2.",
     "explanationFR": "Le dernier schéma configuré est prioritaire : au2.",
-    "image_path": null
+    "image_path": "images/page4_img_14_ffffffffffff.png"
   },
 
   {
@@ -134,8 +134,8 @@
     "id": 8,
     "type": "single-choice",
     "correctAnswer": 2,
-    "questionEn": "What is wrong about the description of the interface information shown in the figure? (Single-choice question)",
-    "questionFr": "Quelle affirmation concernant l’interface affichée est incorrecte ? (Question à choix unique)",
+    "questionEn": "What is wrong about the description of the interface information shown in the figure? (Single-choice question)\n\n[RA] display interface g0/0/0\nGigabitEthernet0/0/0 current state :Administratively DOWN\nLine protocol current state :DOWN",
+    "questionFr": "Quelle affirmation concernant l’interface affichée est incorrecte ? (Question à choix unique)\n\n[RA] display interface g0/0/0\nGigabitEthernet0/0/0 current state :Administratively DOWN\nLine protocol current state :DOWN",
     "optionsEn": [
       "GigabitEthernet0/0/0 is connected to a wrong cable",
       "The interface has no IP address configured",
