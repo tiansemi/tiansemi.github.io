@@ -72,9 +72,8 @@ const langSelector = document.querySelector("#lang");
 const translations = {
   en: {
     "navbar-home": "Home.",
-    "navbar-about": "About.",
     "navbar-skills": "Skills.",
-    "navbar-portfolio": "Portfolio.",
+    "navbar-quiz": "Quiz",
     "navbar-contact": "Contact.",
     "hero-title": "We Design & Build Creative Products",
     "hero-cta": "Get in touch",
@@ -114,13 +113,25 @@ const translations = {
     "copyright": "All rights reserved",
     "btn-signin": "Sign in with Google",
     "welcome-user": "Welcome",
-    "btn-signout": "Sign Out"
+    "btn-signout": "Sign Out",
+    "quiz-main-title": "Interactive Quiz",
+    "quiz-subtitle": "Test your knowledge with this fun quiz!",
+    "quiz-welcome": "Welcome to the Quiz!",
+    "quiz-instructions": "This quiz contains different types of questions: true/false, multiple choice and single choice. Good luck!",
+    "quiz-start-btn": "Start Quiz",
+    "quiz-question": "Question",
+    "quiz-prev": "Previous",
+    "quiz-next": "Next",
+    "quiz-submit": "Submit",
+    "quiz-results-title": "Quiz Results",
+    "quiz-score-label": "Your score:",
+    "quiz-correction": "View Correction",
+    "quiz-restart": "Restart"
   },
   fr: {
     "navbar-home": "Accueil.",
-    "navbar-about": "À propos.",
     "navbar-skills": "Compétences.",
-    "navbar-portfolio": "Portfolio.",
+    "navbar-quiz": "Quiz",
     "navbar-contact": "Contact.",
     "hero-title": "Nous Concevons et Créons des Produits Créatifs",
     "hero-cta": "Contactez-nous",
@@ -160,7 +171,20 @@ const translations = {
     "copyright": "Tous droits réservés",
     "btn-signin": "Se connecter avec Google",
     "welcome-user": "Bienvenue",
-    "btn-signout": "Se déconnecter"
+    "btn-signout": "Se déconnecter",
+    "quiz-main-title": "Quiz Interactif",
+    "quiz-subtitle": "Testez vos connaissances avec ce quiz amusant!",
+    "quiz-welcome": "Bienvenue au Quiz!",
+    "quiz-instructions": "Ce quiz contient différents types de questions : vrai/faux, choix multiples et choix unique. Bonne chance!",
+    "quiz-start-btn": "Commencer le Quiz",
+    "quiz-question": "Question",
+    "quiz-prev": "Précédent",
+    "quiz-next": "Suivant",
+    "quiz-submit": "Soumettre",
+    "quiz-results-title": "Résultats du Quiz",
+    "quiz-score-label": "Votre score :",
+    "quiz-correction": "Voir la Correction",
+    "quiz-restart": "Recommencer"
   }
 };
 

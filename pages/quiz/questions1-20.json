@@ -1,0 +1,381 @@
+[
+  {
+    "id": 1,
+    "type": "single-choice",
+    "correctAnswer": 3,
+    "questionEn": "As shown in the figure, there are three data packets captured by the administrator on the network.\nWhich of the following statements is incorrect? (Single choice question)",
+    "questionFr": "Comme indiqué sur la figure, trois paquets ont été capturés par l’administrateur sur le réseau.\nLaquelle des affirmations suivantes est incorrecte ? (Question à choix unique)",
+    "optionsEn": [
+      "None of these three data packets contain application layer data",
+      "These three data packets represent the three-way handshake process of TCP",
+      "The telnet client uses port 50190 to establish a connection with the server",
+      "The IP address of the telnet server is 10.0.12.1. The IP address of the telnet client is 10.0.12.2"
+    ],
+    "optionsFr": [
+      "Aucun de ces trois paquets ne contient de données applicatives",
+      "Ces trois paquets représentent la poignée de main en trois étapes du TCP",
+      "Le client Telnet utilise le port 50190 pour établir la connexion avec le serveur",
+      "L’adresse IP du serveur Telnet est 10.0.12.1 et celle du client est 10.0.12.2"
+    ],
+    "explanationEN": "These packets represent the TCP handshake (SYN, SYN-ACK, ACK). Option D is incorrect because 10.0.12.1 is the client's IP, not the server's.",
+    "explanationFR": "Ces paquets correspondent à la poignée de main TCP (SYN, SYN-ACK, ACK). L’option D est incorrecte car 10.0.12.1 est l’adresse du client, pas du serveur.",
+    "image_path": "images/page2_img_9_ffffffffffff.png"
+  },
+
+  {
+    "id": 2,
+    "type": "true-false",
+    "answer": false,
+    "questionEn": "As shown in the figure below, Host A and Host B cannot communicate. (True or False)",
+    "questionFr": "Comme indiqué sur la figure ci-dessous, l’hôte A et l’hôte B ne peuvent pas communiquer. (Vrai/Faux)",
+    "optionsEn": ["True", "False"],
+    "optionsFr": ["Vrai", "Faux"],
+    "explanationEN": "Both hosts are in the same subnet and can communicate normally.",
+    "explanationFR": "Les deux hôtes sont dans le même sous-réseau et peuvent communiquer normalement.",
+    "image_path": "images/page3_img_10_f2639de73d63.png"
+  },
+
+  {
+    "id": 3,
+    "type": "single-choice",
+    "correctAnswer": 3,
+    "questionEn": "As shown in the figure, when the switch needs to forward frames with the destination MAC address 5489-98ec-f011, which of the following statements is correct? (Single-choice question)",
+    "questionFr": "Comme indiqué sur la figure, lorsqu’un commutateur doit transférer une trame ayant pour adresse MAC de destination 5489-98ec-f011, quelle affirmation est correcte ? (Question à choix unique)",
+    "optionsEn": [
+      "The switch will send a message indicating destination unreachable.",
+      "The switch will discard the frame.",
+      "The switch will send a request to discover the device.",
+      "The switch will flood the frame out of all ports except the incoming port."
+    ],
+    "optionsFr": [
+      "Le commutateur enverra un message indiquant que la destination est injoignable.",
+      "Le commutateur rejettera la trame.",
+      "Le commutateur enverra une requête pour découvrir le dispositif.",
+      "Le commutateur diffusera la trame sur tous les ports sauf celui d’entrée."
+    ],
+    "explanationEN": "A switch floods unknown-destination frames.",
+    "explanationFR": "Un commutateur diffuse les trames dont l’adresse MAC de destination est inconnue.",
+    "image_path": "images/page3_img_11_4fe149c67386.png"
+  },
+
+  {
+    "id": 4,
+    "type": "single-choice",
+    "correctAnswer": 1,
+    "questionEn": "The MAC address table of the existing switch is shown in the figure. Which of the following statements are correct? (Multiple-choice question)",
+    "questionFr": "La table MAC du commutateur est présentée sur la figure. Laquelle des affirmations suivantes est correcte ? (Question à choix multiple)",
+    "optionsEn": [
+      "MAC addresses learned on Eth0/0/2 do not need to be relearned after reboot",
+      "A frame with destination 5489-989d-1d30 will be forwarded out Eth0/0/1",
+      "A frame with destination 5489-989d-1d30 will be forwarded out Eth0/0/2",
+      "MAC addresses learned on Eth0/0/3 must be relearned after reboot"
+    ],
+    "optionsFr": [
+      "Les adresses MAC apprises sur Eth0/0/2 n’ont pas besoin d’être réapprises après redémarrage",
+      "Une trame destinée à 5489-989d-1d30 sera envoyée sur Eth0/0/1",
+      "Une trame destinée à 5489-989d-1d30 sera envoyée sur Eth0/0/2",
+      "Les adresses MAC apprises sur Eth0/0/3 doivent être réapprises après redémarrage"
+    ],
+    "explanationEN": "Dynamic MAC entries are lost after reboot. Destination MAC 5489-989d-1d30 maps to Eth0/0/1.",
+    "explanationFR": "Les entrées MAC dynamiques sont perdues au redémarrage. La MAC 5489-989d-1d30 correspond au port Eth0/0/1.",
+    "image_path": "images/page4_img_13_3fb6016973b0.png"
+  },
+
+  {
+    "id": 5,
+    "type": "single-choice",
+    "correctAnswer": 2,
+    "questionEn": "The network administrator configures RTA on a Huawei router as shown. If a user needs to be authenticated in the authentication domain \"huawei\", which of the following statements is correct? (Single-choice question)",
+    "questionFr": "L’administrateur réseau configure RTA comme indiqué. Si un utilisateur doit être authentifié dans le domaine « huawei », quelle affirmation est correcte ? (Question à choix unique)",
+    "optionsEn": ["au1", "If au1 is deleted, use au2", "au2 then au1 if au2 is deleted", "au2"],
+    "optionsFr": ["au1", "Si au1 est supprimé, utiliser au2", "au2 puis au1 si au2 est supprimé", "au2"],
+    "explanationEN": "The most recently configured scheme takes precedence: au2.",
+    "explanationFR": "Le dernier schéma configuré est prioritaire : au2.",
+    "image_path": null
+  },
+
+  {
+    "id": 6,
+    "type": "single-choice",
+    "correctAnswer": 2,
+    "questionEn": "The output information of the router is shown in the figure. Which of the following statements is incorrect? (Single-choice question)",
+    "questionFr": "Les informations affichées du routeur sont montrées dans la figure. Laquelle des affirmations suivantes est incorrecte ? (Question à choix unique)",
+    "optionsEn": [
+      "The broadcast address is 10.0.12.255",
+      "The physical link is normal",
+      "The MTU is 1480",
+      "The IP address is 10.0.12.1/24"
+    ],
+    "optionsFr": [
+      "L’adresse de broadcast est 10.0.12.255",
+      "Le lien physique est normal",
+      "La MTU est 1480",
+      "L’adresse IP est 10.0.12.1/24"
+    ],
+    "explanationEN": "The MTU is 1500 by default, not 1480.",
+    "explanationFR": "La MTU par défaut est 1500, pas 1480.",
+    "image_path": "images/page5_img_15_4a38676cd026.png"
+  },
+
+  {
+    "id": 7,
+    "type": "true-false",
+    "answer": true,
+    "questionEn": "The router receives a packet destined for 9.1.1.1 and forwards it using route 9.1.0.0/16 because it has a longer mask. (True or False)",
+    "questionFr": "Le routeur reçoit un paquet destiné à 9.1.1.1 et l’achemine via la route 9.1.0.0/16 car son masque est plus long. (Vrai/Faux)",
+    "optionsEn": ["True", "False"],
+    "optionsFr": ["Vrai", "Faux"],
+    "explanationEN": "Routers choose the route with the longest prefix length.",
+    "explanationFR": "Les routeurs choisissent la route avec le masque le plus long.",
+    "image_path": "images/page6_img_17_ce629154b4fc.png"
+  },
+
+  {
+    "id": 8,
+    "type": "single-choice",
+    "correctAnswer": 2,
+    "questionEn": "What is wrong about the description of the interface information shown in the figure? (Single-choice question)",
+    "questionFr": "Quelle affirmation concernant l’interface affichée est incorrecte ? (Question à choix unique)",
+    "optionsEn": [
+      "GigabitEthernet0/0/0 is connected to a wrong cable",
+      "The interface has no IP address configured",
+      "The interface was manually shut down",
+      "Dynamic routing is not enabled"
+    ],
+    "optionsFr": [
+      "GigabitEthernet0/0/0 est connecté à un mauvais câble",
+      "L’interface n’a pas d’adresse IP configurée",
+      "L’interface a été arrêtée manuellement",
+      "Le routage dynamique n’est pas activé"
+    ],
+    "explanationEN": "“Administratively DOWN” indicates manual shutdown, so option C is not wrong.",
+    "explanationFR": "« Administratively DOWN » signifie une désactivation manuelle, l’option C n’est donc pas incorrecte.",
+    "image_path": null
+  },
+
+  {
+    "id": 9,
+    "type": "single-choice",
+    "correctAnswer": 3,
+    "questionEn": "In the figure below, all switches have STP enabled. What is the root path cost value contained in the configuration BPDU received by SWD port G0/0/4? (Single-choice question)",
+    "questionFr": "Dans la figure ci-dessous, tous les commutateurs ont STP activé. Quel est le coût de chemin racine contenu dans le BPDU reçu par le port G0/0/4 de SWD ? (Question à choix unique)",
+    "optionsEn": ["600", "200", "0", "400"],
+    "optionsFr": ["600", "200", "0", "400"],
+    "explanationEN": "Each hop adds 200. Total = 400.",
+    "explanationFR": "Chaque saut ajoute 200. Total = 400.",
+    "image_path": "images/page7_img_19_4d30e206a011.png"
+  },
+
+  {
+    "id": 10,
+    "type": "single-choice",
+    "correctAnswer": 1,
+    "questionEn": "The information shown is the port status of a switch running STP. Which of the following descriptions is wrong? (Single-choice question)",
+    "questionFr": "Les informations affichées montrent l’état des ports d’un commutateur en STP. Laquelle des affirmations suivantes est incorrecte ? (Question à choix unique)",
+    "optionsEn": [
+      "This switch is the root switch",
+      "The switch priority is 0",
+      "This network may contain only this switch",
+      "This switch may be connected to 6 other switches"
+    ],
+    "optionsFr": [
+      "Ce commutateur est le switch racine",
+      "La priorité du switch est 0",
+      "Le réseau peut contenir uniquement ce switch",
+      "Ce switch peut être connecté à six autres"
+    ],
+    "explanationEN": "The displayed information does not indicate a priority of 0.",
+    "explanationFR": "Les informations affichées n’indiquent pas une priorité égale à 0.",
+    "image_path": "images/page7_img_20_f7aa06eeb407.png"
+  },
+
+  {
+    "id": 11,
+    "type": "single-choice",
+    "correctAnswer": 0,
+    "questionEn": "As shown in the figure, the switch runs STP with default parameters. Which port will be elected as the designated port? (Single-choice question)",
+    "questionFr": "Comme indiqué sur la figure, le switch exécute STP avec les paramètres par défaut. Quel port sera élu port désigné ? (Question à choix unique)",
+    "optionsEn": [
+      "Switch A port G0/0/1",
+      "Hub port G0/0/1",
+      "Hub port G0/0/2",
+      "Switch A port G0/0/2"
+    ],
+    "optionsFr": [
+      "Port G0/0/1 du switch A",
+      "Port G0/0/1 du hub",
+      "Port G0/0/2 du hub",
+      "Port G0/0/2 du switch A"
+    ],
+    "explanationEN": "Switch A has the lowest bridge ID on the segment ⇒ its port G0/0/1 becomes designated.",
+    "explanationFR": "Le switch A possède l’ID de pont le plus faible ⇒ son port G0/0/1 devient le port désigné.",
+    "image_path": "images/page8_img_22_7661534df370.png"
+  },
+
+  {
+    "id": 12,
+    "type": "single-choice",
+    "correctAnswer": 2,
+    "questionEn": "As shown in the figure, all hosts communicate normally. Is the MAC-to-port mapping of SWB correct? (Single-choice question)",
+    "questionFr": "Comme indiqué sur la figure, tous les hôtes communiquent normalement. La table MAC du switch SWB est-elle correcte ? (Question à choix unique)",
+    "optionsEn": [
+      "MAC-A G0/0/1, MAC-B G0/0/2, MAC-C G0/0/3",
+      "MAC-A G0/0/2, MAC-B G0/0/2, MAC-C G0/0/3",
+      "MAC-A G0/0/3, MAC-B G0/0/3, MAC-C G0/0/1",
+      "MAC-A G0/0/1, MAC-B G0/0/1, MAC-C G0/0/3"
+    ],
+    "optionsFr": [
+      "MAC-A G0/0/1, MAC-B G0/0/2, MAC-C G0/0/3",
+      "MAC-A G0/0/2, MAC-B G0/0/2, MAC-C G0/0/3",
+      "MAC-A G0/0/3, MAC-B G0/0/3, MAC-C G0/0/1",
+      "MAC-A G0/0/1, MAC-B G0/0/1, MAC-C G0/0/3"
+    ],
+    "explanationEN": "MAC-A and MAC-B are learned on G0/0/3, MAC-C on G0/0/1.",
+    "explanationFR": "MAC-A et MAC-B sont apprises sur G0/0/3, MAC-C sur G0/0/1.",
+    "image_path": "images/page8_img_23_23e370fe31c6.png"
+  },
+
+  {
+    "id": 13,
+    "type": "single-choice",
+    "correctAnswer": 3,
+    "questionEn": "The priority of the LACP protocol is shown in the figure. Switch A and B adopt LACP with a maximum of 3 active ports. Which port of switch A is not an active port? (Single-choice question)",
+    "questionFr": "La priorité LACP est indiquée sur la figure. Les switchs A et B utilisent LACP avec un maximum de 3 ports actifs. Quel port du switch A n’est pas actif ? (Question à choix unique)",
+    "optionsEn": ["G0/0/1", "G0/0/1", "G0/0/2", "G0/0/3"],
+    "optionsFr": ["G0/0/1", "G0/0/1", "G0/0/2", "G0/0/3"],
+    "explanationEN": "Only 3 ports can be active; G0/0/3 becomes standby.",
+    "explanationFR": "Seulement 3 ports peuvent être actifs ; G0/0/3 devient port de secours.",
+    "image_path": "images/page9_img_25_43fcd9b3a8ea.png"
+  },
+
+  {
+    "id": 14,
+    "type": "single-choice",
+    "correctAnswer": 0,
+    "questionEn": "The administrator configured the router as shown. A host is connected to G1/0/0. Which network will the host obtain an IP address from through DHCP? (Single-choice question)",
+    "questionFr": "L’administrateur a configuré le routeur comme indiqué. Un hôte est connecté à G1/0/0. De quel réseau obtiendra-t-il une adresse IP via DHCP ? (Question à choix unique)",
+    "optionsEn": [
+      "10.10.10.0/24",
+      "10.20.20.0/24",
+      "Either network",
+      "The host cannot obtain an address"
+    ],
+    "optionsFr": [
+      "10.10.10.0/24",
+      "10.20.20.0/24",
+      "L’un ou l’autre réseau",
+      "L’hôte ne peut pas obtenir d’adresse"
+    ],
+    "explanationEN": "The DHCP pool for interface G1/0/0 is 10.10.10.0/24.",
+    "explanationFR": "Le pool DHCP de l’interface G1/0/0 est 10.10.10.0/24.",
+    "image_path": "images/page10_img_27_951c00752a5c.png"
+  },
+
+  {
+    "id": 15,
+    "type": "single-choice",
+    "correctAnswer": 3,
+    "questionEn": "In the network shown, the router receives a packet destined for 11.0.12.1 and forwards it. What are the destination MAC and destination IP? (Single-choice question)",
+    "questionFr": "Dans le réseau indiqué, le routeur reçoit un paquet destiné à 11.0.12.1 et le transfère. Quelle sont la MAC et l’IP de destination ? (Question à choix unique)",
+    "optionsEn": [
+      "MAC-D 10.0.12.2",
+      "MAC-D 11.0.12.1",
+      "MAC-C 11.0.12.1",
+      "MAC-B 11.0.12.1"
+    ],
+    "optionsFr": [
+      "MAC-D 10.0.12.2",
+      "MAC-D 11.0.12.1",
+      "MAC-C 11.0.12.1",
+      "MAC-B 11.0.12.1"
+    ],
+    "explanationEN": "IP stays 11.0.12.1. Next-hop MAC is MAC-B.",
+    "explanationFR": "L’IP reste 11.0.12.1. La MAC du next-hop est MAC-B.",
+    "image_path": "images/page11_img_29_22c0d7e4bde9.png"
+  },
+
+  {
+    "id": 16,
+    "type": "single-choice",
+    "correctAnswer": 3,
+    "questionEn": "In the OSPF network shown, what is the cost of the route to 10.0.0.0/8 in RTA’s routing table? (Single-choice question)",
+    "questionFr": "Dans le réseau OSPF indiqué, quel est le coût de la route vers 10.0.0.0/8 dans la table de RTA ? (Question à choix unique)",
+    "optionsEn": ["100", "70", "20", "60"],
+    "optionsFr": ["100", "70", "20", "60"],
+    "explanationEN": "Lowest-cost path: 50 + 10 = 60.",
+    "explanationFR": "Le chemin au coût minimum est : 50 + 10 = 60.",
+    "image_path": "images/page11_img_30_04be7ef84d14.png"
+  },
+
+  {
+    "id": 17,
+    "type": "single-choice",
+    "correctAnswer": 0,
+    "questionEn": "As shown in the figure, which of the following statements is correct? (Single-choice question)",
+    "questionFr": "Comme indiqué sur la figure, laquelle des affirmations suivantes est correcte ? (Question à choix unique)",
+    "optionsEn": [
+      "Host A can ping Host B",
+      "Only if masks are equal can they communicate",
+      "Different masks prevent communication",
+      "The broadcast addresses are the same"
+    ],
+    "optionsFr": [
+      "L’hôte A peut joindre l’hôte B",
+      "Ils ne peuvent communiquer que si les masques sont identiques",
+      "Des masques différents empêchent la communication",
+      "Les adresses de broadcast sont identiques"
+    ],
+    "explanationEN": "Both addresses fall inside 10.1.0.0/16, so they communicate directly.",
+    "explanationFR": "Les deux adresses appartiennent à 10.1.0.0/16, donc elles peuvent communiquer directement.",
+    "image_path": "images/page12_img_32_18ee4cdec22a.png"
+  },
+
+  {
+    "id": 18,
+    "type": "single-choice",
+    "correctAnswer": 2,
+    "questionEn": "As shown in the figure, which port of the following switches will be blocked? (Single-choice question)",
+    "questionFr": "Comme indiqué sur la figure, quel port parmi les suivants sera bloqué ? (Question à choix unique)",
+    "optionsEn": [
+      "SWC G0/0/2",
+      "SWA G0/0/3",
+      "SWC G0/0/1",
+      "SWB G0/0/3"
+    ],
+    "optionsFr": [
+      "SWC G0/0/2",
+      "SWA G0/0/3",
+      "SWC G0/0/1",
+      "SWB G0/0/3"
+    ],
+    "explanationEN": "SWC's G0/0/1 is neither root nor designated ⇒ it is blocked.",
+    "explanationFR": "Le port G0/0/1 de SWC n’est ni root ni désigné ⇒ il est bloqué.",
+    "image_path": "images/page13_img_34_40665c2b1166.png"
+  },
+
+  {
+    "id": 19,
+    "type": "true-false",
+    "answer": false,
+    "questionEn": "Refer to the single-arm routing configuration. Even if proxy ARP is not enabled on R1 sub-interface, the departments can still communicate. (True or False)",
+    "questionFr": "Référez-vous à la configuration de routage en single-arm. Même si le proxy ARP n’est pas activé sur la sous-interface de R1, les départements peuvent quand même communiquer. (Vrai/Faux)",
+    "optionsEn": ["True", "False"],
+    "optionsFr": ["Vrai", "Faux"],
+    "explanationEN": "Different VLANs cannot communicate unless proxy ARP allows ARP resolution across VLANs.",
+    "explanationFR": "Les VLAN différents ne peuvent pas communiquer si le proxy ARP ne permet pas la résolution ARP inter-VLAN.",
+    "image_path": "images/page13_img_35_74640afd5e49.png"
+  },
+
+  {
+    "id": 20,
+    "type": "single-choice",
+    "correctAnswer": 3,
+    "questionEn": "The configuration of a switch port is shown. What is the PVID of this port? (Single-choice question)",
+    "questionFr": "La configuration d’un port de switch est affichée. Quel est le PVID de ce port ? (Question à choix unique)",
+    "optionsEn": ["100", "2", "4", "1"],
+    "optionsFr": ["100", "2", "4", "1"],
+    "explanationEN": "The PVID is explicitly shown as 1.",
+    "explanationFR": "Le PVID indiqué est clairement 1.",
+    "image_path": "images/page14_img_37_f1e647f50265.png"
+  }
+]

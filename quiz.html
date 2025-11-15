@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Interactif - TianSemi</title>
+
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/quiz.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="top" class="dark_theme">
+    <header class="header" data-header>
+      <div class="container">
+        <h1 class="h1 logo">
+          <a href="index.html">Moulo<span>.</span></a>
+        </h1>
+        <div class="navbar-actions">
+          <!-- Login UI -->
+          <div id="login-ui" class="auth-section">
+            <button
+              onclick="loginWithGoogle()"
+              class="btn-auth"
+              data-i18n="btn-signin"
+            >
+              <ion-icon name="logo-google"></ion-icon>
+              <span>Sign in with Google</span>
+            </button>
+          </div>
+
+          <!-- Protected content for logged-in users -->
+          <div
+            id="protected-content"
+            class="auth-section user-profile"
+            style="display: none"
+          >
+            <div class="user-dropdown">
+              <div class="user-trigger" onclick="toggleUserDropdown()">
+                <img
+                  src=""
+                  alt="User Avatar"
+                  class="user-avatar"
+                  style="display: none"
+                />
+                <div class="user-info">
+                  <span class="welcome-user"></span>
+                </div>
+                <ion-icon
+                  name="chevron-down-outline"
+                  class="dropdown-arrow"
+                ></ion-icon>
+              </div>
+              <div class="user-dropdown-menu" id="user-dropdown-menu">
+                <button
+                  onclick="signOut()"
+                  class="dropdown-item"
+                  data-i18n="btn-signout"
+                >
+                  <ion-icon name="log-out-outline"></ion-icon>
+                  <span>Sign Out</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <select name="language" id="lang">
+            <option value="en">En</option>
+            <option value="fr">Fr</option>
+          </select>
+
+          <button
+            class="theme-btn"
+            aria-label="Change Theme"
+            title="Change Theme"
+            data-theme-btn
+          >
+            <span class="icon"></span>
+          </button>
+        </div>
+
+        <button
+          class="nav-toggle-btn"
+          aria-label="Toggle Menu"
+          title="Toggle Menu"
+          data-nav-toggle-btn
+        >
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a
+                href="index.html#home"
+                class="navbar-link"
+                data-i18n="navbar-home"
+                >Home.</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="index.html#skills"
+                class="navbar-link"
+                data-i18n="navbar-skills"
+                >Skills.</a
+              >
+            </li>
+
+            <li>
+              <a href="quiz.html" class="navbar-link" data-i18n="navbar-quiz"
+                >Quiz.</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="index.html#contact"
+                class="navbar-link"
+                data-i18n="navbar-contact"
+                >Contact.</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article class="container">
+        <section class="quiz-section" id="quiz">
+          <div class="quiz-header">
+            <h2 class="h2 quiz-title" data-i18n="quiz-main-title">
+              Quiz Interactif
+            </h2>
+            <p class="quiz-subtitle" data-i18n="quiz-subtitle">
+              Testez vos connaissances avec ce quiz amusant!
+            </p>
+          </div>
+
+          <div class="quiz-container">
+            <!-- Quiz Start Screen -->
+            <div id="quiz-start" class="quiz-start">
+              <h3 class="h3" data-i18n="quiz-welcome">Bienvenue au Quiz!</h3>
+              <p data-i18n="quiz-instructions">
+                Ce quiz contient différents types de questions : vrai/faux,
+                choix multiples et choix unique. Bonne chance!
+              </p>
+              <button
+                class="btn btn-primary"
+                id="start-quiz-btn"
+                data-i18n="quiz-start-btn"
+                style="margin-left: 30%"
+              >
+                Commencer le Quiz
+              </button>
+            </div>
+
+            <!-- Quiz Questions -->
+            <div
+              id="quiz-questions"
+              class="quiz-questions"
+              style="display: none"
+            >
+              <div class="quiz-progress">
+                <div class="progress-bar">
+                  <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <p class="progress-text">
+                  <span data-i18n="quiz-question">Question</span>
+                  <span id="current-question">1</span> /
+                  <span id="total-questions">10</span>
+                </p>
+              </div>
+
+              <div class="question-container" id="question-container">
+                <!-- Questions will be inserted here dynamically -->
+              </div>
+
+              <div class="quiz-navigation">
+                <button
+                  class="btn btn-secondary"
+                  id="prev-btn"
+                  data-i18n="quiz-prev"
+                  disabled
+                >
+                  Précédent
+                </button>
+                <button
+                  class="btn btn-primary"
+                  id="next-btn"
+                  data-i18n="quiz-next"
+                >
+                  Suivant
+                </button>
+                <button
+                  class="btn btn-primary"
+                  id="submit-btn"
+                  data-i18n="quiz-submit"
+                  style="display: none"
+                >
+                  Soumettre
+                </button>
+              </div>
+            </div>
+
+            <!-- Quiz Results -->
+            <div id="quiz-results" class="quiz-results" style="display: none">
+              <h3 class="h3" data-i18n="quiz-results-title">
+                Résultats du Quiz
+              </h3>
+              <div class="results-content">
+                <div class="score-display">
+                  <p class="score-text" data-i18n="quiz-score-label">
+                    Votre score :
+                  </p>
+                  <p class="score-value">
+                    <span id="score">0</span> / <span id="max-score">10</span>
+                  </p>
+                  <div class="score-percentage" id="score-percentage">0%</div>
+                </div>
+                <div class="score-message" id="score-message"></div>
+              </div>
+              <div class="quiz-actions">
+                <button
+                  class="btn btn-secondary"
+                  id="correction-btn"
+                  data-i18n="quiz-correction"
+                  style="display: none"
+                >
+                  Voir la Correction
+                </button>
+                <button
+                  class="btn btn-primary"
+                  id="restart-btn"
+                  data-i18n="quiz-restart"
+                >
+                  Recommencer
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2025 <a href="#" class="copyright-link">Moulo Oholo</a>. All
+          Rights Reseverd
+        </p>
+
+        <ul class="footer-list">
+          <li>
+            <a href="#" class="footer-link">Terms & Condition</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <a href="#top" class="go-top" data-go-top title="Go to Top">
+      <ion-icon name="arrow-up"></ion-icon>
+    </a>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script type="module" src="./assets/js/firebase.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/quiz.js"></script>
+  </body>
+</html>
