@@ -237,13 +237,10 @@ function applyTranslations(lang) {
     node.textContent = text;
   });
 
-  // Special handling for copyright where we preserve a child link
+  // Keep the footer year current without requiring a yearly content update.
   const copyright = document.querySelector('.copyright');
-  if (copyright && translations[lang]['copyright']) {
-    const copyrightLink = copyright.querySelector('a');
-    copyright.textContent = ` © ${new Date().getFullYear()} `;
-    if (copyrightLink) copyright.appendChild(copyrightLink);
-    copyright.appendChild(document.createTextNode(`. ${translations[lang]['copyright']}`));
+  if (copyright) {
+    copyright.textContent = `© ${new Date().getFullYear()} TianSemi Corp.`;
   }
 }
 
