@@ -1073,12 +1073,32 @@ textarea.input-field {
 
 .input-field:focus + ion-icon { color: var(--raw-seinna); }
 
+.contact-form.was-validated .input-field:invalid {
+  outline: 1px solid #b42318;
+}
+
 .contact .btn-primary {
   max-width: unset;
   width: 100%;
   background: var(--color-primary);
   color: var(--bg-primary);
 }
+
+.contact .btn-primary:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.contact-form-status {
+  min-height: 1.5em;
+  margin-top: 14px;
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-7);
+}
+
+.contact-form-status.is-success { color: #177245; }
+
+.contact-form-status.is-error { color: #b42318; }
 
 
 

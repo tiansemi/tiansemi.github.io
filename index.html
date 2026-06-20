@@ -807,7 +807,7 @@
 
         </div>
 
-        <form action="" class="contact-form">
+        <form action="https://formspree.io/f/xwvdepvv" method="POST" class="contact-form" data-contact-form>
 
           <div class="form-wrapper">
 
@@ -843,7 +843,7 @@
 
             <div class="input-wrapper">
 
-              <input type="tel" name="phone" id="phone" required placeholder="Phone Number" class="input-field" data-i18n="placeholder-phone">
+              <input type="tel" name="phone" id="phone" placeholder="Phone Number" class="input-field" data-i18n="placeholder-phone">
 
               <ion-icon name="call"></ion-icon>
 
@@ -865,7 +865,9 @@
 
           </div>
 
-          <button type="submit" class="btn btn-primary" data-i18n="btn-send">Send</button>
+          <button type="submit" class="btn btn-primary" data-contact-submit data-i18n="btn-send">Send</button>
+
+          <p class="contact-form-status" data-contact-status role="status" aria-live="polite"></p>
 
         </form>
 

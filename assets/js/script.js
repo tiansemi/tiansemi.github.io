@@ -103,6 +103,10 @@ const translations = {
     "btn-hire": "Hire me",
     "btn-cv": "Download cv",
     "btn-send": "Send",
+    "form-sending": "Sending your message…",
+    "form-success": "Thank you — your message has been sent. We will get back to you soon.",
+    "form-error": "We could not send your message. Please try again or contact us by email.",
+    "form-validation-error": "Please complete your name, a valid email address, and your message.",
     "form-name": "Name",
     "form-email": "Email",
     "form-phone": "Phone",
@@ -165,6 +169,10 @@ const translations = {
     "btn-hire": "Embauchez-moi",
     "btn-cv": "Télécharger CV",
     "btn-send": "Envoyer",
+    "form-sending": "Envoi du message…",
+    "form-success": "Merci — votre message a bien été envoyé. Nous vous répondrons bientôt.",
+    "form-error": "Votre message n’a pas pu être envoyé. Réessayez ou contactez-nous par e-mail.",
+    "form-validation-error": "Veuillez renseigner votre nom, une adresse e-mail valide et votre message.",
     "form-name": "Nom",
     "form-email": "Email",
     "form-phone": "Téléphone",
@@ -309,3 +317,57 @@ updateLanguage = function(lang) {
     }
   }, 50);
 };
+
+// Contact form: submit to Formspree without leaving the page.
+const contactForm = document.querySelector('[data-contact-form]');
+
+if (contactForm) {
+  const contactSubmit = contactForm.querySelector('[data-contact-submit]');
+  const contactStatus = contactForm.querySelector('[data-contact-status]');
+
+  const getContactMessages = () => translations[detectLanguage()] || translations.en;
+
+  const setContactStatus = (messageKey, state = '') => {
+    contactStatus.textContent = getContactMessages()[messageKey];
+    contactStatus.className = `contact-form-status${state ? ` is-${state}` : ''}`;
+  };
+
+  contactForm.addEventListener('invalid', () => {
+    contactForm.classList.add('was-validated');
+    setContactStatus('form-validation-error', 'error');
+  }, true);
+
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    if (!contactForm.checkValidity()) {
+      contactForm.classList.add('was-validated');
+      setContactStatus('form-validation-error', 'error');
+      contactForm.reportValidity();
+      return;
+    }
+
+    contactSubmit.disabled = true;
+    contactSubmit.textContent = getContactMessages()['form-sending'];
+    setContactStatus('form-sending');
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!response.ok) throw new Error('Formspree request failed');
+
+      contactForm.reset();
+      contactForm.classList.remove('was-validated');
+      setContactStatus('form-success', 'success');
+    } catch (error) {
+      setContactStatus('form-error', 'error');
+    } finally {
+      contactSubmit.disabled = false;
+      contactSubmit.textContent = getContactMessages()['btn-send'];
+    }
+  });
+}
