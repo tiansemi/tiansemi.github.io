@@ -71,6 +71,31 @@ body.dark_theme {
 
 }
 
+/* Ensure text elements use proper colors in dark theme */
+body.dark_theme p {
+  color: var(--color-secondary);
+}
+
+body.dark_theme ul,
+body.dark_theme li {
+  color: var(--color-secondary);
+}
+
+/* Links inherit parent color but have blue underlines */
+body.dark_theme a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: hsl(220, 90%, 56%);
+}
+
+/* Keep specific styled links as they are */
+body.dark_theme .btn,
+body.dark_theme .navbar-link,
+body.dark_theme .hero-social-link,
+body.dark_theme .contact-info {
+  text-decoration: none;
+}
+
 body.light_theme {
 
   --bg-primary: hsl(0, 0%, 90%);
@@ -82,6 +107,31 @@ body.light_theme {
 
   --shadow-1: 10px 10px 40px var(--card-shadow);
 
+}
+
+/* Ensure text elements use proper colors in light theme */
+body.light_theme p {
+  color: var(--color-secondary);
+}
+
+body.light_theme ul,
+body.light_theme li {
+  color: var(--color-secondary);
+}
+
+/* Links inherit parent color but have blue underlines */
+body.light_theme a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: hsl(220, 90%, 56%);
+}
+
+/* Keep specific styled links as they are */
+body.light_theme .btn,
+body.light_theme .navbar-link,
+body.light_theme .hero-social-link,
+body.light_theme .contact-info {
+  text-decoration: none;
 }
 
 
