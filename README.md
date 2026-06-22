@@ -8,6 +8,12 @@ Pages:
 - `quiz.html` - interactive quiz
 - `toeic.html` - TOEIC flashcards revision tool
 
+## Contribuer
+
+Les contributions sont réservées aux membres actifs reconnus par le bureau TianSemi. Le code est distribué sous la [TianSemi Club Internal Use License](LICENSE) : les personnes externes ne peuvent pas copier, modifier, redistribuer ou exploiter le dépôt sans autorisation écrite préalable du club, même si le dépôt est public.
+
+Consultez [CONTRIBUTING.md](CONTRIBUTING.md) pour le flux de branches, la convention de commits, la revue des pull requests et le signalement responsable de vulnérabilités.
+
 ## Contact form
 
 The contact form on `index.html` submits asynchronously to Formspree. Its public endpoint is configured directly in the form's `action` attribute; no API key is stored in this repository.
@@ -38,6 +44,10 @@ Completed. `robots.txt` allows crawling and references `sitemap.xml`; the sitema
 ### US 0.5 — Helpful 404 page
 
 Completed locally. `404.html` is present at the repository root for GitHub Pages, reuses the TianSemi header and footer styling, and provides direct links to the home page, quiz, TOEIC flashcards, and contact section. Verify it after deployment by opening a non-existent URL.
+
+### US 0.6 — Repository governance
+
+Completed. `LICENSE` defines the TianSemi Club Internal Use License for active members and restricts external use without written authorisation. `CONTRIBUTING.md` documents branches, commit conventions, pull-request review, local checks, and vulnerability reporting.
 
 Dev - how to run locally
 
