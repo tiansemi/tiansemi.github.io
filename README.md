@@ -31,6 +31,10 @@ Completed in commit `3701788` (`chore: remove orphaned page01 duplicate`). `page
 
 Completed. The form uses Formspree with asynchronous submission, accessible sending/success/error feedback, and client-side validation. Name, e-mail, and message are mandatory. Phone is optional but, when supplied, must use the international E.164 format with a country calling code. The end-to-end email test is confirmed.
 
+### US 0.4 — Minimum SEO foundations
+
+Completed locally. `robots.txt` allows crawling and references `sitemap.xml`; the sitemap lists the home page, quiz, and TOEIC pages. Each existing page has a unique meta description and canonical URL. Submitting the site to Google Search Console remains a manual step requiring access to the TianSemi Google account.
+
 Dev - how to run locally
 
 If you edit files and open them directly with the file:// protocol some browsers (or DevTools) may display or interpret file encoding differently which can make JS/CSS appear corrupted in DevTools. To avoid this, serve the site with a simple local HTTP server when developing:

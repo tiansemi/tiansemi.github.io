@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tiansemi.github.io/sitemap.xml
