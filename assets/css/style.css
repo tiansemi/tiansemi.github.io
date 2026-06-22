@@ -1042,6 +1042,12 @@ main { overflow-x: hidden; }
   margin-left: 5px;
 }
 
+.form-hint {
+  color: var(--color-secondary);
+  font-size: var(--fs-8);
+  margin: 6px 5px 0;
+}
+
 .input-wrapper { position: relative; }
 
 .input-field {

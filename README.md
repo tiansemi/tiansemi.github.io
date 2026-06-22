@@ -12,10 +12,24 @@ Pages:
 
 The contact form on `index.html` submits asynchronously to Formspree. Its public endpoint is configured directly in the form's `action` attribute; no API key is stored in this repository.
 
-- Required fields: name, email address, and message. Phone is optional.
+- Required fields: name, email address, and message. Phone is optional; when provided, it must use the international E.164 format with a country calling code (for example, `+2250777366687`, without spaces).
 - Visitor feedback: the form shows sending, success, validation-error, and network-error states without leaving the page.
-- End-to-end test: on 2026-06-20, a labelled technical test was accepted by Formspree (`HTTP 200`). Confirm that it arrived in `tiansemi@outlook.com` before declaring the deployment validated.
+- End-to-end test: on 2026-06-20, a labelled technical test was accepted by Formspree (`HTTP 200`) and its receipt in `tiansemi@outlook.com` was confirmed.
 - Contingency: monitor the Formspree free-plan quota in its dashboard. If it is reached, create a Getform or EmailJS form, replace only the `action` endpoint and retest the success/error states.
+
+## Sprint 0 — Resolved user stories
+
+### US 0.1 — Content clean-up
+
+Completed. The site now displays the TianSemi contact details: Abidjan, Côte d’Ivoire; `tiansemi@outlook.com`; and `+2250777366687`. The footer uses the dynamic current year and the name `TianSemi Corp.`. Facebook, LinkedIn, YouTube, and GitHub point to active profiles; X/Twitter has been removed.
+
+### US 0.2 — Remove the orphaned page
+
+Completed in commit `3701788` (`chore: remove orphaned page01 duplicate`). `page01.html` has been removed and no functional internal reference remains. After each deployment, verify that `/page01.html` returns `404`.
+
+### US 0.3 — Reliable contact channel
+
+Completed. The form uses Formspree with asynchronous submission, accessible sending/success/error feedback, and client-side validation. Name, e-mail, and message are mandatory. Phone is optional but, when supplied, must use the international E.164 format with a country calling code. The end-to-end email test is confirmed.
 
 Dev - how to run locally
 
