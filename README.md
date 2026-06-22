@@ -33,7 +33,11 @@ Completed. The form uses Formspree with asynchronous submission, accessible send
 
 ### US 0.4 — Minimum SEO foundations
 
-Completed locally. `robots.txt` allows crawling and references `sitemap.xml`; the sitemap lists the home page, quiz, and TOEIC pages. Each existing page has a unique meta description and canonical URL. Submitting the site to Google Search Console remains a manual step requiring access to the TianSemi Google account.
+Completed. `robots.txt` allows crawling and references `sitemap.xml`; the sitemap lists the home page, quiz, and TOEIC pages. Each existing page has a unique meta description and canonical URL. On 2026-06-22, the `https://tiansemi.github.io/` property was verified in Google Search Console via an HTML verification file, and `sitemap.xml` was submitted successfully. Keep the verification file deployed to preserve ownership validation.
+
+### US 0.5 — Helpful 404 page
+
+Completed locally. `404.html` is present at the repository root for GitHub Pages, reuses the TianSemi header and footer styling, and provides direct links to the home page, quiz, TOEIC flashcards, and contact section. Verify it after deployment by opening a non-existent URL.
 
 Dev - how to run locally
 

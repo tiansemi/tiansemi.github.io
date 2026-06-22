@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Page introuvable — TianSemi</title>
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+
+  <style>
+    .error-page { min-height: 100vh; display: flex; flex-direction: column; }
+    .error-header { position: static; background: var(--bg-secondary); box-shadow: var(--shadow-1); }
+    .error-header .container { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .error-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 18px; }
+    .error-nav a { color: var(--color-secondary); font-family: var(--ff-poppins); font-size: var(--fs-7); }
+    .error-nav a:is(:hover, :focus) { color: var(--raw-seinna); }
+    .error-main { flex: 1; display: grid; place-items: center; padding: 80px 20px; text-align: center; }
+    .error-content { max-width: 680px; }
+    .error-code { color: var(--raw-seinna); font-family: var(--ff-saira-stencil-one); font-size: clamp(5rem, 20vw, 11rem); line-height: 1; }
+    .error-content h1 { color: var(--color-primary); font-family: var(--ff-poppins); font-size: clamp(1.8rem, 5vw, 3rem); margin: 18px 0; }
+    .error-content p { color: var(--color-secondary); font-size: var(--fs-6); line-height: 1.7; margin-bottom: 30px; }
+    .error-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+    .error-actions .btn { width: auto; padding-inline: 24px; }
+    @media (max-width: 480px) {
+      .error-header .container { align-items: flex-start; flex-direction: column; }
+      .error-nav { justify-content: flex-start; }
+    }
+  </style>
+</head>
+
+<body class="dark_theme error-page">
+  <header class="header error-header">
+    <div class="container">
+      <p class="h1 logo"><a href="./index.html">TianSemi<span>.</span></a></p>
+      <nav class="error-nav" aria-label="Navigation principale">
+        <a href="./index.html">Accueil</a>
+        <a href="./quiz.html">Quiz</a>
+        <a href="./toeic.html">TOEIC</a>
+        <a href="./index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="error-main">
+    <section class="error-content" aria-labelledby="error-title">
+      <p class="error-code" aria-hidden="true">404</p>
+      <h1 id="error-title">Cette page est introuvable</h1>
+      <p>Le lien que vous avez suivi est peut-être incorrect ou la page a été déplacée. Revenez vers une ressource TianSemi pour continuer.</p>
+      <div class="error-actions">
+        <a href="./index.html" class="btn btn-primary">Retour à l’accueil</a>
+        <a href="./index.html#contact" class="btn btn-secondary">Nous contacter</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="h1 logo"><a href="./index.html">TianSemi<span>.</span></a></p>
+      <p class="copyright">© <span id="copyright-year"></span> TianSemi Corp.</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
