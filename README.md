@@ -51,7 +51,7 @@ Completed. `LICENSE` defines the TianSemi Club Internal Use License for active m
 
 ### US 0.7 — Dependency security monitoring
 
-Dependabot is configured in `.github/dependabot.yml` to check npm dependencies weekly. A repository administrator must activate Dependabot alerts and GitHub security alerts in the GitHub repository settings, then confirm receipt of the first Dependabot alert or pull request.
+Completed. Dependabot is configured in `.github/dependabot.yml` to check npm dependencies weekly. On 2026-06-23, the dependency graph, Dependabot alerts, and Dependabot security updates were confirmed active for `tiansemi/tiansemi.github.io`. GitHub detected 14 dependency vulnerabilities on the default branch, confirming that security monitoring is operating.
 
 Dev - how to run locally
 
