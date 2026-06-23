@@ -49,6 +49,10 @@ Completed locally. `404.html` is present at the repository root for GitHub Pages
 
 Completed. `LICENSE` defines the TianSemi Club Internal Use License for active members and restricts external use without written authorisation. `CONTRIBUTING.md` documents branches, commit conventions, pull-request review, local checks, and vulnerability reporting.
 
+### US 0.7 — Dependency security monitoring
+
+Dependabot is configured in `.github/dependabot.yml` to check npm dependencies weekly. A repository administrator must activate Dependabot alerts and GitHub security alerts in the GitHub repository settings, then confirm receipt of the first Dependabot alert or pull request.
+
 Dev - how to run locally
 
 If you edit files and open them directly with the file:// protocol some browsers (or DevTools) may display or interpret file encoding differently which can make JS/CSS appear corrupted in DevTools. To avoid this, serve the site with a simple local HTTP server when developing:
