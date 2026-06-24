@@ -53,6 +53,14 @@ Completed. `LICENSE` defines the TianSemi Club Internal Use License for active m
 
 Completed. Dependabot is configured in `.github/dependabot.yml` to check npm dependencies weekly. On 2026-06-23, the dependency graph, Dependabot alerts, and Dependabot security updates were confirmed active for `tiansemi/tiansemi.github.io`. GitHub detected 14 dependency vulnerabilities on the default branch, confirming that security monitoring is operating.
 
+### US 1.1 — Central design tokens
+
+Completed. [`assets/css/tokens.css`](assets/css/tokens.css) centralises the TianSemi palette, typography, spacing, radii, shadows, and light/dark theme values. [`assets/css/style.css`](assets/css/style.css) imports these tokens, and the usage guide is available in [`docs/design-system.md`](docs/design-system.md).
+
+### US 1.2 — TOEIC design-system alignment
+
+Implemented. `toeic.html` now loads the global token file and contains no hard-coded colour values; its local variables map to the shared `--toeic-*` learning-module tokens and TianSemi brand tokens. The flashcard interaction code is unchanged. Perform a final visual pass through the revision flow after deployment.
+
 Dev - how to run locally
 
 If you edit files and open them directly with the file:// protocol some browsers (or DevTools) may display or interpret file encoding differently which can make JS/CSS appear corrupted in DevTools. To avoid this, serve the site with a simple local HTTP server when developing:

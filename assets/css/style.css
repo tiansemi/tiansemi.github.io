@@ -1,88 +1,4 @@
-:root {
-
-  /**
-   * colors
-   */
-
-  --raw-seinna: hsl(24, 74%, 58%);
-  --sizzling-sunrise: hsl(51, 95%, 54%);
-  --scarlet: hsl(13, 96%, 47%);
-  --black: hsl(0, 0%, 0%);
-  --white: hsl(0, 0%, 100%);
-
-  /**
-   * typography
-   */
-
-  --ff-saira-stencil-one: "Saira Stencil One", sans-serif; 
-  --ff-poppins: 'Poppins', sans-serif;
-  --ff-roboto: 'Roboto', sans-serif;
-
-  --fs-1: 2rem;
-  --fs-2: calc(1.813rem + 1vw);
-  --fs-3: calc(1.313rem + 1vw);
-  --fs-4: 1.4rem;
-  --fs-5: 1rem;
-  --fs-6: 0.813rem;
-  --fs-7: 0.75rem;
-
-  --fw-400: 400;
-  --fw-700: 700;
-
-  /**
-   * transition
-   */
-
-  --transition-1: 0.25s ease-in-out;
-
-  /**
-   * spacing
-   */
-
-  --section-padding: 80px;
-
-  /**
-   * radius
-   */
-
-  --radius-4: 4px;
-  --radius-12: 12px;
-
-}
-
-
-
-
-
-/*-----------------------------------*\
- * #THEME COLORS
-\*-----------------------------------*/
-
-body.dark_theme {
-
-  --bg-primary: hsl(0, 0%, 12%);
-  --bg-secondary: hsl(0, 0%, 19%);
-  --color-primary: hsl(0, 0%, 100%);
-  --color-secondary: hsl(0, 0%, 87%);
-  --card-shadow: hsla(0, 0%, 0%, 0.4);
-  --input-bg: hsl(0, 0%, 16%);
-
-  --shadow-1: 10px 10px 40px var(--card-shadow);
-
-}
-
-body.light_theme {
-
-  --bg-primary: hsl(0, 0%, 90%);
-  --bg-secondary: hsl(0, 0%, 100%);
-  --color-primary: hsl(0, 0%, 12%);
-  --color-secondary: hsl(0, 0%, 37%);
-  --card-shadow: hsla(0, 0%, 0%, 0.1);
-  --input-bg: hsl(0, 0%, 93%);
-
-  --shadow-1: 10px 10px 40px var(--card-shadow);
-
-}
+@import url("./tokens.css");
 
 
 
@@ -209,7 +125,7 @@ body.active { overflow: hidden; }
   color: var(--black);
 }
 
-.btn-secondary:is(:hover, :focus) { --raw-seinna: hsl(24, 74%, 64%); }
+.btn-secondary:is(:hover, :focus) { --raw-seinna: var(--color-cta-hover); }
 
 .section-subtitle {
   position: relative;
@@ -889,7 +805,7 @@ main { overflow-x: hidden; }
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-12);
-  box-shadow: 2px 4px 6px hsla(0, 0%, 0%, 0.2);
+  box-shadow: 2px 4px 6px var(--shadow-color-subtle);
 }
 
 .project-card .card-banner img {
@@ -911,7 +827,7 @@ main { overflow-x: hidden; }
 }
 
 .project-card:is(:hover, :focus)::after {
-  background: hsla(0, 0%, 100%, 0.1);
+  background: var(--overlay-light);
   backdrop-filter: blur(0.5px);
 }
 
@@ -921,7 +837,7 @@ main { overflow-x: hidden; }
   left: 0;
   width: 100%;
   padding: 20px;
-  background: linear-gradient(180deg, transparent, hsla(0, 0%, 0%, 0.62));
+  background: linear-gradient(180deg, transparent, var(--overlay-dark));
 }
 
 .project-card .card-title { margin-bottom: 10px; }
@@ -1080,7 +996,7 @@ textarea.input-field {
 .input-field:focus + ion-icon { color: var(--raw-seinna); }
 
 .contact-form.was-validated .input-field:invalid {
-  outline: 1px solid #b42318;
+  outline: 1px solid var(--color-danger);
 }
 
 .contact .btn-primary {
@@ -1102,9 +1018,9 @@ textarea.input-field {
   font-size: var(--fs-7);
 }
 
-.contact-form-status.is-success { color: #177245; }
+.contact-form-status.is-success { color: var(--color-success); }
 
-.contact-form-status.is-error { color: #b42318; }
+.contact-form-status.is-error { color: var(--color-danger); }
 
 
 
@@ -1433,7 +1349,7 @@ textarea.input-field {
     justify-content: flex-start;
   }
 
-  .hero .btn-primary:is(:hover, :focus) { color: hsl(0, 0%, 12%); }
+  .hero .btn-primary:is(:hover, :focus) { color: var(--color-ink); }
 
   .hero-social-list {
     display: block;
