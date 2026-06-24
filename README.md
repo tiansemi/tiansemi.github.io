@@ -5,8 +5,14 @@ Static GitHub Pages site for the TianSemi portfolio, interactive quiz, and TOEIC
 Pages:
 
 - `index.html` - portfolio home page
-- `quiz.html` - interactive quiz
-- `toeic.html` - TOEIC flashcards revision tool
+- `portfolio/` - portfolio section (temporary page)
+- `club/` - club section (temporary page)
+- `apprentissage/` - learning section
+- `apprentissage/quiz/` - interactive quiz
+- `apprentissage/toeic/` - TOEIC flashcards revision tool
+- `blog/` - technical blog section (temporary page)
+
+The former `quiz.html` and `toeic.html` URLs are retained as redirect pages to preserve existing shared links.
 
 ## Contribuer
 
@@ -59,7 +65,11 @@ Completed. [`assets/css/tokens.css`](assets/css/tokens.css) centralises the Tian
 
 ### US 1.2 — TOEIC design-system alignment
 
-Implemented. `toeic.html` now loads the global token file and contains no hard-coded colour values; its local variables map to the shared `--toeic-*` learning-module tokens and TianSemi brand tokens. The flashcard interaction code is unchanged. Perform a final visual pass through the revision flow after deployment.
+Implemented. `apprentissage/toeic/index.html` now loads the global token file and contains no hard-coded colour values; its local variables map to the shared `--toeic-*` learning-module tokens and TianSemi brand tokens. The flashcard interaction code is unchanged. Perform a final visual pass through the revision flow after deployment.
+
+### US 1.3 — Multi-page architecture
+
+Completed. The `portfolio/`, `club/`, `apprentissage/`, and `blog/` sections are present with temporary pages. The learning structure includes `reseaux/`, `cybersecurite/`, `linux/`, `programmation/`, `cloud-devops/`, `ia/`, `quiz/`, and `toeic/`. Quiz and TOEIC have moved under `apprentissage/`; their former root URLs are retained as redirect pages.
 
 Dev - how to run locally
 

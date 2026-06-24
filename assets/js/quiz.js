@@ -19,6 +19,7 @@ const questionContainer = document.getElementById("question-container");
 const currentQuestionEl = document.getElementById("current-question");
 const totalQuestionsEl = document.getElementById("total-questions");
 const progressFill = document.getElementById("progress-fill");
+const quizContentBaseUrl = new URL("../../pages/quiz/", window.location.href);
 
 // Fonction pour mélanger un tableau (algorithme de Fisher-Yates)
 function shuffleArray(array) {
@@ -33,7 +34,7 @@ function shuffleArray(array) {
 // Charger les questions depuis le fichier JSON
 async function loadQuestions() {
   try {
-    const response = await fetch('./pages/quiz/questions1-20.json');
+    const response = await fetch(new URL("questions1-20.json", quizContentBaseUrl));
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -75,7 +76,7 @@ function displayQuestion() {
   // Ajouter l'image si elle existe
   if (question.image_path) {
     html += `<div class="question-image">
-              <img src="./pages/quiz/${question.image_path}" alt="Question ${question.id}" />
+              <img src="${new URL(question.image_path, quizContentBaseUrl).href}" alt="Question ${question.id}" />
             </div>`;
   }
 
@@ -263,7 +264,7 @@ function displayQuestionWithCorrection() {
   // Ajouter l'image si elle existe
   if (question.image_path) {
     html += `<div class="question-image">
-              <img src="./pages/quiz/${question.image_path}" alt="Question ${question.id}" />
+              <img src="${new URL(question.image_path, quizContentBaseUrl).href}" alt="Question ${question.id}" />
             </div>`;
   }
 

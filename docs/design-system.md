@@ -34,4 +34,4 @@ Avant de fusionner une évolution visuelle, vérifiez les thèmes clair et sombr
 
 ## Module TOEIC
 
-Les tokens préfixés `--toeic-` préservent la palette historique des flashcards (surfaces, dégradés, ombres et états translucides) tout en évitant toute couleur codée directement dans `toeic.html`. Le module utilise aussi les tokens de marque `--color-brand-primary`, `--color-brand-primary-dark`, `--color-cta` et `--color-success`.
+Les tokens préfixés `--toeic-` préservent la palette historique des flashcards (surfaces, dégradés, ombres et états translucides) tout en évitant toute couleur codée directement dans `apprentissage/toeic/index.html`. Le module utilise aussi les tokens de marque `--color-brand-primary`, `--color-brand-primary-dark`, `--color-cta` et `--color-success`.
