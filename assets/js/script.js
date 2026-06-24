@@ -8,6 +8,7 @@ const header = document.querySelector("[data-header]");
 const goTopBtn = document.querySelector("[data-go-top]");
 
 window.addEventListener("scroll", function () {
+  if (!header || !goTopBtn) return;
   if (window.scrollY >= 10) {
     header.classList.add("active");
     goTopBtn.classList.add("active");
@@ -15,15 +16,6 @@ window.addEventListener("scroll", function () {
     header.classList.remove("active");
     goTopBtn.classList.remove("active");
   }
-});
-
-const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
-const navbar = document.querySelector("[data-navbar]");
-
-navToggleBtn.addEventListener("click", function () {
-  elemToggleFunc(navToggleBtn);
-  elemToggleFunc(navbar);
-  elemToggleFunc(document.body);
 });
 
 const toggleBtnBox = document.querySelector("[data-toggle-box]");
@@ -40,30 +32,7 @@ for (let i = 0; i < toggleBtns.length; i++) {
   });
 }
 
-const themeToggleBtn = document.querySelector("[data-theme-btn]");
-
-themeToggleBtn.addEventListener("click", function () {
-  elemToggleFunc(themeToggleBtn);
-  if (themeToggleBtn.classList.contains("active")) {
-    document.body.classList.remove("dark_theme");
-    document.body.classList.add("light_theme");
-    localStorage.setItem("theme", "light_theme");
-  } else {
-    document.body.classList.add("dark_theme");
-    document.body.classList.remove("light_theme");
-    localStorage.setItem("theme", "dark_theme");
-  }
-});
-
-if (localStorage.getItem("theme") === "light_theme") {
-  themeToggleBtn.classList.add("active");
-  document.body.classList.remove("dark_theme");
-  document.body.classList.add("light_theme");
-} else {
-  themeToggleBtn.classList.remove("active");
-  document.body.classList.remove("light_theme");
-  document.body.classList.add("dark_theme");
-}
+// Navigation and theme state are handled by assets/js/navigation.js.
 
 // Language switcher
 const langSelector = document.querySelector("#lang");

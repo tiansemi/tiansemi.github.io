@@ -71,6 +71,10 @@ Implemented. `apprentissage/toeic/index.html` now loads the global token file an
 
 Completed. The `portfolio/`, `club/`, `apprentissage/`, and `blog/` sections are present with temporary pages. The learning structure includes `reseaux/`, `cybersecurite/`, `linux/`, `programmation/`, `cloud-devops/`, `ia/`, `quiz/`, and `toeic/`. Quiz and TOEIC have moved under `apprentissage/`; their former root URLs are retained as redirect pages.
 
+### US 1.4 — Portal home page
+
+Completed. The home page is now a TianSemi portal with Club and Learning calls to action, real statistics (2 interactive tools, 227 TOEIC words, and 13 vocabulary categories), four section teasers, responsive navigation, and the existing Formspree contact form.
+
 Dev - how to run locally
 
 If you edit files and open them directly with the file:// protocol some browsers (or DevTools) may display or interpret file encoding differently which can make JS/CSS appear corrupted in DevTools. To avoid this, serve the site with a simple local HTTP server when developing:

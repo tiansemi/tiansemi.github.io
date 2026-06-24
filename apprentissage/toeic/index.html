@@ -7,6 +7,7 @@
   <meta name="description" content="Révisez le vocabulaire anglais avec les flashcards TOEIC de TianSemi, un outil interactif pour les étudiants." />
   <link rel="canonical" href="https://tiansemi.github.io/apprentissage/toeic/" />
   <link rel="stylesheet" href="../../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../../assets/css/navigation.css" />
 
   <style>
     :root{
@@ -684,14 +685,14 @@
         min-height:58px;
       }
     }
+    body.dark_theme { --bg: var(--color-bg); --surface: var(--color-surface); --surface-strong: var(--color-surface-input); --ink: var(--color-text); --muted: var(--color-text-muted); --line: var(--color-border); background: var(--color-bg); }
+    body.dark_theme .front { background: var(--color-surface); }
+    body.dark_theme .empty-state { background: var(--color-surface); }
   </style>
 </head>
 
 <body>
-  <a class="site-return" href="../../index.html#portfolio" aria-label="Retourner au site TianSemi">
-    <span aria-hidden="true">←</span>
-    TianSemi
-  </a>
+  <div data-site-nav data-site-root="../../"></div>
 
   <header class="hero">
     <div class="hero-inner">
@@ -888,6 +889,7 @@
     </section>
   </main>
 
+  <script src="../../assets/js/navigation.js"></script>
   <script>
     const vocabulary = [
       { category: "Aéroport", en: "Make the round trip", fr: "faire l'aller-retour" },
