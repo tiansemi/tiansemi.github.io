@@ -7,6 +7,7 @@
     const words = text ? text.split(/\s+/).length : 0;
     const minutes = Math.max(1, Math.ceil(words / 200));
     readingTarget.textContent = `${minutes} min de lecture`;
+    readingTarget.setAttribute('aria-label', `Durée de lecture estimée : ${minutes} minute${minutes > 1 ? 's' : ''}`);
   }
 
   document.querySelectorAll('pre code').forEach((code, index) => {
@@ -27,6 +28,10 @@
 
     const label = document.createElement('span');
     label.textContent = code.dataset.label || code.className.replace('language-', '').toUpperCase() || `Code ${index + 1}`;
+
+    pre.setAttribute('tabindex', '0');
+    pre.setAttribute('role', 'region');
+    pre.setAttribute('aria-label', `Bloc de code : ${label.textContent}`);
 
     const button = document.createElement('button');
     button.className = 'article-copy';

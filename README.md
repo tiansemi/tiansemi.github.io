@@ -146,6 +146,102 @@ Validation manuelle attendue avant clôture finale :
 - se déconnecter depuis le Quiz et vérifier le retour à l’état visiteur ;
 - suivre le parcours de démonstration : Accueil → Apprentissage → Réseaux → ressource Adressage IP → Quiz → retour Réseaux.
 
+## Blog
+
+La section `blog/` publie les articles techniques TianSemi et sert de levier SEO long terme. Les articles actuels couvrent :
+
+- introduction à la cybersécurité ;
+- retour d’expérience Huawei ICT ;
+- tutoriel pratique de diagnostic réseau.
+
+### Convention de nommage
+
+Chaque article est un fichier HTML placé directement dans `blog/` selon la convention :
+
+```text
+blog/YYYY-MM-DD-slug-descriptif.html
+```
+
+Exemple :
+
+```text
+blog/2026-06-27-tutoriel-diagnostiquer-connectivite-reseau.html
+```
+
+Le slug doit être court, lisible, sans accent, en minuscules, séparé par des tirets.
+
+### Charte éditoriale du blog
+
+- Ton : clair, pédagogique, professionnel, orienté transmission.
+- Public : étudiants, membres du club, partenaires techniques et recruteurs.
+- Longueur recommandée :
+  - introduction ou article de fond : 800 à 1 500 mots ;
+  - retour d’expérience : 500 à 1 200 mots ;
+  - tutoriel pratique : 600 à 1 500 mots.
+- Structure minimale :
+  - titre SEO explicite ;
+  - introduction ;
+  - sections titrées ;
+  - exemples, tableaux ou blocs de code si pertinent ;
+  - conclusion ou synthèse ;
+  - section “Pour aller plus loin” ;
+  - articles similaires.
+- Rythme cible : viser 2 articles de qualité par mois lorsque l’équipe éditoriale est disponible.
+
+### Métadonnées obligatoires
+
+Chaque article doit inclure :
+
+- un `<title>` unique ;
+- une meta description unique ;
+- une balise canonical ;
+- des balises Open Graph (`og:type`, `og:title`, `og:description`, `og:url`, `og:image`) ;
+- des données structurées `Article` Schema.org en JSON-LD ;
+- une image de couverture avec `alt` pertinent ;
+- un indicateur de durée de lecture avec `data-reading-time`.
+
+### Code, sécurité et accessibilité
+
+- Highlight.js est chargé depuis CDN avec SRI.
+- Les blocs de code sont enrichis par `assets/js/blog-article.js` :
+  - coloration syntaxique ;
+  - bouton “Copier le code” ;
+  - `tabindex="0"` ;
+  - `role="region"` ;
+  - `aria-label`.
+- Ne jamais publier de capture ou log contenant :
+  - mot de passe ;
+  - token/API key ;
+  - adresse IP privée sensible ;
+  - e-mail personnel non validé ;
+  - information interne non destinée au public.
+
+### Ajouter un nouvel article
+
+1. Copier le gabarit d’un article existant.
+2. Renommer le fichier selon `YYYY-MM-DD-slug.html`.
+3. Mettre à jour :
+   - titre ;
+   - meta description ;
+   - canonical ;
+   - Open Graph ;
+   - JSON-LD Article ;
+   - auteur ;
+   - date ;
+   - catégorie ;
+   - image de couverture.
+4. Ajouter la carte correspondante dans `blog/index.html`.
+5. Ajouter l’URL dans `sitemap.xml`.
+6. Ajouter au moins un lien “Pour aller plus loin” vers une filière ou ressource `apprentissage/`.
+7. Si l’article correspond à une filière, ajouter un lien retour depuis la page filière vers l’article.
+8. Vérifier en local :
+   - filtre par catégorie ;
+   - lecture mobile/tablette/desktop ;
+   - coloration du code ;
+   - bouton copier ;
+   - liens croisés Blog ↔ Apprentissage ;
+   - absence de donnée sensible.
+
 Dev - how to run locally
 
 If you edit files and open them directly with the file:// protocol some browsers (or DevTools) may display or interpret file encoding differently which can make JS/CSS appear corrupted in DevTools. To avoid this, serve the site with a simple local HTTP server when developing:

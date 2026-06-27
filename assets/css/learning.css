@@ -218,6 +218,41 @@ a {
   gap: var(--space-1);
 }
 
+.learning-link-list {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.learning-link-list li {
+  padding: var(--space-2);
+  border: 1px solid color-mix(in srgb, var(--color-border) 74%, transparent);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--bg-primary) 42%, transparent);
+}
+
+.learning-link-list a {
+  display: inline-flex;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.learning-link-list a:hover,
+.learning-link-list a:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
+.learning-link-list p {
+  margin: 0.45rem 0 0;
+  color: var(--color-secondary);
+  line-height: 1.65;
+}
+
 .track-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
@@ -593,6 +628,7 @@ body.light_theme .tool-card,
 body.light_theme .learning-card__icon,
 body.light_theme .learning-level,
 body.light_theme .learning-tag,
+body.light_theme .learning-link-list li,
 body.light_theme .track-panel,
 body.light_theme .track-side-panel,
 body.light_theme .track-list li,
