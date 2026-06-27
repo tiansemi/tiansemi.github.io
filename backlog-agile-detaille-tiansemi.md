@@ -1067,7 +1067,7 @@ Critères d'acceptation :
 - Longueur : 500 à 1200 mots.
 
 Tâches techniques :
-- Rédiger/piloter la rédaction.
+- Rédiger/piloter la rédaction : M MOULO OHOLO Jean Noel à terminé 3eme au podium mondial avec deux autres membres de l'équipe réseau lors de la phase mondiale de la Huawei ICT. Je retiens qu'il faut avoir de la maitrise, la rapidité, un fort mental.
 - Implémenter dans le gabarit article.
 
 Dépendances : US-5.2.

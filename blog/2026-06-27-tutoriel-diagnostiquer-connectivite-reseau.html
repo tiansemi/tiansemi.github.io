@@ -1,21 +1,24 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="Tutoriel réseau TianSemi : diagnostiquer une panne de connectivité avec ipconfig, ping, nslookup et une méthode simple en quatre étapes."
-    >
+    <meta name="description" content="Apprenez Ã  diagnostiquer une panne rÃ©seau Ã©tape par Ã©tape avec ping, ipconfig, traceroute et une mÃ©thode claire adaptÃ©e aux dÃ©butants.">
     <link rel="canonical" href="https://tiansemi.github.io/blog/2026-06-27-tutoriel-diagnostiquer-connectivite-reseau.html">
-    <meta property="og:type" content="article">
+        <link rel="alternate" hreflang="fr" href="https://tiansemi.github.io/blog/2026-06-27-tutoriel-diagnostiquer-connectivite-reseau.html">
+    <link rel="alternate" hreflang="x-default" href="https://tiansemi.github.io/blog/2026-06-27-tutoriel-diagnostiquer-connectivite-reseau.html">
+<meta property="og:type" content="article">
     <meta property="og:site_name" content="TianSemi">
-    <meta property="og:title" content="Tutoriel réseau : diagnostiquer une panne de connectivité">
-    <meta property="og:description" content="Tutoriel TianSemi pour diagnostiquer une panne réseau avec ipconfig, ping, nslookup et une méthode simple en quatre étapes.">
+    <meta property="og:title" content="Tutoriel rÃ©seau : diagnostiquer une panne de connectivitÃ©">
+    <meta property="og:description" content="Apprenez Ã  diagnostiquer une panne rÃ©seau Ã©tape par Ã©tape avec ping, ipconfig, traceroute et une mÃ©thode claire adaptÃ©e aux dÃ©butants.">
     <meta property="og:url" content="https://tiansemi.github.io/blog/2026-06-27-tutoriel-diagnostiquer-connectivite-reseau.html">
     <meta property="og:image" content="https://tiansemi.github.io/assets/images/blog-network-tutorial.svg">
     <meta property="article:published_time" content="2026-06-27">
     <meta property="article:author" content="Moulo Oholo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tutoriel r&#233;seau : diagnostiquer une panne de connectivit&#233;">
+    <meta name="twitter:description" content="Apprenez Ã  diagnostiquer une panne rÃ©seau Ã©tape par Ã©tape avec ping, ipconfig, traceroute et une mÃ©thode claire adaptÃ©e aux dÃ©butants.">
+    <meta name="twitter:image" content="https://tiansemi.github.io/assets/images/blog-network-tutorial.svg">
     <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
     <link
       rel="stylesheet"
@@ -26,13 +29,13 @@
     >
     <link rel="stylesheet" href="../assets/css/navigation.css">
     <link rel="stylesheet" href="../assets/css/blog.css">
-    <title>Tutoriel réseau : diagnostiquer une panne de connectivité — TianSemi</title>
+    <title>Tutoriel rÃ©seau : diagnostiquer une panne de connectivitÃ© â€” TianSemi</title>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Tutoriel réseau : diagnostiquer une panne de connectivité",
-        "description": "Tutoriel réseau TianSemi : diagnostiquer une panne de connectivité avec ipconfig, ping, nslookup et une méthode simple en quatre étapes.",
+        "headline": "Tutoriel rÃ©seau : diagnostiquer une panne de connectivitÃ©",
+        "description": "Tutoriel rÃ©seau TianSemi : diagnostiquer une panne de connectivitÃ© avec ipconfig, ping, nslookup et une mÃ©thode simple en quatre Ã©tapes.",
         "image": "https://tiansemi.github.io/assets/images/blog-network-tutorial.svg",
         "datePublished": "2026-06-27",
         "dateModified": "2026-06-27",
@@ -48,6 +51,17 @@
         "mainEntityOfPage": "https://tiansemi.github.io/blog/2026-06-27-tutoriel-diagnostiquer-connectivite-reseau.html"
       }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://tiansemi.github.io/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tiansemi.github.io/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "Réseaux", "item": "https://tiansemi.github.io/blog/2026-06-27-tutoriel-diagnostiquer-connectivite-reseau.html"}
+        ]
+      }
+    </script>
   </head>
   <body class="dark_theme">
     <div data-site-nav data-site-root="../"></div>
@@ -55,27 +69,27 @@
     <main class="article-page">
       <div class="article-shell">
         <header class="article-hero">
-          <nav class="article-breadcrumb" aria-label="Fil d’Ariane">
+          <nav class="article-breadcrumb" aria-label="Fil dâ€™Ariane">
             <a href="../">Accueil</a>
             <span aria-hidden="true">/</span>
             <a href="./">Blog</a>
             <span aria-hidden="true">/</span>
-            <span>Réseaux</span>
+            <span>RÃ©seaux</span>
           </nav>
-          <span class="article-badge">Réseaux</span>
+          <span class="article-badge">RÃ©seaux</span>
           <p class="article-eyebrow">Tutoriel pratique</p>
-          <h1>Tutoriel réseau : diagnostiquer une panne de connectivité</h1>
+          <h1>Tutoriel rÃ©seau : diagnostiquer une panne de connectivitÃ©</h1>
           <p class="article-lead">
-            Quand “Internet ne marche pas”, il faut éviter les tests au hasard. Ce tutoriel propose une méthode simple en
-            quatre étapes pour localiser rapidement une panne réseau de base.
+            Quand â€œInternet ne marche pasâ€, il faut Ã©viter les tests au hasard. Ce tutoriel propose une mÃ©thode simple en
+            quatre Ã©tapes pour localiser rapidement une panne rÃ©seau de base.
           </p>
           <div class="article-meta">
             <span>Par <a href="../portfolio/">Moulo Oholo</a></span>
             <time datetime="2026-06-27">27 juin 2026</time>
-            <span data-reading-time>Lecture en cours d’estimation</span>
+            <span data-reading-time>Lecture en cours dâ€™estimation</span>
           </div>
           <figure class="article-cover">
-            <img src="../assets/images/blog-network-tutorial.svg" alt="Schéma réseau stylisé avec routeur, postes et adresses IP.">
+            <img src="../assets/images/blog-network-tutorial.svg" alt="SchÃ©ma rÃ©seau stylisÃ© avec routeur, postes et adresses IP.">
           </figure>
         </header>
 
@@ -83,16 +97,16 @@
           <article class="article-content" data-article-content>
             <h2>Objectif du tutoriel</h2>
             <p>
-              L’objectif n’est pas de résoudre toutes les pannes possibles, mais d’apprendre une démarche fiable. La
-              plupart des problèmes débutants viennent d’une mauvaise configuration IP, d’une passerelle inaccessible,
-              d’un souci DNS ou d’un service final indisponible. En suivant toujours le même ordre, vous gagnez du temps.
+              Lâ€™objectif nâ€™est pas de rÃ©soudre toutes les pannes possibles, mais dâ€™apprendre une dÃ©marche fiable. La
+              plupart des problÃ¨mes dÃ©butants viennent dâ€™une mauvaise configuration IP, dâ€™une passerelle inaccessible,
+              dâ€™un souci DNS ou dâ€™un service final indisponible. En suivant toujours le mÃªme ordre, vous gagnez du temps.
             </p>
 
-            <h2>Schéma de la méthode</h2>
+            <h2>SchÃ©ma de la mÃ©thode</h2>
             <table>
               <thead>
                 <tr>
-                  <th>Étape</th>
+                  <th>Ã‰tape</th>
                   <th>Question</th>
                   <th>Commande utile</th>
                 </tr>
@@ -100,126 +114,126 @@
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>Ma machine a-t-elle une configuration IP cohérente ?</td>
+                  <td>Ma machine a-t-elle une configuration IP cohÃ©rente ?</td>
                   <td><code>ipconfig</code> ou <code>ip addr</code></td>
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td>La passerelle répond-elle ?</td>
+                  <td>La passerelle rÃ©pond-elle ?</td>
                   <td><code>ping 192.168.1.1</code></td>
                 </tr>
                 <tr>
                   <td>3</td>
-                  <td>Internet répond-il sans DNS ?</td>
+                  <td>Internet rÃ©pond-il sans DNS ?</td>
                   <td><code>ping 8.8.8.8</code></td>
                 </tr>
                 <tr>
                   <td>4</td>
-                  <td>La résolution de nom fonctionne-t-elle ?</td>
+                  <td>La rÃ©solution de nom fonctionne-t-elle ?</td>
                   <td><code>nslookup tiansemi.github.io</code></td>
                 </tr>
               </tbody>
             </table>
 
-            <h2>Étape 1 : vérifier la configuration locale</h2>
+            <h2>Ã‰tape 1 : vÃ©rifier la configuration locale</h2>
             <p>
-              Commencez par lire l’adresse IP, le masque, la passerelle et les DNS. Si l’adresse est absente, incohérente
-              ou dans un réseau inattendu, le reste des tests sera difficile à interpréter.
+              Commencez par lire lâ€™adresse IP, le masque, la passerelle et les DNS. Si lâ€™adresse est absente, incohÃ©rente
+              ou dans un rÃ©seau inattendu, le reste des tests sera difficile Ã  interprÃ©ter.
             </p>
             <p>
-              Sur Windows, une adresse qui commence par <code>169.254</code> indique souvent que la machine n’a pas reçu
-              d’adresse depuis le DHCP. Sur Linux, l’absence de route par défaut peut expliquer pourquoi la machine joint
-              le réseau local mais pas Internet. Notez toujours les valeurs observées avant de modifier quoi que ce soit.
+              Sur Windows, une adresse qui commence par <code>169.254</code> indique souvent que la machine nâ€™a pas reÃ§u
+              dâ€™adresse depuis le DHCP. Sur Linux, lâ€™absence de route par dÃ©faut peut expliquer pourquoi la machine joint
+              le rÃ©seau local mais pas Internet. Notez toujours les valeurs observÃ©es avant de modifier quoi que ce soit.
             </p>
             <pre><code class="language-bash" data-label="Configuration locale">ipconfig
 # ou sous Linux
 ip addr
 ip route</code></pre>
 
-            <h2>Étape 2 : tester la passerelle</h2>
+            <h2>Ã‰tape 2 : tester la passerelle</h2>
             <p>
-              La passerelle est souvent la première sortie vers le reste du réseau. Si elle ne répond pas, le problème
-              peut venir du Wi-Fi, du câble, du VLAN, de l’adresse IP ou de la passerelle elle-même.
+              La passerelle est souvent la premiÃ¨re sortie vers le reste du rÃ©seau. Si elle ne rÃ©pond pas, le problÃ¨me
+              peut venir du Wi-Fi, du cÃ¢ble, du VLAN, de lâ€™adresse IP ou de la passerelle elle-mÃªme.
             </p>
             <p>
-              Si le ping échoue, ne concluez pas immédiatement que la passerelle est éteinte : certains équipements
-              bloquent les réponses ICMP. Mais dans un environnement d’apprentissage ou un petit réseau local, ce test
-              reste très utile pour vérifier rapidement la proximité réseau.
+              Si le ping Ã©choue, ne concluez pas immÃ©diatement que la passerelle est Ã©teinte : certains Ã©quipements
+              bloquent les rÃ©ponses ICMP. Mais dans un environnement dâ€™apprentissage ou un petit rÃ©seau local, ce test
+              reste trÃ¨s utile pour vÃ©rifier rapidement la proximitÃ© rÃ©seau.
             </p>
             <pre><code class="language-bash" data-label="Test passerelle">ping 192.168.1.1</code></pre>
 
-            <h2>Étape 3 : tester Internet sans DNS</h2>
+            <h2>Ã‰tape 3 : tester Internet sans DNS</h2>
             <p>
-              Tester une adresse IP publique permet de savoir si la sortie réseau fonctionne sans dépendre de la
-              résolution de nom. Si <code>ping 8.8.8.8</code> répond mais qu’un site ne s’ouvre pas, le DNS devient une
-              piste sérieuse.
+              Tester une adresse IP publique permet de savoir si la sortie rÃ©seau fonctionne sans dÃ©pendre de la
+              rÃ©solution de nom. Si <code>ping 8.8.8.8</code> rÃ©pond mais quâ€™un site ne sâ€™ouvre pas, le DNS devient une
+              piste sÃ©rieuse.
             </p>
             <p>
-              Si ce test échoue alors que la passerelle répond, la panne peut se situer plus loin : règle de filtrage,
-              route absente, problème NAT ou coupure côté fournisseur. À ce stade, vous savez au moins que la machine
-              locale et le lien vers la passerelle ne sont probablement pas la première cause.
+              Si ce test Ã©choue alors que la passerelle rÃ©pond, la panne peut se situer plus loin : rÃ¨gle de filtrage,
+              route absente, problÃ¨me NAT ou coupure cÃ´tÃ© fournisseur. Ã€ ce stade, vous savez au moins que la machine
+              locale et le lien vers la passerelle ne sont probablement pas la premiÃ¨re cause.
             </p>
             <pre><code class="language-bash" data-label="Test Internet">ping 8.8.8.8</code></pre>
 
-            <h2>Étape 4 : tester le DNS</h2>
+            <h2>Ã‰tape 4 : tester le DNS</h2>
             <p>
-              Le DNS transforme un nom en adresse IP. Une panne DNS donne souvent l’impression qu’Internet est coupé,
-              alors que la connectivité IP fonctionne encore.
+              Le DNS transforme un nom en adresse IP. Une panne DNS donne souvent lâ€™impression quâ€™Internet est coupÃ©,
+              alors que la connectivitÃ© IP fonctionne encore.
             </p>
             <p>
-              Comparez toujours deux tests : un accès par adresse IP et un accès par nom. Si l’adresse répond mais pas le
-              nom, vérifiez le serveur DNS configuré, essayez un autre nom de domaine, puis contrôlez si le navigateur
-              n’utilise pas un cache ou un DNS privé différent.
+              Comparez toujours deux tests : un accÃ¨s par adresse IP et un accÃ¨s par nom. Si lâ€™adresse rÃ©pond mais pas le
+              nom, vÃ©rifiez le serveur DNS configurÃ©, essayez un autre nom de domaine, puis contrÃ´lez si le navigateur
+              nâ€™utilise pas un cache ou un DNS privÃ© diffÃ©rent.
             </p>
             <pre><code class="language-bash" data-label="Test DNS">nslookup tiansemi.github.io</code></pre>
 
-            <h2>Mini-scénarios pour s’entraîner</h2>
+            <h2>Mini-scÃ©narios pour sâ€™entraÃ®ner</h2>
             <ol>
               <li>
-                Votre ordinateur a une adresse <code>169.254.x.x</code>. Recherchez d’abord un problème DHCP ou une
-                absence de connexion au réseau.
+                Votre ordinateur a une adresse <code>169.254.x.x</code>. Recherchez dâ€™abord un problÃ¨me DHCP ou une
+                absence de connexion au rÃ©seau.
               </li>
               <li>
-                La passerelle répond, mais <code>8.8.8.8</code> ne répond pas. Orientez l’analyse vers la sortie réseau,
+                La passerelle rÃ©pond, mais <code>8.8.8.8</code> ne rÃ©pond pas. Orientez lâ€™analyse vers la sortie rÃ©seau,
                 le routage ou le filtrage.
               </li>
               <li>
-                <code>8.8.8.8</code> répond, mais <code>tiansemi.github.io</code> ne se résout pas. Le DNS devient la
+                <code>8.8.8.8</code> rÃ©pond, mais <code>tiansemi.github.io</code> ne se rÃ©sout pas. Le DNS devient la
                 piste principale.
               </li>
             </ol>
 
-            <h2>Valider et documenter le résultat</h2>
+            <h2>Valider et documenter le rÃ©sultat</h2>
             <p>
-              Une fois la panne localisée, ne vous contentez pas de dire “ça marche”. Notez le symptôme initial, les
-              tests effectués, le résultat de chaque commande et la correction appliquée. Cette trace aide à expliquer
-              votre démarche, à éviter la même erreur plus tard et à transmettre l’expérience aux autres membres du club.
-              Dans un contexte professionnel, cette habitude fait la différence entre un dépannage improvisé et un vrai
+              Une fois la panne localisÃ©e, ne vous contentez pas de dire â€œÃ§a marcheâ€. Notez le symptÃ´me initial, les
+              tests effectuÃ©s, le rÃ©sultat de chaque commande et la correction appliquÃ©e. Cette trace aide Ã  expliquer
+              votre dÃ©marche, Ã  Ã©viter la mÃªme erreur plus tard et Ã  transmettre lâ€™expÃ©rience aux autres membres du club.
+              Dans un contexte professionnel, cette habitude fait la diffÃ©rence entre un dÃ©pannage improvisÃ© et un vrai
               diagnostic reproductible.
             </p>
 
             <h2>Conclusion</h2>
             <p>
-              Une bonne méthode de diagnostic évite les suppositions. En partant de la machine locale, puis de la
-              passerelle, puis d’Internet, puis du DNS, vous pouvez expliquer votre raisonnement et trouver plus vite où
-              se situe la panne. Pour vous entraîner, refaites ce tutoriel sur deux réseaux différents et notez les
-              résultats obtenus.
+              Une bonne mÃ©thode de diagnostic Ã©vite les suppositions. En partant de la machine locale, puis de la
+              passerelle, puis dâ€™Internet, puis du DNS, vous pouvez expliquer votre raisonnement et trouver plus vite oÃ¹
+              se situe la panne. Pour vous entraÃ®ner, refaites ce tutoriel sur deux rÃ©seaux diffÃ©rents et notez les
+              rÃ©sultats obtenus.
             </p>
           </article>
 
-          <aside class="article-aside" aria-label="Navigation complémentaire">
+          <aside class="article-aside" aria-label="Navigation complÃ©mentaire">
             <section class="article-aside__card">
               <h2>Pour aller plus loin</h2>
               <ul>
                 <li><a href="../apprentissage/reseaux/adressage-ip/">Fiche : adressage IP</a></li>
-                <li><a href="../apprentissage/reseaux/">Filière Réseaux</a></li>
-                <li><a href="../apprentissage/quiz/">Quiz d’auto-évaluation</a></li>
+                <li><a href="../apprentissage/reseaux/">FiliÃ¨re RÃ©seaux</a></li>
+                <li><a href="../apprentissage/quiz/">Quiz dâ€™auto-Ã©valuation</a></li>
               </ul>
             </section>
             <section class="article-aside__card">
               <h2>Articles similaires</h2>
               <ul>
-                <li><a href="2026-06-27-introduction-cybersecurite.html">Introduction cybersécurité</a></li>
+                <li><a href="2026-06-27-introduction-cybersecurite.html">Introduction cybersÃ©curitÃ©</a></li>
                 <li><a href="2026-06-27-retour-experience-huawei-ict-mondial.html">Retour Huawei ICT mondial</a></li>
               </ul>
             </section>
@@ -238,3 +252,6 @@ ip route</code></pre>
     <script src="../assets/js/blog-article.js"></script>
   </body>
 </html>
+
+
+

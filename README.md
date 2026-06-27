@@ -242,6 +242,55 @@ Chaque article doit inclure :
    - liens croisés Blog ↔ Apprentissage ;
    - absence de donnée sensible.
 
+## SEO transverse
+
+Le Sprint 6 consolide les métadonnées, le sitemap et les données structurées sur l'ensemble du site.
+
+### Bloc meta attendu sur chaque page publique
+
+Chaque page HTML publique doit contenir :
+
+- un `<title>` unique ;
+- une `<meta name="description">` unique et utile, idéalement proche de 150 à 160 caractères ;
+- un `<link rel="canonical">` absolu vers l'URL finale ;
+- des liens `hreflang="fr"` et `hreflang="x-default"` ;
+- Open Graph : `og:type`, `og:site_name`, `og:title`, `og:description`, `og:url`, `og:image` ;
+- Twitter Cards : `twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`.
+
+L'image Open Graph générique du site est :
+
+```text
+assets/images/og-cover.png
+```
+
+Elle doit rester en 1200 × 630 px pour un affichage propre lors du partage sur les réseaux sociaux.
+
+### Données structurées Schema.org
+
+Les pages clés utilisent JSON-LD :
+
+- `Person` sur `portfolio/index.html` pour le profil de Moulo Oholo Jean Noël ;
+- `Organization` sur `club/index.html` pour TianSemi ;
+- `Article` sur chaque article du blog ;
+- `BreadcrumbList` sur les pages profondes : portfolio, club, apprentissage et articles.
+
+Après modification d'un bloc JSON-LD, valider la page avec Google Rich Results Test avant publication finale.
+
+### Sitemap et robots.txt
+
+`sitemap.xml` doit contenir uniquement les pages indexables finales. Ne pas y ajouter :
+
+- `404.html` ;
+- le fichier de validation Google ;
+- les anciennes redirections `quiz.html` et `toeic.html`.
+
+Après ajout, déplacement ou suppression d'une page :
+
+1. vérifier la balise canonical de la page ;
+2. ajouter ou retirer l'URL finale dans `sitemap.xml` ;
+3. conserver `robots.txt` avec `Allow: /` et `Sitemap: https://tiansemi.github.io/sitemap.xml` ;
+4. soumettre de nouveau le sitemap dans Google Search Console si le changement est important.
+
 Dev - how to run locally
 
 If you edit files and open them directly with the file:// protocol some browsers (or DevTools) may display or interpret file encoding differently which can make JS/CSS appear corrupted in DevTools. To avoid this, serve the site with a simple local HTTP server when developing:

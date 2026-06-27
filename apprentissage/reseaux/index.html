@@ -1,17 +1,52 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="Filière Réseaux TianSemi : objectifs, prérequis, ressources et outils pour apprendre les bases réseau par la pratique."
-    >
+    <title>Cours R&#233;seaux — Parcours Apprentissage TianSemi</title>
+    <meta name="description" content="Apprenez les rÃ©seaux informatiques avec TianSemi : modÃ¨les OSI et TCP/IP, adressage IP, diagnostic, routage et ressources pratiques.">
     <link rel="canonical" href="https://tiansemi.github.io/apprentissage/reseaux/">
+        <link rel="alternate" hreflang="fr" href="https://tiansemi.github.io/apprentissage/reseaux/">
+    <link rel="alternate" hreflang="x-default" href="https://tiansemi.github.io/apprentissage/reseaux/">
+<meta property="og:type" content="website">
+    <meta property="og:site_name" content="TianSemi">
+    <meta property="og:title" content="Cours R&#233;seaux — Parcours Apprentissage TianSemi">
+    <meta property="og:description" content="Apprenez les rÃ©seaux informatiques avec TianSemi : modÃ¨les OSI et TCP/IP, adressage IP, diagnostic, routage et ressources pratiques.">
+    <meta property="og:url" content="https://tiansemi.github.io/apprentissage/reseaux/">
+    <meta property="og:image" content="https://tiansemi.github.io/assets/images/og-cover.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cours R&#233;seaux — Parcours Apprentissage TianSemi">
+    <meta name="twitter:description" content="Apprenez les rÃ©seaux informatiques avec TianSemi : modÃ¨les OSI et TCP/IP, adressage IP, diagnostic, routage et ressources pratiques.">
+    <meta name="twitter:image" content="https://tiansemi.github.io/assets/images/og-cover.png">
     <link rel="shortcut icon" href="../../favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../../assets/css/navigation.css">
     <link rel="stylesheet" href="../../assets/css/learning.css">
-    <title>Réseaux — Parcours TianSemi</title>
+    <script type="application/ld+json" data-schema="breadcrumb">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://tiansemi.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Apprentissage",
+      "item": "https://tiansemi.github.io/apprentissage/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "RÃ©seaux",
+      "item": "https://tiansemi.github.io/apprentissage/reseaux/"
+    }
+  ]
+}
+    </script>
   </head>
   <body class="dark_theme">
     <div data-site-nav data-site-root="../../"></div>
@@ -20,50 +55,50 @@
       <div class="learning-shell">
         <section class="learning-hero" aria-labelledby="track-title">
           <div>
-            <p class="learning-eyebrow">Filière prioritaire · Débutant</p>
-            <h1 class="learning-title" id="track-title">Réseaux informatiques</h1>
+            <p class="learning-eyebrow">FiliÃ¨re prioritaire Â· DÃ©butant</p>
+            <h1 class="learning-title" id="track-title">RÃ©seaux informatiques</h1>
           </div>
           <p class="learning-lead">
-            Ce parcours pose les fondations indispensables pour comprendre comment les équipements communiquent :
-            adressage, architecture, diagnostic et premiers réflexes de dépannage.
+            Ce parcours pose les fondations indispensables pour comprendre comment les Ã©quipements communiquent :
+            adressage, architecture, diagnostic et premiers rÃ©flexes de dÃ©pannage.
           </p>
           <div class="learning-actions">
             <a class="learning-button learning-button--primary" href="../quiz/">Tester ses connaissances</a>
-            <a class="learning-button" href="../">Retour aux filières</a>
+            <a class="learning-button" href="../">Retour aux filiÃ¨res</a>
           </div>
         </section>
 
-        <section class="track-layout" aria-label="Vue d’ensemble du parcours Réseaux">
+        <section class="track-layout" aria-label="Vue dâ€™ensemble du parcours RÃ©seaux">
           <article class="track-panel">
-            <h2>Objectifs d’apprentissage</h2>
+            <h2>Objectifs dâ€™apprentissage</h2>
             <ul class="track-list">
               <li><strong>Comprendre les bases</strong>Identifier les notions LAN/WAN, adresse IP, passerelle, DNS, ports et protocoles courants.</li>
-              <li><strong>Lire une architecture simple</strong>Se repérer dans un schéma réseau, distinguer les rôles des équipements et les flux principaux.</li>
-              <li><strong>Diagnostiquer méthodiquement</strong>Utiliser une logique de vérification progressive pour isoler une panne réseau simple.</li>
-              <li><strong>Préparer les compétitions ICT</strong>Construire les bases utiles aux entraînements comme Huawei ICT Competition.</li>
+              <li><strong>Lire une architecture simple</strong>Se repÃ©rer dans un schÃ©ma rÃ©seau, distinguer les rÃ´les des Ã©quipements et les flux principaux.</li>
+              <li><strong>Diagnostiquer mÃ©thodiquement</strong>Utiliser une logique de vÃ©rification progressive pour isoler une panne rÃ©seau simple.</li>
+              <li><strong>PrÃ©parer les compÃ©titions ICT</strong>Construire les bases utiles aux entraÃ®nements comme Huawei ICT Competition.</li>
             </ul>
           </article>
 
           <aside class="track-side-panel">
-            <h2>Prérequis</h2>
+            <h2>PrÃ©requis</h2>
             <ul class="resource-list">
-              <li><strong>Niveau recommandé</strong>Débutant motivé, à l’aise avec l’usage quotidien d’un ordinateur.</li>
-              <li><strong>À prévoir</strong>Un cahier de notes, un navigateur, et idéalement un outil de simulation réseau.</li>
+              <li><strong>Niveau recommandÃ©</strong>DÃ©butant motivÃ©, Ã  lâ€™aise avec lâ€™usage quotidien dâ€™un ordinateur.</li>
+              <li><strong>Ã€ prÃ©voir</strong>Un cahier de notes, un navigateur, et idÃ©alement un outil de simulation rÃ©seau.</li>
             </ul>
             <div class="track-meta">
-              <span class="learning-tag">Réseaux</span>
+              <span class="learning-tag">RÃ©seaux</span>
               <span class="learning-tag">Diagnostic</span>
               <span class="learning-tag">ICT</span>
             </div>
             <div class="learning-context" aria-labelledby="network-tools-context">
-              <h3 id="network-tools-context">Outils recommandés</h3>
+              <h3 id="network-tools-context">Outils recommandÃ©s</h3>
               <p>
-                Après une séance sur l’adressage ou le diagnostic, utilisez le Quiz pour vérifier les notions clés.
-                Les flashcards TOEIC complètent le parcours en renforçant le vocabulaire technique anglais.
+                AprÃ¨s une sÃ©ance sur lâ€™adressage ou le diagnostic, utilisez le Quiz pour vÃ©rifier les notions clÃ©s.
+                Les flashcards TOEIC complÃ¨tent le parcours en renforÃ§ant le vocabulaire technique anglais.
               </p>
               <div class="learning-actions">
                 <a class="learning-button learning-button--primary" href="../quiz/">Faire le quiz</a>
-                <a class="learning-button" href="../toeic/">Réviser le TOEIC</a>
+                <a class="learning-button" href="../toeic/">RÃ©viser le TOEIC</a>
               </div>
             </div>
           </aside>
@@ -75,12 +110,12 @@
               <p class="learning-eyebrow">Ressources initiales</p>
               <h2 id="resources-title">Commencer maintenant</h2>
             </div>
-            <p>Les contenus détaillés seront enrichis progressivement par le club ; les points d’entrée réels sont déjà accessibles.</p>
+            <p>Les contenus dÃ©taillÃ©s seront enrichis progressivement par le club ; les points dâ€™entrÃ©e rÃ©els sont dÃ©jÃ  accessibles.</p>
           </div>
           <div class="tool-grid">
             <article class="tool-card">
-              <span class="learning-level">Fiche débutant</span>
-              <h3>Adressage IP et bases réseau</h3>
+              <span class="learning-level">Fiche dÃ©butant</span>
+              <h3>Adressage IP et bases rÃ©seau</h3>
               <p>Comprenez OSI/TCP-IP, IPv4, masque, passerelle, DNS et les premiers tests de diagnostic.</p>
               <div class="tool-card__meta">
                 <span class="learning-tag">Tableaux</span>
@@ -92,9 +127,9 @@
               </div>
             </article>
             <article class="tool-card">
-              <span class="learning-level">Auto-évaluation</span>
+              <span class="learning-level">Auto-Ã©valuation</span>
               <h3>Quiz interactif</h3>
-              <p>Utilisez le quiz pour identifier les notions à revoir après une séance réseau.</p>
+              <p>Utilisez le quiz pour identifier les notions Ã  revoir aprÃ¨s une sÃ©ance rÃ©seau.</p>
               <div class="tool-card__actions">
                 <a class="learning-button learning-button--primary" href="../quiz/">Ouvrir le quiz</a>
               </div>
@@ -104,7 +139,7 @@
               <h3>Flashcards TOEIC</h3>
               <p>Renforcez le vocabulaire utile pour lire de la documentation et suivre des formations internationales.</p>
               <div class="tool-card__actions">
-                <a class="learning-button learning-button--primary" href="../toeic/">Réviser le TOEIC</a>
+                <a class="learning-button learning-button--primary" href="../toeic/">RÃ©viser le TOEIC</a>
               </div>
             </article>
           </div>
@@ -113,19 +148,19 @@
         <section class="learning-section" aria-labelledby="network-blog-title">
           <div class="learning-section__header">
             <div>
-              <p class="learning-eyebrow">Blog associé</p>
-              <h2 id="network-blog-title">Articles pour prolonger la filière Réseaux</h2>
+              <p class="learning-eyebrow">Blog associÃ©</p>
+              <h2 id="network-blog-title">Articles pour prolonger la filiÃ¨re RÃ©seaux</h2>
             </div>
-            <p>Ces articles relient les notions du parcours à des explications et retours d’expérience plus narratifs.</p>
+            <p>Ces articles relient les notions du parcours Ã  des explications et retours dâ€™expÃ©rience plus narratifs.</p>
           </div>
           <ul class="learning-link-list">
             <li>
-              <a href="../../blog/2026-06-27-tutoriel-diagnostiquer-connectivite-reseau.html">Tutoriel réseau : diagnostiquer une panne de connectivité</a>
-              <p>Un guide pratique pour appliquer une méthode de diagnostic en quatre étapes.</p>
+              <a href="../../blog/2026-06-27-tutoriel-diagnostiquer-connectivite-reseau.html">Tutoriel rÃ©seau : diagnostiquer une panne de connectivitÃ©</a>
+              <p>Un guide pratique pour appliquer une mÃ©thode de diagnostic en quatre Ã©tapes.</p>
             </li>
             <li>
-              <a href="../../blog/2026-06-27-retour-experience-huawei-ict-mondial.html">Retour d’expérience Huawei ICT : maîtrise, rapidité et mental</a>
-              <p>Un retour concret sur l’importance des bases réseau en compétition technique.</p>
+              <a href="../../blog/2026-06-27-retour-experience-huawei-ict-mondial.html">Retour dâ€™expÃ©rience Huawei ICT : maÃ®trise, rapiditÃ© et mental</a>
+              <p>Un retour concret sur lâ€™importance des bases rÃ©seau en compÃ©tition technique.</p>
             </li>
           </ul>
         </section>
@@ -135,3 +170,7 @@
     <script src="../../assets/js/navigation.js"></script>
   </body>
 </html>
+
+
+
+

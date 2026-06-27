@@ -1,72 +1,95 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tiansemi.github.io/</loc>
-  </url>
-  <url>
-    <loc>https://tiansemi.github.io/portfolio/</loc>
-  </url>
-  <url>
-    <loc>https://tiansemi.github.io/portfolio/competences.html</loc>
-  </url>
-  <url>
-    <loc>https://tiansemi.github.io/portfolio/certifications.html</loc>
-  </url>
-  <url>
-    <loc>https://tiansemi.github.io/portfolio/contact.html</loc>
-  </url>
-  <url>
-    <loc>https://tiansemi.github.io/club/</loc>
-  </url>
-  <url>
-    <loc>https://tiansemi.github.io/club/activites.html</loc>
-  </url>
-  <url>
-    <loc>https://tiansemi.github.io/club/rejoindre.html</loc>
+    <lastmod>2026-06-27</lastmod>
   </url>
   <url>
     <loc>https://tiansemi.github.io/apprentissage/</loc>
-  </url>
-  <url>
-    <loc>https://tiansemi.github.io/apprentissage/reseaux/</loc>
-  </url>
-  <url>
-    <loc>https://tiansemi.github.io/apprentissage/reseaux/adressage-ip/</loc>
-  </url>
-  <url>
-    <loc>https://tiansemi.github.io/apprentissage/cybersecurite/</loc>
-  </url>
-  <url>
-    <loc>https://tiansemi.github.io/apprentissage/cybersecurite/attaques-courantes/</loc>
-  </url>
-  <url>
-    <loc>https://tiansemi.github.io/apprentissage/linux/</loc>
-  </url>
-  <url>
-    <loc>https://tiansemi.github.io/apprentissage/programmation/</loc>
+    <lastmod>2026-06-27</lastmod>
   </url>
   <url>
     <loc>https://tiansemi.github.io/apprentissage/cloud-devops/</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://tiansemi.github.io/apprentissage/cybersecurite/</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://tiansemi.github.io/apprentissage/cybersecurite/attaques-courantes/</loc>
+    <lastmod>2026-06-27</lastmod>
   </url>
   <url>
     <loc>https://tiansemi.github.io/apprentissage/ia/</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://tiansemi.github.io/apprentissage/linux/</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://tiansemi.github.io/apprentissage/programmation/</loc>
+    <lastmod>2026-06-27</lastmod>
   </url>
   <url>
     <loc>https://tiansemi.github.io/apprentissage/quiz/</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://tiansemi.github.io/apprentissage/reseaux/</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://tiansemi.github.io/apprentissage/reseaux/adressage-ip/</loc>
+    <lastmod>2026-06-27</lastmod>
   </url>
   <url>
     <loc>https://tiansemi.github.io/apprentissage/toeic/</loc>
+    <lastmod>2026-06-27</lastmod>
   </url>
   <url>
     <loc>https://tiansemi.github.io/blog/</loc>
+    <lastmod>2026-06-27</lastmod>
   </url>
   <url>
     <loc>https://tiansemi.github.io/blog/2026-06-27-introduction-cybersecurite.html</loc>
+    <lastmod>2026-06-27</lastmod>
   </url>
   <url>
     <loc>https://tiansemi.github.io/blog/2026-06-27-retour-experience-huawei-ict-mondial.html</loc>
+    <lastmod>2026-06-27</lastmod>
   </url>
   <url>
     <loc>https://tiansemi.github.io/blog/2026-06-27-tutoriel-diagnostiquer-connectivite-reseau.html</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://tiansemi.github.io/club/</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://tiansemi.github.io/club/activites.html</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://tiansemi.github.io/club/rejoindre.html</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://tiansemi.github.io/portfolio/</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://tiansemi.github.io/portfolio/certifications.html</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://tiansemi.github.io/portfolio/competences.html</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://tiansemi.github.io/portfolio/contact.html</loc>
+    <lastmod>2026-06-27</lastmod>
   </url>
 </urlset>
