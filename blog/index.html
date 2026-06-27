@@ -1,1 +1,105 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../assets/css/construction.css"><link rel="stylesheet" href="../assets/css/navigation.css"><title>Blog — TianSemi</title></head><body><div data-site-nav data-site-root="../"></div><main class="site-shell construction"><section class="construction-card"><p class="eyebrow">Pôle Blog</p><h1>Blog en construction</h1><p>La veille et les tutoriels TianSemi seront publiés ici.</p></section></main><script src="../assets/js/navigation.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Blog technique TianSemi : articles Réseaux, Cybersécurité, Linux, Programmation, actualités et retours d’expérience du club."
+    >
+    <link rel="canonical" href="https://tiansemi.github.io/blog/">
+    <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/css/navigation.css">
+    <link rel="stylesheet" href="../assets/css/blog.css">
+    <title>Blog technique — TianSemi</title>
+  </head>
+  <body class="dark_theme">
+    <div data-site-nav data-site-root="../"></div>
+
+    <main class="blog-page">
+      <div class="blog-shell">
+        <section class="blog-hero" aria-labelledby="blog-title">
+          <p class="blog-eyebrow">Blog technique</p>
+          <h1 id="blog-title">Comprendre, documenter, transmettre.</h1>
+          <p>
+            Les articles TianSemi partagent des bases techniques, des retours d’expérience et des guides pratiques pour
+            aider les étudiants à progresser en réseau, cybersécurité et numérique.
+          </p>
+        </section>
+
+        <section class="blog-section" aria-labelledby="articles-title">
+          <h2 class="blog-section-title" id="articles-title">Tous les articles</h2>
+
+          <div class="blog-toolbar" aria-label="Filtrer les articles par catégorie">
+            <button class="blog-filter is-active" type="button" data-blog-filter="all" aria-pressed="true">Tous</button>
+            <button class="blog-filter" type="button" data-blog-filter="reseaux" aria-pressed="false">Réseaux</button>
+            <button class="blog-filter" type="button" data-blog-filter="cybersecurite" aria-pressed="false">Cybersécurité</button>
+            <button class="blog-filter" type="button" data-blog-filter="linux" aria-pressed="false">Linux</button>
+            <button class="blog-filter" type="button" data-blog-filter="programmation" aria-pressed="false">Programmation</button>
+            <button class="blog-filter" type="button" data-blog-filter="actualites" aria-pressed="false">Actualités</button>
+            <button class="blog-filter" type="button" data-blog-filter="retours-experience" aria-pressed="false">Retours d’expérience</button>
+          </div>
+
+          <div class="blog-grid">
+            <article class="article-card" data-blog-card data-category="reseaux">
+              <div class="article-card__cover" aria-hidden="true">NET</div>
+              <div class="article-card__body">
+                <span class="blog-badge">Réseaux</span>
+                <h2>Pourquoi l’adressage IP reste la base de tout parcours réseau</h2>
+                <p>
+                  Une introduction claire pour comprendre pourquoi IP, masque, passerelle et DNS sont les premiers
+                  repères à maîtriser avant d’aborder des architectures plus avancées.
+                </p>
+                <div class="article-card__meta">
+                  <span>Moulo Oholo</span>
+                  <time datetime="2026-06-27">27 juin 2026</time>
+                </div>
+                <a class="article-card__link" href="2026-06-27-adressage-ip-base-reseau.html">Lire l’article</a>
+              </div>
+            </article>
+
+            <article class="article-card" data-blog-card data-category="cybersecurite">
+              <div class="article-card__cover" aria-hidden="true">SEC</div>
+              <div class="article-card__body">
+                <span class="blog-badge">Cybersécurité</span>
+                <h2>Phishing : les signaux faibles à repérer avant de cliquer</h2>
+                <p>
+                  Un guide pratique pour analyser un message suspect, ralentir la réaction impulsive et adopter les bons
+                  réflexes de protection.
+                </p>
+                <div class="article-card__meta">
+                  <span>TianSemi</span>
+                  <time datetime="2026-06-27">27 juin 2026</time>
+                </div>
+                <a class="article-card__link" href="2026-06-27-phishing-signaux-faibles.html">Lire l’article</a>
+              </div>
+            </article>
+
+            <article class="article-card" data-blog-card data-category="retours-experience">
+              <div class="article-card__cover" aria-hidden="true">ICT</div>
+              <div class="article-card__body">
+                <span class="blog-badge">Retours d’expérience</span>
+                <h2>Préparer Huawei ICT Competition sans se disperser</h2>
+                <p>
+                  Une méthode de travail progressive pour transformer l’entraînement actuel du club en routine durable :
+                  bases, pratique, correction et transmission.
+                </p>
+                <div class="article-card__meta">
+                  <span>TianSemi</span>
+                  <time datetime="2026-06-27">27 juin 2026</time>
+                </div>
+                <a class="article-card__link" href="2026-06-27-preparer-huawei-ict-competition.html">Lire l’article</a>
+              </div>
+            </article>
+          </div>
+
+          <p class="blog-empty" data-blog-empty hidden>Aucun article ne correspond encore à cette catégorie.</p>
+          <button class="blog-more" type="button" data-blog-more hidden>Voir plus</button>
+        </section>
+      </div>
+    </main>
+
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/blog.js"></script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Article TianSemi : comprendre pourquoi l’adressage IP, le masque, la passerelle et le DNS sont les bases d’un parcours réseau solide."
+    >
+    <link rel="canonical" href="https://tiansemi.github.io/blog/2026-06-27-adressage-ip-base-reseau.html">
+    <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+      integrity="sha384-wH75j6z1lH97ZOpMOInqhgKzFkAInZPPSPlZpYKYTOqsaizPvhQZmAtLcPKXpLyH"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    >
+    <link rel="stylesheet" href="../assets/css/navigation.css">
+    <link rel="stylesheet" href="../assets/css/blog.css">
+    <title>Pourquoi l’adressage IP reste la base de tout parcours réseau — TianSemi</title>
+  </head>
+  <body class="dark_theme">
+    <div data-site-nav data-site-root="../"></div>
+
+    <main class="article-page">
+      <div class="article-shell">
+        <header class="article-hero">
+          <nav class="article-breadcrumb" aria-label="Fil d’Ariane">
+            <a href="../">Accueil</a>
+            <span aria-hidden="true">/</span>
+            <a href="./">Blog</a>
+            <span aria-hidden="true">/</span>
+            <span>Réseaux</span>
+          </nav>
+          <span class="article-badge">Réseaux</span>
+          <p class="article-eyebrow">Fondamentaux</p>
+          <h1>Pourquoi l’adressage IP reste la base de tout parcours réseau</h1>
+          <p class="article-lead">
+            Avant les VLAN, les firewalls ou le cloud, il y a une compétence toute simple mais décisive :
+            comprendre où se trouve une machine dans un réseau et comment elle joint les autres.
+          </p>
+          <div class="article-meta">
+            <span>Par <a href="../portfolio/">Moulo Oholo</a></span>
+            <time datetime="2026-06-27">27 juin 2026</time>
+            <span data-reading-time>Lecture en cours d’estimation</span>
+          </div>
+        </header>
+
+        <div class="article-layout">
+          <article class="article-content" data-article-content>
+            <h2>Le réseau commence par une question simple</h2>
+            <p>
+              Quand deux machines communiquent, elles doivent d’abord savoir si elles appartiennent au même réseau local
+              ou si elles doivent passer par une passerelle. Cette décision dépend principalement de l’adresse IP et du
+              masque. C’est pour cela que l’adressage IP est une base incontournable.
+            </p>
+
+            <h2>Les quatre informations à lire en premier</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Élément</th>
+                  <th>Rôle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Adresse IP</td>
+                  <td>Identifie l’hôte dans le réseau.</td>
+                </tr>
+                <tr>
+                  <td>Masque</td>
+                  <td>Indique quelle partie de l’adresse représente le réseau.</td>
+                </tr>
+                <tr>
+                  <td>Passerelle</td>
+                  <td>Permet de joindre les réseaux extérieurs.</td>
+                </tr>
+                <tr>
+                  <td>DNS</td>
+                  <td>Transforme les noms comme <code>tiansemi.github.io</code> en adresses IP.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Un exemple concret</h2>
+            <p>
+              Avec <code>192.168.1.25/24</code>, le réseau est généralement <code>192.168.1.0</code>. Une machine en
+              <code>192.168.1.40/24</code> est dans le même réseau ; une machine en <code>192.168.2.40/24</code> ne l’est
+              pas.
+            </p>
+            <pre><code class="language-bash" data-label="Diagnostic réseau">ipconfig
+ping 192.168.1.1
+ping 8.8.8.8
+nslookup tiansemi.github.io</code></pre>
+
+            <h2>La méthode TianSemi</h2>
+            <p>
+              Pour débuter, nous recommandons de toujours diagnostiquer dans cet ordre : configuration locale, passerelle,
+              sortie Internet, puis DNS. Cette progression évite de confondre un problème de résolution de nom avec une
+              coupure réseau réelle.
+            </p>
+
+            <h2>Pour aller plus loin</h2>
+            <p>
+              Lisez ensuite la fiche détaillée sur l’adressage IP, puis faites le quiz pour vérifier votre compréhension.
+            </p>
+          </article>
+
+          <aside class="article-aside" aria-label="Navigation complémentaire">
+            <section class="article-aside__card">
+              <h2>Pour aller plus loin</h2>
+              <ul>
+                <li><a href="../apprentissage/reseaux/adressage-ip/">Fiche : adressage IP</a></li>
+                <li><a href="../apprentissage/quiz/">Quiz d’auto-évaluation</a></li>
+                <li><a href="../apprentissage/reseaux/">Filière Réseaux</a></li>
+              </ul>
+            </section>
+            <section class="article-aside__card">
+              <h2>Articles similaires</h2>
+              <ul>
+                <li><a href="2026-06-27-preparer-huawei-ict-competition.html">Préparer Huawei ICT Competition</a></li>
+                <li><a href="2026-06-27-phishing-signaux-faibles.html">Phishing : signaux faibles</a></li>
+              </ul>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <script src="../assets/js/navigation.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"
+      integrity="sha384-F/bZzf7p3Joyp5psL90p/p89AZJsndkSoGwRpXcZhleCWhd8SnRuoYo4d0yirjJp"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../assets/js/blog-article.js"></script>
+  </body>
+</html>
