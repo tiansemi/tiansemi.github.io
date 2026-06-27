@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Contact professionnel de Moulo Oholo Jean Noël pour recruteurs et partenaires : opportunités réseaux, cybersécurité et projets numériques."
+    >
+    <link rel="canonical" href="https://tiansemi.github.io/portfolio/contact.html">
+    <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/css/navigation.css">
+    <link rel="stylesheet" href="../assets/css/portfolio.css">
+    <title>Contact recruteur — Moulo Oholo Jean Noël | TianSemi</title>
+  </head>
+  <body class="dark_theme">
+    <div data-site-nav data-site-root="../"></div>
+
+    <main class="portfolio-page">
+      <div class="portfolio-shell">
+        <section class="portfolio-hero" aria-labelledby="portfolio-contact-title">
+          <div>
+            <p class="portfolio-eyebrow">Portfolio · Contact professionnel</p>
+            <h1 class="portfolio-title" id="portfolio-contact-title">Contacter M. Moulo</h1>
+            <p class="portfolio-lead">
+              Un point de contact dédié aux recruteurs et partenaires souhaitant échanger autour d’une opportunité,
+              d’une mission, d’un stage, d’un projet réseau/cybersécurité ou d’une collaboration professionnelle.
+            </p>
+            <div class="portfolio-actions">
+              <a class="portfolio-button portfolio-button--primary" href="./">Retour au portfolio</a>
+              <a
+                class="portfolio-button"
+                href="../assets/documents/cv-moulo-oholo-jean-noel-reseaux-cybersecurite.pdf"
+                download
+              >
+                Télécharger le CV FR
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <div class="portfolio-contact-layout">
+          <aside class="portfolio-availability" aria-labelledby="availability-title">
+            <section class="availability-card">
+              <span class="availability-badge">Ouvert aux opportunités</span>
+              <h2 id="availability-title">Disponibilité</h2>
+              <p>
+                M. Moulo est ouvert aux échanges professionnels liés aux réseaux, à la cybersécurité, aux outils
+                numériques, aux projets pédagogiques et aux collaborations techniques.
+              </p>
+              <ul class="availability-list">
+                <li>Opportunités professionnelles ou académiques</li>
+                <li>Projets réseau et cybersécurité</li>
+                <li>Partenariats et interventions techniques</li>
+                <li>Réponse via l’adresse TianSemi officielle</li>
+              </ul>
+            </section>
+
+            <section class="availability-card" aria-labelledby="direct-contact-title">
+              <h2 id="direct-contact-title">Contact direct</h2>
+              <p>
+                En cas de difficulté avec le formulaire, utilisez l’e-mail professionnel :
+                <a href="mailto:oholo.moulo23@inphb.ci">oholo.moulo23@inphb.ci</a>.
+              </p>
+            </section>
+          </aside>
+
+          <form
+            class="portfolio-contact-form"
+            action="https://formspree.io/f/xjgqwnoj"
+            method="POST"
+            data-portfolio-contact-form
+            aria-labelledby="portfolio-form-title"
+          >
+            <h2 id="portfolio-form-title">Message recruteur</h2>
+
+            <input type="hidden" name="_subject" value="Contact portfolio recruteur — Moulo Oholo Jean Noël">
+            <input type="hidden" name="context" value="portfolio-professionnel">
+            <input type="hidden" name="recipient_type" value="moulo-oholo">
+
+            <div class="portfolio-form-grid">
+              <div class="portfolio-form-row">
+                <label for="portfolio-name">Nom complet</label>
+                <input
+                  class="portfolio-input"
+                  id="portfolio-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                >
+              </div>
+
+              <div class="portfolio-form-row">
+                <label for="portfolio-email">E-mail professionnel</label>
+                <input
+                  class="portfolio-input"
+                  id="portfolio-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                >
+              </div>
+
+              <div class="portfolio-form-row">
+                <label for="portfolio-organization">Organisation <span>(facultatif)</span></label>
+                <input
+                  class="portfolio-input"
+                  id="portfolio-organization"
+                  name="organization"
+                  type="text"
+                  autocomplete="organization"
+                >
+              </div>
+
+              <div class="portfolio-form-row">
+                <label for="portfolio-phone">Téléphone <span>(facultatif)</span></label>
+                <input
+                  class="portfolio-input"
+                  id="portfolio-phone"
+                  name="phone"
+                  type="tel"
+                  inputmode="tel"
+                  pattern="\+[1-9][0-9]{7,14}"
+                  aria-describedby="portfolio-phone-hint"
+                  placeholder="+2250777366687"
+                >
+                <p class="portfolio-form-hint" id="portfolio-phone-hint">
+                  Si renseigné, utilisez le format international avec indicatif pays.
+                </p>
+              </div>
+
+              <div class="portfolio-form-row">
+                <label for="portfolio-message">Message</label>
+                <textarea
+                  class="portfolio-textarea"
+                  id="portfolio-message"
+                  name="message"
+                  required
+                  minlength="20"
+                  placeholder="Présentez brièvement l’opportunité, le contexte et le meilleur moyen de vous recontacter."
+                ></textarea>
+              </div>
+            </div>
+
+            <button class="portfolio-button portfolio-button--primary portfolio-section-link" type="submit" data-portfolio-contact-submit>
+              Envoyer le message
+            </button>
+            <p class="portfolio-form-status" data-portfolio-contact-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/portfolio-contact.js"></script>
+  </body>
+</html>

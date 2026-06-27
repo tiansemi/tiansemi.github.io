@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;700&family=Saira+Stencil+One&display=swap");
 @import url("./tokens.css");
 
 *,
@@ -232,24 +233,579 @@ a {
   font-size: 0.9rem;
 }
 
+.portfolio-section-link {
+  margin-top: var(--space-3);
+}
+
+.portfolio-intro {
+  max-width: 780px;
+  margin: 0 auto var(--space-4);
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+  line-height: 1.75;
+  text-align: center;
+}
+
+.skills-overview {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-2);
+  margin: 0 0 var(--space-4);
+}
+
+.skills-overview__item {
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--color-accent) 12%, transparent), transparent 62%),
+    color-mix(in srgb, var(--bg-secondary) 88%, transparent);
+  box-shadow: 0 14px 34px color-mix(in srgb, var(--card-shadow) 30%, transparent);
+}
+
+.skills-overview__value {
+  display: block;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.skills-overview__label {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--color-secondary);
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.skill-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  overflow: hidden;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top right, color-mix(in srgb, var(--color-accent) 16%, transparent), transparent 15rem),
+    color-mix(in srgb, var(--bg-secondary) 92%, transparent);
+  box-shadow: 0 22px 56px color-mix(in srgb, var(--card-shadow) 38%, transparent);
+}
+
+.skill-card::before {
+  display: inline-grid;
+  place-items: center;
+  width: 4.25rem;
+  height: 4.25rem;
+  margin-bottom: var(--space-1);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 42%, transparent);
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--color-accent) 13%, transparent);
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.skill-card:nth-child(1)::before {
+  content: "NET";
+}
+
+.skill-card:nth-child(2)::before {
+  content: "SEC";
+}
+
+.skill-card:nth-child(3)::before {
+  content: "WEB";
+}
+
+.skill-card:nth-child(4)::before {
+  content: "EDU";
+}
+
+.skill-card h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.skill-card__summary {
+  margin: 0;
+  color: var(--color-secondary);
+  line-height: 1.65;
+}
+
+.skill-list {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  margin-top: var(--space-1);
+  padding: 0;
+  list-style: none;
+}
+
+.skill-item {
+  position: relative;
+  display: grid;
+  gap: 0.45rem;
+  padding: var(--space-2);
+  border: 1px solid color-mix(in srgb, var(--color-border) 72%, transparent);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--bg-primary) 46%, transparent);
+}
+
+.skill-item:first-child {
+  padding-top: var(--space-2);
+  border-top: 1px solid color-mix(in srgb, var(--color-border) 72%, transparent);
+}
+
+.skill-item__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.skill-item strong {
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  letter-spacing: -0.015em;
+}
+
+.skill-level {
+  flex: 0 0 auto;
+  padding: 0.24rem 0.65rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-accent) 16%, transparent);
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.skill-item p {
+  margin: 0;
+  color: var(--color-secondary);
+  line-height: 1.6;
+}
+
+.skill-item::after {
+  display: block;
+  width: 100%;
+  height: 0.42rem;
+  margin-top: 0.35rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, var(--color-accent) var(--skill-strength, 72%), color-mix(in srgb, var(--color-border) 72%, transparent) 0);
+  content: "";
+}
+
+.skill-card:nth-child(1) .skill-item:nth-child(1),
+.skill-card:nth-child(2) .skill-item:nth-child(3),
+.skill-card:nth-child(4) .skill-item:nth-child(3) {
+  --skill-strength: 78%;
+}
+
+.skill-card:nth-child(1) .skill-item:nth-child(2),
+.skill-card:nth-child(3) .skill-item:nth-child(2),
+.skill-card:nth-child(4) .skill-item:nth-child(1) {
+  --skill-strength: 68%;
+}
+
+.skill-card:nth-child(1) .skill-item:nth-child(3),
+.skill-card:nth-child(2) .skill-item:nth-child(1),
+.skill-card:nth-child(3) .skill-item:nth-child(1),
+.skill-card:nth-child(3) .skill-item:nth-child(3),
+.skill-card:nth-child(4) .skill-item:nth-child(2) {
+  --skill-strength: 62%;
+}
+
+.portfolio-note {
+  margin: var(--space-4) 0 0;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--bg-secondary) 88%, transparent);
+  color: var(--color-secondary);
+  line-height: 1.7;
+}
+
+.portfolio-contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 1.15fr);
+  gap: var(--space-4);
+  align-items: start;
+  margin-top: var(--space-4);
+}
+
+.portfolio-availability {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.availability-card,
+.portfolio-contact-form {
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top right, color-mix(in srgb, var(--color-accent) 14%, transparent), transparent 16rem),
+    color-mix(in srgb, var(--bg-secondary) 92%, transparent);
+  box-shadow: 0 22px 56px color-mix(in srgb, var(--card-shadow) 36%, transparent);
+}
+
+.availability-card h2,
+.portfolio-contact-form h2 {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-heading);
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  line-height: 1.15;
+}
+
+.availability-card p {
+  margin: 0;
+  color: var(--color-secondary);
+  line-height: 1.7;
+}
+
+.availability-badge {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.2rem;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid color-mix(in srgb, var(--color-success) 62%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-success) 12%, transparent);
+  color: var(--color-success);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.availability-list {
+  display: grid;
+  gap: var(--space-1);
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  color: var(--color-secondary);
+  list-style: none;
+}
+
+.availability-list li::before {
+  margin-right: 0.55rem;
+  color: var(--color-accent);
+  content: "•";
+}
+
+.portfolio-form-grid {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.portfolio-form-row {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.portfolio-form-row label {
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 0.96rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.portfolio-form-row span {
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-regular);
+}
+
+.portfolio-input,
+.portfolio-textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--input-bg);
+  color: var(--color-primary);
+  font: inherit;
+  line-height: 1.5;
+}
+
+.portfolio-input {
+  min-height: 3.15rem;
+  padding: 0 1rem;
+}
+
+.portfolio-textarea {
+  min-height: 10rem;
+  padding: 1rem;
+  resize: vertical;
+}
+
+.portfolio-input:focus,
+.portfolio-textarea:focus {
+  border-color: var(--color-accent);
+  outline: 3px solid color-mix(in srgb, var(--color-accent) 22%, transparent);
+}
+
+.portfolio-form-hint {
+  margin: 0;
+  color: var(--color-secondary);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.portfolio-form-status {
+  min-height: 1.5rem;
+  margin: var(--space-2) 0 0;
+  color: var(--color-secondary);
+  line-height: 1.5;
+}
+
+.portfolio-form-status.is-success {
+  color: var(--color-success);
+}
+
+.portfolio-form-status.is-error {
+  color: var(--color-danger);
+}
+
+.portfolio-contact-form.was-validated .portfolio-input:invalid,
+.portfolio-contact-form.was-validated .portfolio-textarea:invalid {
+  border-color: var(--color-danger);
+}
+
+.certification-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.certification-card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 22px;
+  background: color-mix(in srgb, var(--bg-secondary) 90%, transparent);
+  box-shadow: 0 18px 44px color-mix(in srgb, var(--card-shadow) 45%, transparent);
+}
+
+.certification-card > div:not(.certification-media) {
+  padding: var(--space-3) var(--space-3) var(--space-2);
+}
+
+.certification-card h2 {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+}
+
+.certification-card p {
+  margin: 0;
+  color: var(--color-secondary);
+  line-height: 1.65;
+}
+
+.certification-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+}
+
+.certification-media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 190px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--color-accent) 28%, transparent), transparent 45%),
+    radial-gradient(circle at 80% 20%, color-mix(in srgb, var(--color-cta) 28%, transparent), transparent 36%),
+    color-mix(in srgb, var(--bg-primary) 84%, transparent);
+}
+
+.certification-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 190px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform var(--transition-default);
+}
+
+.certification-card:hover .certification-media img {
+  transform: scale(1.03);
+}
+
+.certification-document-preview {
+  display: grid;
+  place-items: center;
+  width: min(72%, 190px);
+  min-height: 138px;
+  padding: var(--space-2);
+  border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--color-surface-light) 92%, transparent), color-mix(in srgb, var(--color-bg-light) 80%, transparent)),
+    var(--color-surface-light);
+  color: var(--color-text-light);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  box-shadow: 0 18px 40px color-mix(in srgb, var(--shadow-color-dark) 26%, transparent);
+}
+
+.certification-document-preview::before {
+  content: "PDF";
+  display: grid;
+  place-items: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  margin-bottom: 0.75rem;
+  border-radius: 14px;
+  background: var(--color-cta);
+  color: #101827;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+.certification-document-preview span {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  line-height: 1.35;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.certification-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--color-warning) 65%, transparent);
+  border-radius: 999px;
+  color: var(--color-warning);
+  font-size: 0.82rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.certification-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.6rem;
+  margin: 0 var(--space-3) var(--space-3);
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--color-cta);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--color-cta) 14%, transparent);
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.certification-link:hover,
+.certification-link:focus-visible {
+  border-color: var(--color-cta-hover);
+  background: var(--color-cta);
+  color: #101827;
+  outline: none;
+}
+
+.certification-empty {
+  padding: var(--space-4);
+  border: 1px dashed var(--color-border);
+  border-radius: 24px;
+  background: color-mix(in srgb, var(--bg-secondary) 82%, transparent);
+  text-align: center;
+}
+
+.certification-empty h2 {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.certification-empty p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--color-secondary);
+  line-height: 1.75;
+}
+
 body.light_theme .portfolio-hero,
 body.light_theme .portfolio-section,
 body.light_theme .portfolio-portrait-card,
 body.light_theme .portfolio-list li,
 body.light_theme .portfolio-timeline li,
-body.light_theme .portfolio-tag {
+body.light_theme .portfolio-tag,
+body.light_theme .skills-overview__item,
+body.light_theme .skill-card,
+body.light_theme .skill-item,
+body.light_theme .portfolio-note,
+body.light_theme .availability-card,
+body.light_theme .portfolio-contact-form,
+body.light_theme .portfolio-input,
+body.light_theme .portfolio-textarea,
+body.light_theme .certification-card,
+body.light_theme .certification-media,
+body.light_theme .certification-empty {
   border-color: var(--color-border-light);
 }
 
 @media (max-width: 860px) {
   .portfolio-hero,
-  .portfolio-grid {
+  .portfolio-grid,
+  .portfolio-contact-layout,
+  .skills-grid,
+  .certification-list {
     grid-template-columns: 1fr;
   }
 
   .portfolio-hero,
   .portfolio-section {
     padding: var(--space-3);
+  }
+
+  .skills-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .certification-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 861px) and (max-width: 1120px) {
+  .certification-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -269,5 +825,19 @@ body.light_theme .portfolio-tag {
 
   .portfolio-button {
     width: 100%;
+  }
+
+  .skills-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    padding: var(--space-3);
+  }
+
+  .skill-item__header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.45rem;
   }
 }
