@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Rejoindre TianSemi, club Réseau & Cybersécurité de l’INPHB : apprentissage, pratique, projets et communauté technique."
+    >
+    <link rel="canonical" href="https://tiansemi.github.io/club/rejoindre.html">
+    <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/css/navigation.css">
+    <link rel="stylesheet" href="../assets/css/club.css">
+    <title>Rejoindre TianSemi — Club Réseau & Cybersécurité</title>
+  </head>
+  <body class="dark_theme">
+    <div data-site-nav data-site-root="../"></div>
+
+    <main class="club-page">
+      <div class="club-shell">
+        <section class="club-hero" aria-labelledby="join-title">
+          <div>
+            <p class="club-eyebrow">Recrutement · Communauté TianSemi</p>
+            <h1 class="club-title" id="join-title">Rejoindre TianSemi</h1>
+          </div>
+          <p class="club-lead">
+            Vous souhaitez progresser en réseau, cybersécurité et numérique dans une communauté orientée pratique ?
+            Déposez votre demande d’adhésion : le bureau TianSemi pourra vous recontacter avec les prochaines étapes.
+          </p>
+          <div class="club-actions" aria-label="Actions adhésion">
+            <a class="club-button club-button--primary" href="#formulaire-adhesion">Remplir le formulaire</a>
+            <a class="club-button" href="./">Découvrir le club</a>
+          </div>
+        </section>
+
+        <div class="club-join-layout">
+          <aside class="club-benefits" aria-labelledby="benefits-title">
+            <section class="club-benefit-card">
+              <h2 id="benefits-title">Pourquoi rejoindre ?</h2>
+              <p>
+                TianSemi est pensé comme un espace de progression collective : apprendre, pratiquer, documenter et
+                contribuer à des ressources utiles pour les étudiants.
+              </p>
+              <ul class="club-benefit-list">
+                <li>Participer à des activités réseau, cybersécurité et ICT</li>
+                <li>Progresser avec des outils pédagogiques et projets concrets</li>
+                <li>Partager ses connaissances avec d’autres étudiants</li>
+                <li>Préparer des compétitions et initiatives techniques</li>
+              </ul>
+            </section>
+
+            <section class="club-benefit-card" aria-labelledby="process-title">
+              <h2 id="process-title">Processus actuel</h2>
+              <p>
+                Le processus d’adhésion est centralisé via ce formulaire. Les demandes reçues sont transmises au
+                contact officiel TianSemi pour suivi par le bureau du club.
+              </p>
+            </section>
+          </aside>
+
+          <form
+            class="club-join-form"
+            id="formulaire-adhesion"
+            action="https://formspree.io/f/xwvdepvv"
+            method="POST"
+            data-club-join-form
+            aria-labelledby="join-form-title"
+          >
+            <h2 id="join-form-title">Formulaire d’adhésion</h2>
+
+            <input type="hidden" name="_subject" value="Demande d’adhésion TianSemi">
+            <input type="hidden" name="context" value="adhesion-club-tiansemi">
+            <input type="hidden" name="recipient_type" value="bureau-tiansemi">
+
+            <div class="club-form-grid">
+              <div class="club-form-row">
+                <label for="join-name">Nom complet</label>
+                <input class="club-input" id="join-name" name="name" type="text" autocomplete="name" required>
+              </div>
+
+              <div class="club-form-row">
+                <label for="join-email">E-mail</label>
+                <input class="club-input" id="join-email" name="email" type="email" autocomplete="email" required>
+              </div>
+
+              <div class="club-form-row">
+                <label for="join-phone">Téléphone <span>(facultatif)</span></label>
+                <input
+                  class="club-input"
+                  id="join-phone"
+                  name="phone"
+                  type="tel"
+                  inputmode="tel"
+                  pattern="\+[1-9][0-9]{7,14}"
+                  aria-describedby="join-phone-hint"
+                  placeholder="+2250777366687"
+                >
+                <p class="club-form-hint" id="join-phone-hint">
+                  Si renseigné, utilisez le format international avec indicatif pays.
+                </p>
+              </div>
+
+              <div class="club-form-row">
+                <label for="join-profile">Profil</label>
+                <select class="club-select" id="join-profile" name="profile" required>
+                  <option value="">Sélectionnez votre profil</option>
+                  <option value="etudiant-inphb">Étudiant INPHB</option>
+                  <option value="etudiant-autre">Étudiant autre établissement</option>
+                  <option value="partenaire">Partenaire / intervenant</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+
+              <div class="club-form-row">
+                <label for="join-interest">Domaine d’intérêt principal</label>
+                <select class="club-select" id="join-interest" name="interest" required>
+                  <option value="">Sélectionnez un domaine</option>
+                  <option value="reseaux">Réseaux</option>
+                  <option value="cybersecurite">Cybersécurité</option>
+                  <option value="linux">Linux</option>
+                  <option value="cloud-devops">Cloud / DevOps</option>
+                  <option value="programmation">Programmation</option>
+                  <option value="competition-ict">Compétitions ICT</option>
+                </select>
+              </div>
+
+              <div class="club-form-row">
+                <label for="join-message">Motivation</label>
+                <textarea
+                  class="club-textarea"
+                  id="join-message"
+                  name="message"
+                  minlength="20"
+                  required
+                  placeholder="Présentez brièvement votre motivation, votre niveau actuel et ce que vous souhaitez apprendre ou apporter au club."
+                ></textarea>
+              </div>
+            </div>
+
+            <button class="club-button club-button--primary club-section-actions" type="submit" data-club-join-submit>
+              Envoyer ma demande
+            </button>
+            <p class="club-form-status" data-club-join-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/club-join.js"></script>
+  </body>
+</html>

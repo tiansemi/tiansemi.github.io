@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Fiche Cybersécurité TianSemi : comprendre les attaques courantes, phishing, malware, mots de passe faibles et premiers réflexes de protection."
+    >
+    <link rel="canonical" href="https://tiansemi.github.io/apprentissage/cybersecurite/attaques-courantes/">
+    <link rel="shortcut icon" href="../../../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../../assets/css/navigation.css">
+    <link rel="stylesheet" href="../../../assets/css/learning.css">
+    <title>Attaques courantes et premiers réflexes — TianSemi</title>
+  </head>
+  <body class="dark_theme">
+    <div data-site-nav data-site-root="../../../"></div>
+
+    <main class="learning-page">
+      <div class="learning-shell">
+        <article class="learning-article">
+          <header class="learning-article__header">
+            <p class="learning-eyebrow">Filière Cybersécurité · Fiche débutant</p>
+            <h1>Reconnaître les attaques courantes et réagir correctement.</h1>
+            <p class="learning-article__lead">
+              Cette fiche introduit les menaces les plus fréquentes pour un étudiant ou un jeune professionnel :
+              phishing, mots de passe faibles, malwares, faux liens et mauvaises configurations.
+            </p>
+            <div class="learning-article__meta" aria-label="Métadonnées de la ressource">
+              <span class="learning-tag">Durée : 20 min</span>
+              <span class="learning-tag">Niveau : débutant</span>
+              <span class="learning-tag">Sujet : hygiène sécurité</span>
+            </div>
+          </header>
+
+          <div class="learning-article__grid">
+            <div class="learning-prose">
+              <section aria-labelledby="threats-title">
+                <h2 id="threats-title">1. Les attaques à connaître en premier</h2>
+                <div class="learning-table-wrap">
+                  <table class="learning-table">
+                    <thead>
+                      <tr>
+                        <th>Attaque</th>
+                        <th>Principe</th>
+                        <th>Signal d’alerte</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Phishing</td>
+                        <td>Faire croire à un message légitime pour voler un mot de passe ou pousser au clic.</td>
+                        <td>Urgence artificielle, faute de domaine, pièce jointe inattendue.</td>
+                      </tr>
+                      <tr>
+                        <td>Mot de passe faible</td>
+                        <td>Deviner ou réutiliser un mot de passe déjà compromis.</td>
+                        <td>Même mot de passe partout, absence de MFA.</td>
+                      </tr>
+                      <tr>
+                        <td>Malware</td>
+                        <td>Installer un programme malveillant via fichier, lien ou logiciel piraté.</td>
+                        <td>Fichier étrange, demande d’exécution, antivirus désactivé.</td>
+                      </tr>
+                      <tr>
+                        <td>Mauvaise configuration</td>
+                        <td>Exposer involontairement un service, un dépôt ou une donnée sensible.</td>
+                        <td>Accès public non prévu, secret visible, permissions trop larges.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section aria-labelledby="phishing-title">
+                <h2 id="phishing-title">2. Lire un message suspect</h2>
+                <p>
+                  Un bon réflexe consiste à vérifier l’expéditeur, le domaine du lien, le contexte et la demande réelle.
+                  Un message peut utiliser un logo officiel tout en pointant vers une adresse frauduleuse.
+                </p>
+                <pre class="learning-code" role="region" aria-label="Checklist de vérification d’un message suspect" data-code-label="Checklist phishing"><code>Exemple de vérification :
+1. L’adresse de l’expéditeur correspond-elle au service attendu ?
+2. Le lien pointe-t-il vers le vrai domaine ?
+3. Le message crée-t-il une urgence inhabituelle ?
+4. La pièce jointe était-elle attendue ?
+5. Puis-je confirmer par un autre canal ?</code></pre>
+              </section>
+
+              <section aria-labelledby="reflexes-title">
+                <h2 id="reflexes-title">3. Les premiers réflexes de protection</h2>
+                <ul>
+                  <li>Utiliser un mot de passe unique par service, idéalement généré par un gestionnaire de mots de passe.</li>
+                  <li>Activer l’authentification multifacteur dès qu’elle est disponible.</li>
+                  <li>Mettre à jour le système, le navigateur et les applications critiques.</li>
+                  <li>Éviter les logiciels piratés et les pièces jointes non attendues.</li>
+                  <li>Sauvegarder les données importantes hors de la machine principale.</li>
+                </ul>
+              </section>
+
+              <section aria-labelledby="incident-title">
+                <h2 id="incident-title">4. Si vous avez cliqué</h2>
+                <p>
+                  L’objectif n’est pas de paniquer, mais de réduire vite l’impact. Déconnectez la session suspecte,
+                  changez le mot de passe depuis un appareil sain, activez la MFA et signalez l’incident à une personne
+                  compétente.
+                </p>
+                <div class="learning-flow" aria-label="Réaction en cas d’incident">
+                  <div class="learning-flow__steps">
+                    <span>1. Isoler</span>
+                    <span>2. Changer</span>
+                    <span>3. Vérifier</span>
+                    <span>4. Signaler</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <aside class="learning-aside" aria-label="Résumé et suite de la ressource">
+              <div class="learning-aside__card">
+                <h2>À retenir</h2>
+                <ul>
+                  <li>Le phishing joue sur l’urgence et la confiance.</li>
+                  <li>Un mot de passe réutilisé devient un risque global.</li>
+                  <li>La MFA bloque de nombreuses compromissions.</li>
+                  <li>Signaler vite vaut mieux que cacher l’incident.</li>
+                </ul>
+              </div>
+              <div class="learning-aside__card">
+                <h2>Continuer</h2>
+                <p>Après cette fiche, testez votre compréhension avec le quiz et reliez les notions aux bases réseau.</p>
+                <div class="learning-actions">
+                  <a class="learning-button learning-button--primary" href="../../quiz/">Faire le quiz</a>
+                  <a class="learning-button" href="../">Retour Cybersécurité</a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <script src="../../../assets/js/navigation.js"></script>
+    <script src="../../../assets/js/learning.js"></script>
+  </body>
+</html>

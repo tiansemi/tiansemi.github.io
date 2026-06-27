@@ -122,6 +122,45 @@
       letter-spacing:0;
     }
 
+    .toeic-breadcrumb{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:0 0 18px;
+      color:var(--toeic-white-84);
+      font-size:0.94rem;
+      font-weight:700;
+    }
+
+    .toeic-breadcrumb a{
+      color:var(--toeic-surface-strong);
+      text-decoration:none;
+    }
+
+    .toeic-breadcrumb a:hover,
+    .toeic-breadcrumb a:focus-visible{
+      color:var(--accent);
+      outline:none;
+    }
+
+    .toeic-context{
+      width:min(760px, 100%);
+      margin-top:22px;
+      padding:18px 20px;
+      border:1px solid var(--toeic-white-22);
+      border-radius:18px;
+      background:var(--toeic-white-12);
+      color:var(--toeic-white-84);
+      line-height:1.65;
+      backdrop-filter:blur(10px);
+    }
+
+    .toeic-context strong{
+      display:block;
+      margin-bottom:6px;
+      color:var(--toeic-surface-strong);
+    }
+
     h1{
       margin:0;
       font-size:clamp(2.5rem, 4vw, 4.5rem);
@@ -697,9 +736,20 @@
   <header class="hero">
     <div class="hero-inner">
       <div class="hero-copy">
+        <nav class="toeic-breadcrumb" aria-label="Fil d’Ariane">
+          <a href="../">Apprentissage</a>
+          <span aria-hidden="true">/</span>
+          <span>TOEIC</span>
+        </nav>
         <p class="eyebrow">Révision TOEIC</p>
         <h1>Flashcards TOEIC</h1>
         <p>Une interface plus nette pour parcourir, filtrer et mémoriser le vocabulaire utile.</p>
+
+        <div class="toeic-context">
+          <strong>Pourquoi l’utiliser dans le parcours ?</strong>
+          Le TOEIC soutient les filières TianSemi en renforçant l’anglais technique utile aux certifications,
+          documentations, compétitions ICT et ressources internationales.
+        </div>
 
         <div class="hero-stats" aria-label="Statistiques du jeu de cartes">
           <div class="stat">

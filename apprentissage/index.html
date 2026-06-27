@@ -1,1 +1,195 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../assets/css/construction.css"><link rel="stylesheet" href="../assets/css/navigation.css"><title>Apprentissage — TianSemi</title></head><body><div data-site-nav data-site-root="../"></div><main class="site-shell construction"><section class="construction-card"><p class="eyebrow">Pôle Apprentissage</p><h1>Parcours en construction</h1><p>Commencez déjà avec le quiz et les flashcards TOEIC.</p><p><a class="cta" href="quiz/">Quiz interactif</a> <a class="cta" href="toeic/">Flashcards TOEIC</a></p></section></main><script src="../assets/js/navigation.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Plateforme d’apprentissage TianSemi : parcours Réseaux, Cybersécurité, Linux, Programmation, Cloud/DevOps, IA, quiz et flashcards TOEIC."
+    >
+    <link rel="canonical" href="https://tiansemi.github.io/apprentissage/">
+    <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/css/navigation.css">
+    <link rel="stylesheet" href="../assets/css/learning.css">
+    <title>Apprentissage — TianSemi</title>
+  </head>
+  <body class="dark_theme">
+    <div data-site-nav data-site-root="../"></div>
+
+    <main class="learning-page">
+      <div class="learning-shell">
+        <section class="learning-hero" aria-labelledby="learning-title">
+          <div>
+            <p class="learning-eyebrow">Plateforme d’apprentissage</p>
+            <h1 class="learning-title" id="learning-title">Choisissez votre parcours TianSemi.</h1>
+          </div>
+          <p class="learning-lead">
+            Les filières TianSemi structurent les ressources du club pour progresser étape par étape : bases réseau,
+            culture cybersécurité, systèmes Linux, développement, cloud/devops et intelligence artificielle.
+          </p>
+          <div class="learning-actions" aria-label="Accès rapides apprentissage">
+            <a class="learning-button learning-button--primary" href="#filieres">Voir les filières</a>
+            <a class="learning-button" href="quiz/">Faire le quiz</a>
+            <a class="learning-button" href="toeic/">Réviser le TOEIC</a>
+          </div>
+
+          <div class="learning-auth-card" data-learning-auth data-auth-state="loading" aria-live="polite">
+            <div data-learning-auth-guest>
+              <span class="learning-level">Espace membre</span>
+              <h2>Bienvenue sur la plateforme.</h2>
+              <p>
+                Connectez-vous avec Google pour que TianSemi reconnaisse votre profil. Le suivi de progression sera
+                ajouté dans une phase future ; aucune donnée de progression n’est enregistrée ici.
+              </p>
+              <button class="learning-button learning-button--primary" type="button" onclick="loginWithGoogle()">
+                Se connecter avec Google
+              </button>
+            </div>
+            <div data-learning-auth-member hidden>
+              <span class="learning-level">Profil reconnu</span>
+              <h2>Bonjour <span data-learning-auth-name></span>, prêt à progresser ?</h2>
+              <p>
+                Votre session Google est active. Pour l’instant, la plateforme personnalise uniquement l’accueil ;
+                le suivi de progression sera ajouté dans une évolution dédiée.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="learning-section" id="filieres" aria-labelledby="tracks-title">
+          <div class="learning-section__header">
+            <div>
+              <p class="learning-eyebrow">6 filières</p>
+              <h2 id="tracks-title">Parcours disponibles</h2>
+            </div>
+            <p>
+              Chaque filière donne une porte d’entrée claire. Certaines pages seront enrichies progressivement, mais
+              l’arborescence est prête pour accueillir les contenus du club.
+            </p>
+          </div>
+
+          <div class="learning-grid">
+            <article class="learning-card">
+              <div class="learning-card__icon" aria-hidden="true">NET</div>
+              <span class="learning-level">Débutant</span>
+              <h3>Réseaux</h3>
+              <p>Comprendre les bases des architectures réseau, de l’adressage et du diagnostic technique.</p>
+              <div class="learning-card__actions">
+                <a class="learning-button learning-button--primary" href="reseaux/">Ouvrir la filière</a>
+              </div>
+            </article>
+
+            <article class="learning-card">
+              <div class="learning-card__icon" aria-hidden="true">SEC</div>
+              <span class="learning-level">Débutant</span>
+              <h3>Cybersécurité</h3>
+              <p>Découvrir l’hygiène numérique, les menaces courantes, la veille et les premiers réflexes sécurité.</p>
+              <div class="learning-card__actions">
+                <a class="learning-button learning-button--primary" href="cybersecurite/">Ouvrir la filière</a>
+              </div>
+            </article>
+
+            <article class="learning-card">
+              <div class="learning-card__icon" aria-hidden="true">LIN</div>
+              <span class="learning-level">Intermédiaire</span>
+              <h3>Linux</h3>
+              <p>Prendre en main l’environnement Linux, la ligne de commande, le scripting et l’administration système.</p>
+              <div class="learning-card__actions">
+                <a class="learning-button learning-button--primary" href="linux/">Ouvrir la filière</a>
+              </div>
+            </article>
+
+            <article class="learning-card">
+              <div class="learning-card__icon" aria-hidden="true">DEV</div>
+              <span class="learning-level">Débutant</span>
+              <h3>Programmation</h3>
+              <p>Développer les bases nécessaires pour automatiser, créer des outils et contribuer aux projets web.</p>
+              <div class="learning-card__actions">
+                <a class="learning-button learning-button--primary" href="programmation/">Ouvrir la filière</a>
+              </div>
+            </article>
+
+            <article class="learning-card">
+              <div class="learning-card__icon" aria-hidden="true">OPS</div>
+              <span class="learning-level">Intermédiaire</span>
+              <h3>Cloud & DevOps</h3>
+              <p>Explorer les pratiques de déploiement, d’automatisation, d’infrastructure et de collaboration technique.</p>
+              <div class="learning-card__actions">
+                <a class="learning-button learning-button--primary" href="cloud-devops/">Ouvrir la filière</a>
+              </div>
+            </article>
+
+            <article class="learning-card">
+              <div class="learning-card__icon" aria-hidden="true">IA</div>
+              <span class="learning-level">Avancé</span>
+              <h3>Intelligence artificielle</h3>
+              <p>Comprendre les usages de l’IA et ses liens avec les données, l’automatisation et la cybersécurité.</p>
+              <div class="learning-card__actions">
+                <a class="learning-button learning-button--primary" href="ia/">Ouvrir la filière</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="learning-section" aria-labelledby="tools-title">
+          <div class="learning-section__header">
+            <div>
+              <p class="learning-eyebrow">Auto-évaluation</p>
+              <h2 id="tools-title">Outils pour pratiquer dès maintenant</h2>
+            </div>
+            <p>
+              Les outils existants ne sont plus isolés : ils deviennent des points d’entrée pratiques pour tester son
+              niveau et progresser dans un parcours.
+            </p>
+          </div>
+
+          <div class="tool-grid">
+            <article class="tool-card">
+              <span class="learning-level">Quiz interactif</span>
+              <h3>Tester ses connaissances</h3>
+              <p>
+                Utilisez le quiz comme outil d’auto-évaluation après une session de révision ou une activité TianSemi.
+                Il sert de point de départ pour identifier les notions à renforcer.
+              </p>
+              <div class="tool-card__meta">
+                <span class="learning-tag">Auto-évaluation</span>
+                <span class="learning-tag">Réseaux / sécurité</span>
+              </div>
+              <div class="tool-card__actions">
+                <a class="learning-button learning-button--primary" href="quiz/">Ouvrir le quiz</a>
+              </div>
+            </article>
+
+            <article class="tool-card">
+              <span class="learning-level">Flashcards TOEIC</span>
+              <h3>Renforcer l’anglais professionnel</h3>
+              <p>
+                Les flashcards TOEIC aident à progresser sur le vocabulaire utile aux certifications, documentations,
+                formations internationales et compétitions techniques.
+              </p>
+              <div class="tool-card__meta">
+                <span class="learning-tag">227 mots</span>
+                <span class="learning-tag">13 catégories</span>
+              </div>
+              <div class="tool-card__actions">
+                <a class="learning-button learning-button--primary" href="toeic/">Ouvrir les flashcards</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="learning-context" aria-labelledby="tools-context-title">
+            <h3 id="tools-context-title">Comment les utiliser dans votre progression ?</h3>
+            <p>
+              Commencez par choisir une filière, puis utilisez le Quiz après une séance Réseaux ou Cybersécurité pour
+              vérifier vos acquis. Utilisez les flashcards TOEIC en parallèle pour renforcer l’anglais technique utile
+              aux certifications, documentations et compétitions internationales.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="../assets/js/navigation.js"></script>
+    <script type="module" src="../assets/js/firebase.js"></script>
+  </body>
+</html>

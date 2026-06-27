@@ -635,7 +635,7 @@ Dépendances : US-1.3, US-1.4.
 Risques : contenu historique/mission pas encore formalisé en interne → prévoir un atelier de cadrage avec le bureau avant rédaction.
 Estimation : **Story Points : 5**
 
-#### User Story 3.2
+#### User Story 3.2 [à faire]
 En tant que **visiteur**
 Je souhaite **voir l'organisation et les membres du bureau de TianSemi**
 Afin d'**identifier les responsables et points de contact**
@@ -673,7 +673,7 @@ Dépendances : US-3.1.
 Risques : peu d'activités déjà documentées → accepter un contenu minimal réel plutôt que d'inventer du contenu.
 Estimation : **Story Points : 3**
 
-#### User Story 3.4
+#### User Story 3.4 [à faire]
 En tant que **partenaire académique**
 Je souhaite **connaître les évènements passés et à venir du club**
 Afin d'**évaluer une éventuelle collaboration**
@@ -690,7 +690,7 @@ Dépendances : US-3.1.
 Risques : faible.
 Estimation : **Story Points : 3**
 
-#### User Story 3.5
+#### User Story 3.5 [à faire]
 En tant que **partenaire académique ou industriel potentiel**
 Je souhaite **voir les partenaires actuels du club**
 Afin d'**évaluer sa crédibilité institutionnelle**
@@ -912,7 +912,7 @@ Je souhaite **que la plateforme reconnaisse mon profil pour préparer le suivi d
 Afin de **bénéficier d'une expérience personnalisée lors de la phase d'évolution**
 
 Critères d'acceptation :
-- La page Apprentissage reconnaît si un utilisateur est connecté (via l'authentification Firebase déjà en place) et affiche son prénom dans un accueil personnalisé minimal.
+- La page Apprentissage reconnaît si un utilisateur est connecté (via l'authentification Firebase déjà en place ou à mettre en place) et affiche son prénom dans un accueil personnalisé minimal.
 - Aucune donnée de progression n'est encore persistée (User Story de suivi de progression réservée pour une phase future — cf. US-16 du backlog initial).
 - La page reste pleinement fonctionnelle pour les visiteurs non connectés.
 

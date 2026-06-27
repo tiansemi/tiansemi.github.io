@@ -75,6 +75,77 @@ Completed. The `portfolio/`, `club/`, `apprentissage/`, and `blog/` sections are
 
 Completed. The home page is now a TianSemi portal with Club and Learning calls to action, real statistics (2 interactive tools, 227 TOEIC words, and 13 vocabulary categories), four section teasers, responsive navigation, and the existing Formspree contact form.
 
+## Apprentissage
+
+La section `apprentissage/` est la plateforme pédagogique TianSemi. Elle regroupe :
+
+- un hub principal : `apprentissage/index.html` ;
+- 6 filières : Réseaux, Cybersécurité, Linux, Programmation, Cloud & DevOps, Intelligence artificielle ;
+- les outils existants contextualisés : `apprentissage/quiz/` et `apprentissage/toeic/` ;
+- les premières ressources pédagogiques :
+  - `apprentissage/reseaux/adressage-ip/` ;
+  - `apprentissage/cybersecurite/attaques-courantes/`.
+
+Les anciennes URLs `quiz.html` et `toeic.html` restent disponibles sous forme de redirections afin de préserver les liens déjà partagés.
+
+### Guide éditorial des ressources pédagogiques
+
+Chaque nouvelle ressource doit rester concrète, courte et utile pour un étudiant :
+
+- longueur recommandée : 800 à 1 500 mots ;
+- structure minimale : titre clair, introduction, objectifs, contenu découpé en sections, résumé “À retenir”, liens de suite ;
+- niveau explicitement indiqué : débutant, intermédiaire ou avancé ;
+- contenu non factice : pas de promesse, d’activité ou de source inventée ;
+- exemples techniques testables quand c’est pertinent ;
+- tableaux, listes, blocs de code ou schémas simples pour faciliter la lecture ;
+- blocs de code accessibles avec `class="learning-code"`, `role="region"`, `aria-label` et `data-code-label`.
+
+Exemple de bloc de code :
+
+```html
+<pre
+  class="learning-code"
+  role="region"
+  aria-label="Commandes de diagnostic réseau"
+  data-code-label="Commandes de diagnostic"
+><code>ping 8.8.8.8</code></pre>
+```
+
+Le script `assets/js/learning.js` ajoute automatiquement le bouton “Copier” sur les blocs `.learning-code`.
+
+### Ajouter une ressource pédagogique
+
+1. Créer un dossier sous la filière concernée, par exemple `apprentissage/reseaux/nom-de-la-ressource/`.
+2. Ajouter un fichier `index.html` avec :
+   - une meta description unique ;
+   - une balise canonical ;
+   - le header de navigation via `data-site-nav` ;
+   - `assets/css/learning.css` ;
+   - `assets/js/navigation.js` ;
+   - `assets/js/learning.js` si la page contient des blocs de code.
+3. Ajouter une carte de ressource sur la page de filière.
+4. Ajouter l’URL dans `sitemap.xml`.
+5. Vérifier :
+   - absence de `noindex` ;
+   - liens relatifs ;
+   - hiérarchie des titres ;
+   - boutons “Copier” ;
+   - affichage mobile ;
+   - lisibilité en thème clair et sombre.
+
+### Sprint 4 — État de validation
+
+Le Sprint 4 livre le hub Apprentissage, les 6 filières, la contextualisation Quiz/TOEIC, deux premières ressources réelles et l’accueil personnalisé minimal pour utilisateur Google connecté.
+
+L’accueil personnalisé ne persiste aucune donnée de progression. Le stockage local est limité au nom d’affichage nécessaire à l’interface ; l’e-mail et la photo ne sont pas stockés dans `localStorage`.
+
+Validation manuelle attendue avant clôture finale :
+
+- ouvrir `apprentissage/` en visiteur non connecté ;
+- se connecter avec Google et vérifier l’affichage `Bonjour [prénom]` ;
+- se déconnecter depuis le Quiz et vérifier le retour à l’état visiteur ;
+- suivre le parcours de démonstration : Accueil → Apprentissage → Réseaux → ressource Adressage IP → Quiz → retour Réseaux.
+
 Dev - how to run locally
 
 If you edit files and open them directly with the file:// protocol some browsers (or DevTools) may display or interpret file encoding differently which can make JS/CSS appear corrupted in DevTools. To avoid this, serve the site with a simple local HTTP server when developing:

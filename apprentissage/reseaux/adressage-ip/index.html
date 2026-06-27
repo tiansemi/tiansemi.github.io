@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Fiche Réseaux TianSemi : comprendre les modèles OSI/TCP-IP, l’adressage IPv4, les masques et les premiers réflexes de diagnostic."
+    >
+    <link rel="canonical" href="https://tiansemi.github.io/apprentissage/reseaux/adressage-ip/">
+    <link rel="shortcut icon" href="../../../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../../assets/css/navigation.css">
+    <link rel="stylesheet" href="../../../assets/css/learning.css">
+    <title>Adressage IP et bases réseau — TianSemi</title>
+  </head>
+  <body class="dark_theme">
+    <div data-site-nav data-site-root="../../../"></div>
+
+    <main class="learning-page">
+      <div class="learning-shell">
+        <article class="learning-article">
+          <header class="learning-article__header">
+            <p class="learning-eyebrow">Filière Réseaux · Fiche débutant</p>
+            <h1>Comprendre l’adressage IP et les bases réseau.</h1>
+            <p class="learning-article__lead">
+              Cette fiche donne les repères indispensables pour lire une configuration réseau simple : modèles OSI/TCP-IP,
+              adresse IPv4, masque, passerelle, DNS et premiers tests de connectivité.
+            </p>
+            <div class="learning-article__meta" aria-label="Métadonnées de la ressource">
+              <span class="learning-tag">Durée : 20 min</span>
+              <span class="learning-tag">Niveau : débutant</span>
+              <span class="learning-tag">Sujet : IPv4</span>
+            </div>
+          </header>
+
+          <div class="learning-article__grid">
+            <div class="learning-prose">
+              <section aria-labelledby="models-title">
+                <h2 id="models-title">1. Deux modèles pour se repérer</h2>
+                <p>
+                  Un réseau peut être vu comme une pile de responsabilités. Le modèle OSI aide à raisonner couche par
+                  couche, tandis que TCP/IP correspond davantage à la réalité des réseaux modernes.
+                </p>
+                <div class="learning-table-wrap">
+                  <table class="learning-table">
+                    <thead>
+                      <tr>
+                        <th>OSI</th>
+                        <th>TCP/IP</th>
+                        <th>Question à se poser</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Physique / Liaison</td>
+                        <td>Accès réseau</td>
+                        <td>Le câble, le Wi-Fi ou la carte réseau fonctionnent-ils ?</td>
+                      </tr>
+                      <tr>
+                        <td>Réseau</td>
+                        <td>Internet</td>
+                        <td>L’adresse IP, le masque et la passerelle sont-ils cohérents ?</td>
+                      </tr>
+                      <tr>
+                        <td>Transport</td>
+                        <td>Transport</td>
+                        <td>Le service utilise-t-il TCP ou UDP ? Le port est-il joignable ?</td>
+                      </tr>
+                      <tr>
+                        <td>Session à Application</td>
+                        <td>Application</td>
+                        <td>Le service applicatif répond-il correctement ?</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section aria-labelledby="ipv4-title">
+                <h2 id="ipv4-title">2. Lire une adresse IPv4</h2>
+                <p>
+                  Une adresse IPv4 identifie une machine dans un réseau. Elle est accompagnée d’un masque, qui sépare la
+                  partie réseau de la partie hôte.
+                </p>
+                <pre class="learning-code" role="region" aria-label="Exemple de configuration IPv4" data-code-label="Configuration IPv4"><code>Exemple :
+Adresse IP  : 192.168.1.25
+Masque      : 255.255.255.0  (/24)
+Réseau      : 192.168.1.0
+Hôte        : 25
+Passerelle  : 192.168.1.1</code></pre>
+                <p>
+                  Ici, toutes les machines en <code>192.168.1.x</code> avec le masque <code>/24</code> sont dans le même
+                  réseau local. La passerelle sert à sortir vers d’autres réseaux, par exemple Internet.
+                </p>
+              </section>
+
+              <section aria-labelledby="diagnostic-title">
+                <h2 id="diagnostic-title">3. Diagnostiquer dans le bon ordre</h2>
+                <p>
+                  Quand la connexion ne fonctionne pas, il faut éviter de tester au hasard. Une méthode simple consiste à
+                  remonter progressivement depuis la machine locale vers Internet.
+                </p>
+                <div class="learning-flow" aria-label="Méthode de diagnostic réseau">
+                  <div class="learning-flow__steps">
+                    <span>1. Carte réseau</span>
+                    <span>2. Passerelle</span>
+                    <span>3. DNS</span>
+                    <span>4. Service final</span>
+                  </div>
+                </div>
+                <pre class="learning-code" role="region" aria-label="Commandes de diagnostic réseau" data-code-label="Commandes de diagnostic"><code># Vérifier la configuration IP
+ipconfig        # Windows
+ip addr         # Linux
+
+# Tester la passerelle
+ping 192.168.1.1
+
+# Tester Internet sans DNS
+ping 8.8.8.8
+
+# Tester la résolution DNS
+nslookup tiansemi.github.io</code></pre>
+              </section>
+
+              <section aria-labelledby="practice-title">
+                <h2 id="practice-title">4. Exercice rapide</h2>
+                <p>
+                  Une machine a l’adresse <code>192.168.10.34/24</code>. Répondez mentalement :
+                </p>
+                <ol>
+                  <li>Quel est le réseau ?</li>
+                  <li>Quelle pourrait être une passerelle logique ?</li>
+                  <li>Une machine <code>192.168.11.8/24</code> est-elle dans le même réseau ?</li>
+                </ol>
+                <p>
+                  Réponses attendues : réseau <code>192.168.10.0</code>, passerelle possible
+                  <code>192.168.10.1</code>, et non, <code>192.168.11.8/24</code> est dans un autre réseau.
+                </p>
+              </section>
+            </div>
+
+            <aside class="learning-aside" aria-label="Résumé et suite de la ressource">
+              <div class="learning-aside__card">
+                <h2>À retenir</h2>
+                <ul>
+                  <li>L’IP identifie une machine.</li>
+                  <li>Le masque indique la taille du réseau.</li>
+                  <li>La passerelle relie à d’autres réseaux.</li>
+                  <li>Le DNS transforme un nom en adresse IP.</li>
+                </ul>
+              </div>
+              <div class="learning-aside__card">
+                <h2>Continuer</h2>
+                <p>Après cette fiche, testez vos bases avec le quiz puis revenez enrichir vos notes.</p>
+                <div class="learning-actions">
+                  <a class="learning-button learning-button--primary" href="../../quiz/">Faire le quiz</a>
+                  <a class="learning-button" href="../">Retour Réseaux</a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <script src="../../../assets/js/navigation.js"></script>
+    <script src="../../../assets/js/learning.js"></script>
+  </body>
+</html>
