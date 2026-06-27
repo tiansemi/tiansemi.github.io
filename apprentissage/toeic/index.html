@@ -1,22 +1,22 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flashcards TOEIC TianSemi — Anglais professionnel</title>
-    <meta name="description" content="RÃ©visez le vocabulaire TOEIC avec TianSemi grÃ¢ce aux flashcards interactives, catÃ©gories ciblÃ©es, audio anglais et suivi de progression.">
+    <meta name="description" content="Révisez le vocabulaire TOEIC avec TianSemi grâce aux flashcards interactives, catégories ciblées, audio anglais et suivi de progression.">
     <link rel="canonical" href="https://tiansemi.github.io/apprentissage/toeic/">
         <link rel="alternate" hreflang="fr" href="https://tiansemi.github.io/apprentissage/toeic/">
     <link rel="alternate" hreflang="x-default" href="https://tiansemi.github.io/apprentissage/toeic/">
 <meta property="og:type" content="website">
     <meta property="og:site_name" content="TianSemi">
     <meta property="og:title" content="Flashcards TOEIC TianSemi — Anglais professionnel">
-    <meta property="og:description" content="RÃ©visez le vocabulaire TOEIC avec TianSemi grÃ¢ce aux flashcards interactives, catÃ©gories ciblÃ©es, audio anglais et suivi de progression.">
+    <meta property="og:description" content="Révisez le vocabulaire TOEIC avec TianSemi grâce aux flashcards interactives, catégories ciblées, audio anglais et suivi de progression.">
     <meta property="og:url" content="https://tiansemi.github.io/apprentissage/toeic/">
     <meta property="og:image" content="https://tiansemi.github.io/assets/images/og-cover.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Flashcards TOEIC TianSemi — Anglais professionnel">
-    <meta name="twitter:description" content="RÃ©visez le vocabulaire TOEIC avec TianSemi grÃ¢ce aux flashcards interactives, catÃ©gories ciblÃ©es, audio anglais et suivi de progression.">
+    <meta name="twitter:description" content="Révisez le vocabulaire TOEIC avec TianSemi grâce aux flashcards interactives, catégories ciblées, audio anglais et suivi de progression.">
     <meta name="twitter:image" content="https://tiansemi.github.io/assets/images/og-cover.png">
   <link rel="stylesheet" href="../../assets/css/tokens.css" />
   <link rel="stylesheet" href="../../assets/css/navigation.css" />
@@ -774,19 +774,19 @@
   <header class="hero">
     <div class="hero-inner">
       <div class="hero-copy">
-        <nav class="toeic-breadcrumb" aria-label="Fil dâ€™Ariane">
+        <nav class="toeic-breadcrumb" aria-label="Fil d’Ariane">
           <a href="../">Apprentissage</a>
           <span aria-hidden="true">/</span>
           <span>TOEIC</span>
         </nav>
-        <p class="eyebrow">RÃ©vision TOEIC</p>
+        <p class="eyebrow">Révision TOEIC</p>
         <h1>Flashcards TOEIC</h1>
-        <p>Une interface plus nette pour parcourir, filtrer et mÃ©moriser le vocabulaire utile.</p>
+        <p>Une interface plus nette pour parcourir, filtrer et mémoriser le vocabulaire utile.</p>
 
         <div class="toeic-context">
-          <strong>Pourquoi lâ€™utiliser dans le parcours ?</strong>
-          Le TOEIC soutient les filiÃ¨res TianSemi en renforÃ§ant lâ€™anglais technique utile aux certifications,
-          documentations, compÃ©titions ICT et ressources internationales.
+          <strong>Pourquoi l’utiliser dans le parcours ?</strong>
+          Le TOEIC soutient les filières TianSemi en renforçant l’anglais technique utile aux certifications,
+          documentations, compétitions ICT et ressources internationales.
         </div>
 
         <div class="hero-stats" aria-label="Statistiques du jeu de cartes">
@@ -796,11 +796,11 @@
           </div>
           <div class="stat">
             <strong id="totalCategories">0</strong>
-            <span>catÃ©gories</span>
+            <span>catégories</span>
           </div>
           <div class="stat">
             <strong id="visibleWords">0</strong>
-            <span>affichÃ©s</span>
+            <span>affichés</span>
           </div>
         </div>
       </div>
@@ -808,7 +808,7 @@
   </header>
 
   <main>
-    <section class="workspace" aria-label="Espace de rÃ©vision">
+    <section class="workspace" aria-label="Espace de révision">
       <aside class="toolbar">
         <div class="panel-block">
           <label for="searchInput">Recherche</label>
@@ -822,7 +822,7 @@
         </div>
 
         <div class="panel-block">
-          <label for="categoryFilter">CatÃ©gorie</label>
+          <label for="categoryFilter">Catégorie</label>
           <div class="select-wrap">
             <select id="categoryFilter"></select>
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -832,10 +832,10 @@
         </div>
 
         <div class="panel-block">
-          <label>Face de dÃ©part</label>
-          <div class="segmented" role="group" aria-label="Choisir la langue affichÃ©e en premier">
+          <label>Face de départ</label>
+          <div class="segmented" role="group" aria-label="Choisir la langue affichée en premier">
             <button id="englishFirst" class="active" type="button">Anglais</button>
-            <button id="frenchFirst" type="button">FranÃ§ais</button>
+            <button id="frenchFirst" type="button">Français</button>
           </div>
         </div>
 
@@ -849,11 +849,11 @@
           </div>
           <div class="range-grid">
             <label class="range-control" for="rateRange">
-              <span>DÃ©bit <output id="rateValue">0.90</output></span>
+              <span>Débit <output id="rateValue">0.90</output></span>
               <input id="rateRange" type="range" min="0.65" max="1.15" step="0.05" value="0.90" />
             </label>
             <label class="range-control" for="pitchRange">
-              <span>TonalitÃ© <output id="pitchValue">1.00</output></span>
+              <span>Tonalité <output id="pitchValue">1.00</output></span>
               <input id="pitchRange" type="range" min="0.85" max="1.15" step="0.05" value="1.00" />
             </label>
           </div>
@@ -863,7 +863,7 @@
         <div class="panel-block">
           <label>Actions rapides</label>
           <div class="utility-row">
-            <button class="soft-button" id="shuffleButton" type="button" title="MÃ©langer les cartes">
+            <button class="soft-button" id="shuffleButton" type="button" title="Mélanger les cartes">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M16 3H21V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                 <path d="M4 20L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
@@ -871,14 +871,14 @@
                 <path d="M14 14L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
                 <path d="M16 8L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
               </svg>
-              MÃ©langer
+              Mélanger
             </button>
-            <button class="soft-button" id="resetButton" type="button" title="RÃ©initialiser les filtres">
+            <button class="soft-button" id="resetButton" type="button" title="Réinitialiser les filtres">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M20 11A8 8 0 1 1 17.66 5.34" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
                 <path d="M20 4V11H13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
-              RÃ©initialiser
+              Réinitialiser
             </button>
           </div>
         </div>
@@ -889,7 +889,7 @@
           <div>
             <h2 id="studyTitle">Toutes les cartes</h2>
             <div class="study-meta">
-              <span class="badge" id="activeMode">Anglais â†’ FranÃ§ais</span>
+              <span class="badge" id="activeMode">Anglais â†’ Français</span>
               <span id="progressText">0 / 0</span>
             </div>
           </div>
@@ -919,7 +919,7 @@
               <div class="card-face back">
                 <div class="face-top">
                   <span class="category" id="categoryBack"></span>
-                  <span class="side-label" id="backSideLabel">FranÃ§ais</span>
+                  <span class="side-label" id="backSideLabel">Français</span>
                 </div>
                 <div class="term">
                   <h3 class="translation" id="translation"></h3>
@@ -934,13 +934,13 @@
 
           <div class="empty-state" id="emptyState">
             <div>
-              <strong>Aucune carte trouvÃ©e</strong>
-              <p>Modifie la recherche ou la catÃ©gorie pour retrouver des cartes.</p>
+              <strong>Aucune carte trouvée</strong>
+              <p>Modifie la recherche ou la catégorie pour retrouver des cartes.</p>
             </div>
           </div>
 
           <div class="actions">
-            <button class="icon-button" id="prevButton" type="button" title="Carte prÃ©cÃ©dente" aria-label="Carte prÃ©cÃ©dente">
+            <button class="icon-button" id="prevButton" type="button" title="Carte précédente" aria-label="Carte précédente">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
@@ -980,35 +980,35 @@
   <script src="../../assets/js/navigation.js"></script>
   <script>
     const vocabulary = [
-      { category: "AÃ©roport", en: "Make the round trip", fr: "faire l'aller-retour" },
-      { category: "AÃ©roport", en: "Departure/arrival board", fr: "tableau des dÃ©parts/arrivÃ©es" },
-      { category: "AÃ©roport", en: "Whereabouts", fr: "localisation" },
-      { category: "AÃ©roport", en: "Baggage claim", fr: "lieu oÃ¹ rÃ©cupÃ©rer ses valises Ã  l'aÃ©roport" },
-      { category: "AÃ©roport", en: "Return ticket", fr: "billet retour ou aller-retour" },
-      { category: "AÃ©roport", en: "Carry-on", fr: "bagage Ã  main" },
-      { category: "AÃ©roport", en: "Conveyor belt", fr: "tapis roulant pour rÃ©cupÃ©rer les valises" },
-      { category: "AÃ©roport", en: "Flight attendant", fr: "hÃ´tesse de l'air / steward" },
-      { category: "AÃ©roport", en: "Overhead bin", fr: "compartiment supÃ©rieur" },
-      { category: "AÃ©roport", en: "Runway", fr: "piste d'atterrissage" },
-      { category: "AÃ©roport", en: "Fleet", fr: "flotte aÃ©rienne" },
-      { category: "AÃ©roport", en: "Tray table", fr: "tablette rabattable" },
+      { category: "Aéroport", en: "Make the round trip", fr: "faire l'aller-retour" },
+      { category: "Aéroport", en: "Departure/arrival board", fr: "tableau des départs/arrivées" },
+      { category: "Aéroport", en: "Whereabouts", fr: "localisation" },
+      { category: "Aéroport", en: "Baggage claim", fr: "lieu où récupérer ses valises à l'aéroport" },
+      { category: "Aéroport", en: "Return ticket", fr: "billet retour ou aller-retour" },
+      { category: "Aéroport", en: "Carry-on", fr: "bagage à main" },
+      { category: "Aéroport", en: "Conveyor belt", fr: "tapis roulant pour récupérer les valises" },
+      { category: "Aéroport", en: "Flight attendant", fr: "hôtesse de l'air / steward" },
+      { category: "Aéroport", en: "Overhead bin", fr: "compartiment supérieur" },
+      { category: "Aéroport", en: "Runway", fr: "piste d'atterrissage" },
+      { category: "Aéroport", en: "Fleet", fr: "flotte aérienne" },
+      { category: "Aéroport", en: "Tray table", fr: "tablette rabattable" },
 
-      { category: "Entreprise", en: "Company retreat", fr: "sÃ©minaire" },
-      { category: "Entreprise", en: "Outstanding", fr: "impayÃ© / remarquable" },
-      { category: "Entreprise", en: "Overdraft", fr: "dÃ©couvert" },
-      { category: "Entreprise", en: "Settlement", fr: "rÃ¨glement" },
+      { category: "Entreprise", en: "Company retreat", fr: "séminaire" },
+      { category: "Entreprise", en: "Outstanding", fr: "impayé / remarquable" },
+      { category: "Entreprise", en: "Overdraft", fr: "découvert" },
+      { category: "Entreprise", en: "Settlement", fr: "règlement" },
       { category: "Entreprise", en: "Sharp", fr: "brusque" },
       { category: "Entreprise", en: "Subsidies", fr: "subventions" },
       { category: "Entreprise", en: "A raise", fr: "augmentation de salaire" },
-      { category: "Entreprise", en: "Payee", fr: "bÃ©nÃ©ficiaire d'un paiement" },
+      { category: "Entreprise", en: "Payee", fr: "bénéficiaire d'un paiement" },
       { category: "Entreprise", en: "Exposure", fr: "exposition" },
       { category: "Entreprise", en: "Trade show", fr: "salon professionnel" },
       { category: "Entreprise", en: "Booth", fr: "stand / cabine / guichet" },
       { category: "Entreprise", en: "Pay slip", fr: "fiche de paie" },
-      { category: "Entreprise", en: "Trial period", fr: "pÃ©riode d'essai" },
-      { category: "Entreprise", en: "Appraisal", fr: "Ã©valuation" },
-      { category: "Entreprise", en: "Vacancy", fr: "poste Ã  pourvoir" },
-      { category: "Entreprise", en: "Leave / vacation", fr: "congÃ©s" },
+      { category: "Entreprise", en: "Trial period", fr: "période d'essai" },
+      { category: "Entreprise", en: "Appraisal", fr: "évaluation" },
+      { category: "Entreprise", en: "Vacancy", fr: "poste à pourvoir" },
+      { category: "Entreprise", en: "Leave / vacation", fr: "congés" },
       { category: "Entreprise", en: "Token of appreciation", fr: "marque de gratitude" },
       { category: "Entreprise", en: "Appreciation", fr: "reconnaissance" },
       { category: "Entreprise", en: "Rave", fr: "excellent" },
@@ -1018,58 +1018,58 @@
       { category: "Entreprise", en: "Memorandum", fr: "note interne" },
       { category: "Entreprise", en: "Agenda", fr: "ordre du jour" },
       { category: "Entreprise", en: "Credentials", fr: "qualifications" },
-      { category: "Entreprise", en: "Waiver", fr: "dÃ©rogation" },
-      { category: "Entreprise", en: "Creditor", fr: "crÃ©ancier" },
-      { category: "Entreprise", en: "Transfer", fr: "affecter Ã  un autre poste" },
-      { category: "Entreprise", en: "Bid", fr: "enchÃ¨re" },
+      { category: "Entreprise", en: "Waiver", fr: "dérogation" },
+      { category: "Entreprise", en: "Creditor", fr: "créancier" },
+      { category: "Entreprise", en: "Transfer", fr: "affecter à un autre poste" },
+      { category: "Entreprise", en: "Bid", fr: "enchère" },
       { category: "Entreprise", en: "Board of directors", fr: "conseil d'administration" },
-      { category: "Entreprise", en: "Clerk", fr: "employÃ© de bureau" },
+      { category: "Entreprise", en: "Clerk", fr: "employé de bureau" },
       { category: "Entreprise", en: "Invoice", fr: "facture" },
       { category: "Entreprise", en: "Dismissal", fr: "licenciement" },
-      { category: "Entreprise", en: "Resignation", fr: "dÃ©mission" },
-      { category: "Entreprise", en: "Induction", fr: "intÃ©gration" },
+      { category: "Entreprise", en: "Resignation", fr: "démission" },
+      { category: "Entreprise", en: "Induction", fr: "intégration" },
       { category: "Entreprise", en: "Resumption", fr: "reprise" },
-      { category: "Entreprise", en: "Appliance", fr: "appareil Ã©lectromÃ©nager" },
-      { category: "Entreprise", en: "Beneficiary", fr: "bÃ©nÃ©ficiaire" },
-      { category: "Entreprise", en: "Commercial spot", fr: "publicitÃ©" },
+      { category: "Entreprise", en: "Appliance", fr: "appareil électroménager" },
+      { category: "Entreprise", en: "Beneficiary", fr: "bénéficiaire" },
+      { category: "Entreprise", en: "Commercial spot", fr: "publicité" },
       { category: "Entreprise", en: "Appointment", fr: "rendez-vous" },
 
       { category: "Poste", en: "Rush fee", fr: "frais de livraison rapide" },
       { category: "Poste", en: "Overnight", fr: "en 24 h" },
       { category: "Poste", en: "Fare", fr: "prix du billet" },
-      { category: "Poste", en: "Letterhead", fr: "en-tÃªte de lettre" },
+      { category: "Poste", en: "Letterhead", fr: "en-tête de lettre" },
       { category: "Poste", en: "Stamp", fr: "tampon / timbre / tamponner" },
       { category: "Poste", en: "Fortnight", fr: "quinzaine" },
       { category: "Poste", en: "Postage", fr: "affranchissement" },
       { category: "Poste", en: "Zip code", fr: "code postal" },
-      { category: "Poste", en: "Postal", fr: "relatif Ã  la poste" },
+      { category: "Poste", en: "Postal", fr: "relatif à la poste" },
       { category: "Poste", en: "Mail", fr: "courrier" },
       { category: "Poste", en: "To mail", fr: "poster" },
-      { category: "Poste", en: "E-mail", fr: "courrier Ã©lectronique" },
-      { category: "Poste", en: "Junk mail", fr: "spam / courrier indÃ©sirable" },
-      { category: "Poste", en: "Mailbox", fr: "boÃ®te aux lettres" },
+      { category: "Poste", en: "E-mail", fr: "courrier électronique" },
+      { category: "Poste", en: "Junk mail", fr: "spam / courrier indésirable" },
+      { category: "Poste", en: "Mailbox", fr: "boîte aux lettres" },
       { category: "Poste", en: "Hereunder", fr: "ci-dessous" },
       { category: "Poste", en: "Recipient", fr: "destinataire" },
-      { category: "Poste", en: "In the fine print", fr: "en petits caractÃ¨res" },
+      { category: "Poste", en: "In the fine print", fr: "en petits caractères" },
       { category: "Poste", en: "Parcel", fr: "colis" },
       { category: "Poste", en: "Void", fr: "annuler / nul" },
 
-      { category: "HÃ´tellerie", en: "Towel", fr: "serviette" },
-      { category: "HÃ´tellerie", en: "Blanket", fr: "couverture" },
-      { category: "HÃ´tellerie", en: "Amenities", fr: "Ã©quipements / amÃ©nagements / infrastructures" },
-      { category: "HÃ´tellerie", en: "Facilities", fr: "Ã©quipements / amÃ©nagements / infrastructures" },
-      { category: "HÃ´tellerie", en: "Shuttle", fr: "navette" },
-      { category: "HÃ´tellerie", en: "Guest", fr: "client d'hÃ´tel" },
-      { category: "HÃ´tellerie", en: "Porter", fr: "porteur de valises Ã  l'hÃ´tel" },
-      { category: "HÃ´tellerie", en: "Location", fr: "emplacement" },
-      { category: "HÃ´tellerie", en: "Accommodation", fr: "logement" },
-      { category: "HÃ´tellerie", en: "Front desk", fr: "rÃ©ception" },
-      { category: "HÃ´tellerie", en: "Rate", fr: "tarif / taux" },
+      { category: "Hôtellerie", en: "Towel", fr: "serviette" },
+      { category: "Hôtellerie", en: "Blanket", fr: "couverture" },
+      { category: "Hôtellerie", en: "Amenities", fr: "équipements / aménagements / infrastructures" },
+      { category: "Hôtellerie", en: "Facilities", fr: "équipements / aménagements / infrastructures" },
+      { category: "Hôtellerie", en: "Shuttle", fr: "navette" },
+      { category: "Hôtellerie", en: "Guest", fr: "client d'hôtel" },
+      { category: "Hôtellerie", en: "Porter", fr: "porteur de valises à l'hôtel" },
+      { category: "Hôtellerie", en: "Location", fr: "emplacement" },
+      { category: "Hôtellerie", en: "Accommodation", fr: "logement" },
+      { category: "Hôtellerie", en: "Front desk", fr: "réception" },
+      { category: "Hôtellerie", en: "Rate", fr: "tarif / taux" },
 
-      { category: "Shopping", en: "Apparel", fr: "vÃªtements" },
-      { category: "Shopping", en: "Garment", fr: "vÃªtement" },
+      { category: "Shopping", en: "Apparel", fr: "vêtements" },
+      { category: "Shopping", en: "Garment", fr: "vêtement" },
       { category: "Shopping", en: "Fabric", fr: "tissu" },
-      { category: "Shopping", en: "Fitting", fr: "appropriÃ©" },
+      { category: "Shopping", en: "Fitting", fr: "approprié" },
       { category: "Shopping", en: "Fitting room", fr: "cabine d'essayage" },
       { category: "Shopping", en: "Leather", fr: "cuir" },
       { category: "Shopping", en: "Checkout", fr: "caisse d'un magasin" },
@@ -1077,81 +1077,81 @@
       { category: "Shopping", en: "Change", fr: "monnaie" },
       { category: "Shopping", en: "Out of order", fr: "hors service" },
       { category: "Shopping", en: "Markdown", fr: "rabais" },
-      { category: "Shopping", en: "Coupon", fr: "bon de rÃ©duction" },
-      { category: "Shopping", en: "Voucher", fr: "bon de rÃ©duction" },
+      { category: "Shopping", en: "Coupon", fr: "bon de réduction" },
+      { category: "Shopping", en: "Voucher", fr: "bon de réduction" },
       { category: "Shopping", en: "Mall", fr: "centre commercial" },
       { category: "Shopping", en: "Warranty", fr: "garantie" },
       { category: "Shopping", en: "Rebate", fr: "remise" },
       { category: "Shopping", en: "Complimentary", fr: "gratuit" },
       { category: "Shopping", en: "Window display", fr: "vitrine" },
       { category: "Shopping", en: "Floor manager", fr: "chef de magasin" },
-      { category: "Shopping", en: "Cashier", fr: "caissier / caissiÃ¨re" },
+      { category: "Shopping", en: "Cashier", fr: "caissier / caissière" },
 
-      { category: "CinÃ©ma", en: "Rehearsal", fr: "rÃ©pÃ©tition" },
-      { category: "CinÃ©ma", en: "The cast", fr: "les acteurs" },
-      { category: "CinÃ©ma", en: "Director", fr: "rÃ©alisateur" },
-      { category: "CinÃ©ma", en: "Plot", fr: "intrigue" },
-      { category: "CinÃ©ma", en: "A play", fr: "piÃ¨ce de thÃ©Ã¢tre" },
-      { category: "CinÃ©ma", en: "Intermission", fr: "entracte" },
-      { category: "CinÃ©ma", en: "Sequel", fr: "suite" },
-      { category: "CinÃ©ma", en: "To star", fr: "Ãªtre la vedette" },
-      { category: "CinÃ©ma", en: "To shoot", fr: "tourner une scÃ¨ne" },
-      { category: "CinÃ©ma", en: "Interlude", fr: "divertissement entre deux parties" },
-      { category: "CinÃ©ma", en: "Story line", fr: "scÃ©nario" },
+      { category: "Cinéma", en: "Rehearsal", fr: "répétition" },
+      { category: "Cinéma", en: "The cast", fr: "les acteurs" },
+      { category: "Cinéma", en: "Director", fr: "réalisateur" },
+      { category: "Cinéma", en: "Plot", fr: "intrigue" },
+      { category: "Cinéma", en: "A play", fr: "pièce de théâtre" },
+      { category: "Cinéma", en: "Intermission", fr: "entracte" },
+      { category: "Cinéma", en: "Sequel", fr: "suite" },
+      { category: "Cinéma", en: "To star", fr: "être la vedette" },
+      { category: "Cinéma", en: "To shoot", fr: "tourner une scène" },
+      { category: "Cinéma", en: "Interlude", fr: "divertissement entre deux parties" },
+      { category: "Cinéma", en: "Story line", fr: "scénario" },
 
-      { category: "Immobilier", en: "Notice", fr: "prÃ©avis" },
+      { category: "Immobilier", en: "Notice", fr: "préavis" },
       { category: "Immobilier", en: "Outlook", fr: "perspectives" },
       { category: "Immobilier", en: "Instalment", fr: "versement" },
       { category: "Immobilier", en: "Quote", fr: "devis" },
       { category: "Immobilier", en: "Estimate", fr: "devis" },
-      { category: "Immobilier", en: "Household", fr: "mÃ©nage" },
+      { category: "Immobilier", en: "Household", fr: "ménage" },
       { category: "Immobilier", en: "Real estate", fr: "immobilier" },
       { category: "Immobilier", en: "Grievance", fr: "plainte" },
-      { category: "Immobilier", en: "Condominium", fr: "copropriÃ©tÃ©" },
+      { category: "Immobilier", en: "Condominium", fr: "copropriété" },
       { category: "Immobilier", en: "Rental agency", fr: "agence de location" },
-      { category: "Immobilier", en: "Landlord", fr: "propriÃ©taire" },
+      { category: "Immobilier", en: "Landlord", fr: "propriétaire" },
 
-      { category: "Route", en: "Toll", fr: "pÃ©age" },
+      { category: "Route", en: "Toll", fr: "péage" },
       { category: "Route", en: "Trunk", fr: "coffre" },
       { category: "Route", en: "Dashboard", fr: "tableau de bord" },
       { category: "Route", en: "Steering wheel", fr: "volant" },
       { category: "Route", en: "Windshield", fr: "pare-brise" },
-      { category: "Route", en: "Tank", fr: "rÃ©servoir" },
+      { category: "Route", en: "Tank", fr: "réservoir" },
       { category: "Route", en: "Four-wheel drive", fr: "4x4" },
       { category: "Route", en: "Black ice", fr: "verglas" },
       { category: "Route", en: "Slippery road", fr: "route glissante" },
       { category: "Route", en: "Frost", fr: "givre" },
       { category: "Route", en: "Fog", fr: "brouillard" },
-      { category: "Route", en: "Rainfall", fr: "prÃ©cipitations" },
-      { category: "Route", en: "Storm", fr: "tempÃªte" },
+      { category: "Route", en: "Rainfall", fr: "précipitations" },
+      { category: "Route", en: "Storm", fr: "tempête" },
       { category: "Route", en: "Thunder", fr: "tonnerre" },
 
       { category: "Bureau", en: "Attendees", fr: "participants" },
-      { category: "Bureau", en: "Contest", fr: "compÃ©tition" },
+      { category: "Bureau", en: "Contest", fr: "compétition" },
       { category: "Bureau", en: "Notepad", fr: "bloc-notes" },
       { category: "Bureau", en: "Tape up", fr: "scotcher" },
       { category: "Bureau", en: "Stationery", fr: "papeterie" },
       { category: "Bureau", en: "Chart", fr: "diagramme" },
       { category: "Bureau", en: "Graph", fr: "graphique" },
       { category: "Bureau", en: "Flip chart", fr: "paperboard" },
-      { category: "Bureau", en: "Water cooler", fr: "fontaine Ã  eau" },
+      { category: "Bureau", en: "Water cooler", fr: "fontaine à eau" },
       { category: "Bureau", en: "Desktop", fr: "ordinateur de bureau / bureau" },
       { category: "Bureau", en: "Swivel chair", fr: "chaise pivotante" },
-      { category: "Bureau", en: "Coffee pot", fr: "cafetiÃ¨re" },
+      { category: "Bureau", en: "Coffee pot", fr: "cafetière" },
       { category: "Bureau", en: "Cupboard", fr: "placard" },
       { category: "Bureau", en: "Briefcase", fr: "mallette" },
       { category: "Bureau", en: "Binder", fr: "classeur" },
       { category: "Bureau", en: "Filing cabinet", fr: "meuble classeur" },
-      { category: "Bureau", en: "Take the minutes", fr: "compte rendu de rÃ©union" },
+      { category: "Bureau", en: "Take the minutes", fr: "compte rendu de réunion" },
       { category: "Bureau", en: "Voluntary", fr: "volontaire" },
 
       { category: "Restaurant", en: "Wrapping", fr: "emballage" },
-      { category: "Restaurant", en: "Produce", fr: "fruits et lÃ©gumes" },
+      { category: "Restaurant", en: "Produce", fr: "fruits et légumes" },
       { category: "Restaurant", en: "Tablecloth", fr: "nappe" },
       { category: "Restaurant", en: "Cutlery", fr: "couverts" },
       { category: "Restaurant", en: "Caterer", fr: "traiteur" },
       { category: "Restaurant", en: "Dish", fr: "plat" },
-      { category: "Restaurant", en: "Starter", fr: "entrÃ©e" },
+      { category: "Restaurant", en: "Starter", fr: "entrée" },
       { category: "Restaurant", en: "Main course", fr: "plat principal" },
       { category: "Restaurant", en: "Wholesome", fr: "sain" },
       { category: "Restaurant", en: "Well-done", fr: "bien cuit" },
@@ -1165,48 +1165,48 @@
       { category: "Restaurant", en: "Tray", fr: "plateau" },
       { category: "Restaurant", en: "Waitress", fr: "serveuse" },
 
-      { category: "EntrepÃ´t", en: "Batch", fr: "lot" },
-      { category: "EntrepÃ´t", en: "Spare part", fr: "piÃ¨ce dÃ©tachÃ©e" },
-      { category: "EntrepÃ´t", en: "Premises", fr: "locaux" },
-      { category: "EntrepÃ´t", en: "Consignment", fr: "cargaison" },
-      { category: "EntrepÃ´t", en: "Courier", fr: "coursier" },
-      { category: "EntrepÃ´t", en: "Freight", fr: "fret / cargaison" },
-      { category: "EntrepÃ´t", en: "Forklift truck", fr: "chariot Ã©lÃ©vateur" },
-      { category: "EntrepÃ´t", en: "Load", fr: "chargement" },
-      { category: "EntrepÃ´t", en: "Stack", fr: "pile" },
-      { category: "EntrepÃ´t", en: "Boxes", fr: "boÃ®tes" },
-      { category: "EntrepÃ´t", en: "Blueprints", fr: "plans / projet" },
-      { category: "EntrepÃ´t", en: "Drill", fr: "perceuse" },
-      { category: "EntrepÃ´t", en: "Crates", fr: "caissons" },
-      { category: "EntrepÃ´t", en: "Aisle", fr: "allÃ©e" },
-      { category: "EntrepÃ´t", en: "Hard hat", fr: "casque de chantier" },
-      { category: "EntrepÃ´t", en: "Stocktaking", fr: "inventaire" },
-      { category: "EntrepÃ´t", en: "Trolley", fr: "chariot" },
-      { category: "EntrepÃ´t", en: "Cart", fr: "caddie" },
-      { category: "EntrepÃ´t", en: "Wharf", fr: "quai" },
-      { category: "EntrepÃ´t", en: "Laid out", fr: "disposÃ©" },
-      { category: "EntrepÃ´t", en: "Lined up", fr: "alignÃ©" },
-      { category: "EntrepÃ´t", en: "Be stacked", fr: "Ãªtre empilÃ©" },
-      { category: "EntrepÃ´t", en: "Defective", fr: "dÃ©fectueux" },
-      { category: "EntrepÃ´t", en: "Unit", fr: "unitÃ©" },
-      { category: "EntrepÃ´t", en: "Pending", fr: "en attente" },
+      { category: "Entrepôt", en: "Batch", fr: "lot" },
+      { category: "Entrepôt", en: "Spare part", fr: "pièce détachée" },
+      { category: "Entrepôt", en: "Premises", fr: "locaux" },
+      { category: "Entrepôt", en: "Consignment", fr: "cargaison" },
+      { category: "Entrepôt", en: "Courier", fr: "coursier" },
+      { category: "Entrepôt", en: "Freight", fr: "fret / cargaison" },
+      { category: "Entrepôt", en: "Forklift truck", fr: "chariot élévateur" },
+      { category: "Entrepôt", en: "Load", fr: "chargement" },
+      { category: "Entrepôt", en: "Stack", fr: "pile" },
+      { category: "Entrepôt", en: "Boxes", fr: "boîtes" },
+      { category: "Entrepôt", en: "Blueprints", fr: "plans / projet" },
+      { category: "Entrepôt", en: "Drill", fr: "perceuse" },
+      { category: "Entrepôt", en: "Crates", fr: "caissons" },
+      { category: "Entrepôt", en: "Aisle", fr: "allée" },
+      { category: "Entrepôt", en: "Hard hat", fr: "casque de chantier" },
+      { category: "Entrepôt", en: "Stocktaking", fr: "inventaire" },
+      { category: "Entrepôt", en: "Trolley", fr: "chariot" },
+      { category: "Entrepôt", en: "Cart", fr: "caddie" },
+      { category: "Entrepôt", en: "Wharf", fr: "quai" },
+      { category: "Entrepôt", en: "Laid out", fr: "disposé" },
+      { category: "Entrepôt", en: "Lined up", fr: "aligné" },
+      { category: "Entrepôt", en: "Be stacked", fr: "être empilé" },
+      { category: "Entrepôt", en: "Defective", fr: "défectueux" },
+      { category: "Entrepôt", en: "Unit", fr: "unité" },
+      { category: "Entrepôt", en: "Pending", fr: "en attente" },
 
       { category: "Juridique", en: "Live", fr: "en direct" },
       { category: "Juridique", en: "Counterpart", fr: "homologue" },
-      { category: "Juridique", en: "Trial", fr: "procÃ¨s" },
-      { category: "Juridique", en: "Convention", fr: "congrÃ¨s" },
+      { category: "Juridique", en: "Trial", fr: "procès" },
+      { category: "Juridique", en: "Convention", fr: "congrès" },
       { category: "Juridique", en: "Court", fr: "tribunal" },
       { category: "Juridique", en: "Cubicle", fr: "cabine" },
       { category: "Juridique", en: "Lawsuit", fr: "action en justice" },
 
       { category: "Quotidien", en: "Public transportation", fr: "transport en commun" },
-      { category: "Quotidien", en: "Conductor", fr: "contrÃ´leur" },
+      { category: "Quotidien", en: "Conductor", fr: "contrôleur" },
       { category: "Quotidien", en: "Journey", fr: "trajet" },
       { category: "Quotidien", en: "Hosepipe", fr: "tuyau d'arrosage" },
       { category: "Quotidien", en: "Ointment", fr: "pommade" },
       { category: "Quotidien", en: "In the suburbs", fr: "dans la banlieue" },
       { category: "Quotidien", en: "Liver", fr: "foie" },
-      { category: "Quotidien", en: "Housekeeper", fr: "femme de mÃ©nage" },
+      { category: "Quotidien", en: "Housekeeper", fr: "femme de ménage" },
       { category: "Quotidien", en: "Well", fr: "puits" },
       { category: "Quotidien", en: "Hay", fr: "foin" },
       { category: "Quotidien", en: "Spade", fr: "pelle" },
@@ -1216,7 +1216,7 @@
       { category: "Quotidien", en: "Downtown", fr: "centre-ville" },
       { category: "Quotidien", en: "Outing", fr: "sortie" },
       { category: "Quotidien", en: "Mould", fr: "moisissure" },
-      { category: "Quotidien", en: "Retiree", fr: "retraitÃ©" },
+      { category: "Quotidien", en: "Retiree", fr: "retraité" },
       { category: "Quotidien", en: "Contractor", fr: "entrepreneur" },
       { category: "Quotidien", en: "To do laps", fr: "faire des longueurs" }
     ];
@@ -1273,7 +1273,7 @@
     function populateCategories() {
       const defaultOption = document.createElement("option");
       defaultOption.value = "ALL";
-      defaultOption.textContent = "Toutes les catÃ©gories";
+      defaultOption.textContent = "Toutes les catégories";
       els.categoryFilter.appendChild(defaultOption);
 
       uniqueCategories().forEach((category) => {
@@ -1357,17 +1357,17 @@
       if (!availableEnglishVoices.length) {
         const option = document.createElement("option");
         option.value = "";
-        option.textContent = "Voix anglaise par dÃ©faut";
+        option.textContent = "Voix anglaise par défaut";
         els.voiceSelect.appendChild(option);
         els.voiceSelect.disabled = true;
-        els.audioStatus.textContent = "Aucune voix anglaise dÃ©diÃ©e trouvÃ©e; le navigateur utilisera sa voix par dÃ©faut.";
+        els.audioStatus.textContent = "Aucune voix anglaise dédiée trouvée; le navigateur utilisera sa voix par défaut.";
         return;
       }
 
       availableEnglishVoices.forEach((voice, index) => {
         const option = document.createElement("option");
         option.value = voice.name;
-        option.textContent = `${voice.name} (${voice.lang})${index === 0 ? " - recommandÃ©" : ""}`;
+        option.textContent = `${voice.name} (${voice.lang})${index === 0 ? " - recommandé" : ""}`;
         els.voiceSelect.appendChild(option);
       });
 
@@ -1375,14 +1375,14 @@
       els.voiceSelect.value = preferredVoice.name;
       selectedVoiceName = preferredVoice.name;
       els.voiceSelect.disabled = false;
-      els.audioStatus.textContent = `${availableEnglishVoices.length} voix anglaise(s) gratuite(s) dÃ©tectÃ©e(s).`;
+      els.audioStatus.textContent = `${availableEnglishVoices.length} voix anglaise(s) gratuite(s) détectée(s).`;
     }
 
     function updateModeButtons() {
       const englishActive = startSide === "en";
       els.englishFirst.classList.toggle("active", englishActive);
       els.frenchFirst.classList.toggle("active", !englishActive);
-      els.activeMode.textContent = englishActive ? "Anglais â†’ FranÃ§ais" : "FranÃ§ais â†’ Anglais";
+      els.activeMode.textContent = englishActive ? "Anglais â†’ Français" : "Français â†’ Anglais";
       els.audioButton.title = "Lire le mot en anglais";
     }
 
@@ -1443,10 +1443,10 @@
       els.translation.textContent = backValue;
       els.categoryFront.textContent = item.category;
       els.categoryBack.textContent = item.category;
-      els.frontSideLabel.textContent = startSide === "en" ? "Anglais" : "FranÃ§ais";
-      els.backSideLabel.textContent = startSide === "en" ? "FranÃ§ais" : "Anglais";
-      els.frontHint.textContent = startSide === "en" ? "Terme Ã  traduire" : "Sens Ã  retrouver";
-      els.backHint.textContent = startSide === "en" ? "Traduction franÃ§aise" : "Expression anglaise";
+      els.frontSideLabel.textContent = startSide === "en" ? "Anglais" : "Français";
+      els.backSideLabel.textContent = startSide === "en" ? "Français" : "Anglais";
+      els.frontHint.textContent = startSide === "en" ? "Terme à traduire" : "Sens à retrouver";
+      els.backHint.textContent = startSide === "en" ? "Traduction française" : "Expression anglaise";
 
       const position = currentIndex + 1;
       const total = filteredVocabulary.length;
