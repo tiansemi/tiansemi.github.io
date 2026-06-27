@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Illustration tutoriel réseau</title>
+  <desc id="desc">Schéma réseau stylisé avec postes, routeur et adresses IP.</desc>
+  <rect width="1200" height="675" fill="#0f172a"/>
+  <circle cx="970" cy="120" r="260" fill="#2fd1c8" opacity=".18"/>
+  <circle cx="170" cy="560" r="250" fill="#d86f45" opacity=".18"/>
+  <g stroke="#2fd1c8" stroke-width="8" fill="none" stroke-linecap="round">
+    <path d="M270 355h250M680 355h250M600 250v-95M600 460v85"/>
+  </g>
+  <rect x="500" y="275" width="200" height="160" rx="28" fill="#111f33" stroke="#2fd1c8" stroke-width="8"/>
+  <text x="548" y="368" fill="#fff" font-family="Arial, sans-serif" font-size="42" font-weight="800">R1</text>
+  <g fill="#16263d" stroke="#eaffff" stroke-width="6">
+    <rect x="130" y="295" width="140" height="96" rx="18"/>
+    <rect x="930" y="295" width="140" height="96" rx="18"/>
+    <rect x="530" y="70" width="140" height="96" rx="18"/>
+    <rect x="530" y="530" width="140" height="96" rx="18"/>
+  </g>
+  <g fill="#eaffff" font-family="Arial, sans-serif" font-size="28" font-weight="700">
+    <text x="112" y="440">192.168.1.10</text>
+    <text x="900" y="440">192.168.1.20</text>
+    <text x="500" y="52">DNS</text>
+    <text x="485" y="660">Passerelle</text>
+  </g>
+  <text x="70" y="110" fill="#fff" font-family="Arial, sans-serif" font-size="52" font-weight="800">ADRESSAGE IP</text>
+  <text x="72" y="162" fill="#c7fff8" font-family="Arial, sans-serif" font-size="26" font-weight="700">Un tutoriel pratique pour diagnostiquer vite</text>
+</svg>
