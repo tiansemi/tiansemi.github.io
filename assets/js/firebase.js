@@ -30,6 +30,33 @@ provider.setCustomParameters({
   prompt: 'select_account' // Forces account selection, can help with popup issues
 });
 
+function getFirstName(user) {
+  if (!user) {
+    return '';
+  }
+
+  if (user.displayName) {
+    return user.displayName.trim().split(/\s+/)[0];
+  }
+
+  if (user.email) {
+    return user.email.split('@')[0];
+  }
+
+  return 'membre';
+}
+
+function rememberCurrentUser(user) {
+  if (!user) {
+    localStorage.removeItem('currentUser');
+    return;
+  }
+
+  localStorage.setItem('currentUser', JSON.stringify({
+    displayName: user.displayName || getFirstName(user)
+  }));
+}
+
 // Suppress console warnings for Cross-Origin-Opener-Policy (cosmetic fix)
 const originalConsoleWarn = console.warn;
 console.warn = function(...args) {
@@ -54,16 +81,10 @@ window.loginWithGoogle = function() {
       // Clear timeout on success
       clearTimeout(popupTimeout);
       
-      // User is signed in. You can now access user data.
       const user = result.user;
-      console.log("Logged in user:", user.displayName);
       
-      // Store user info for persistence across page loads and translations
-      localStorage.setItem('currentUser', JSON.stringify({
-        displayName: user.displayName,
-        email: user.email,
-        photoURL: user.photoURL
-      }));
+      // Store only the minimum non-sensitive display data needed by the UI.
+      rememberCurrentUser(user);
       
       // Update UI with user info
       updateUserInterface(user);
@@ -141,7 +162,7 @@ function clearUserInterface() {
   }
   
   // Clear stored user data
-  localStorage.removeItem('currentUser');
+  rememberCurrentUser(null);
 
   updateLearningAuthPanel(null);
 }
@@ -163,7 +184,7 @@ auth.onAuthStateChanged(user => {
 
   if (user) {
     // User is signed in, show protected content
-    console.log("User is signed in:", user.displayName);
+    console.log("User is signed in.");
     if (protectedContent) {
       protectedContent.style.display = "flex";
     }
@@ -171,12 +192,8 @@ auth.onAuthStateChanged(user => {
       loginUi.style.display = "none";
     }
     
-    // Store user info and update UI
-    localStorage.setItem('currentUser', JSON.stringify({
-      displayName: user.displayName,
-      email: user.email,
-      photoURL: user.photoURL
-    }));
+    // Store only minimal display data; no e-mail or photo URL is persisted.
+    rememberCurrentUser(user);
     updateUserInterface(user);
   } else {
     // User is signed out, show login button
@@ -193,28 +210,10 @@ auth.onAuthStateChanged(user => {
 
 // Function to restore user interface on page load/language change
 window.restoreUserInterface = function() {
-  const storedUser = localStorage.getItem('currentUser');
-  if (storedUser && auth.currentUser) {
-    const user = JSON.parse(storedUser);
-    updateUserInterface(user);
+  if (auth.currentUser) {
+    updateUserInterface(auth.currentUser);
   }
 };
-
-function getFirstName(user) {
-  if (!user) {
-    return '';
-  }
-
-  if (user.displayName) {
-    return user.displayName.trim().split(/\s+/)[0];
-  }
-
-  if (user.email) {
-    return user.email.split('@')[0];
-  }
-
-  return 'membre';
-}
 
 function updateLearningAuthPanel(user) {
   const panel = document.querySelector('[data-learning-auth]');

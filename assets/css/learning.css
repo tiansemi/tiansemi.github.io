@@ -480,13 +480,65 @@ a {
   border-bottom: 0;
 }
 
+.learning-code-block {
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 34%, var(--color-border));
+  border-radius: 18px;
+  background: color-mix(in srgb, #020617 86%, var(--bg-secondary));
+}
+
+.learning-code-block__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: 0.65rem 0.85rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 24%, transparent);
+}
+
+.learning-code-block__label {
+  color: #dff7ff;
+  font-family: var(--font-heading);
+  font-size: 0.86rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.learning-code-copy {
+  min-height: 2.15rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 50%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-accent) 18%, transparent);
+  color: #dff7ff;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+.learning-code-copy:hover,
+.learning-code-copy:focus-visible {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+.learning-code-copy[data-state="success"] {
+  border-color: var(--color-success);
+  background: color-mix(in srgb, var(--color-success) 22%, transparent);
+}
+
+.learning-code-copy[data-state="error"] {
+  border-color: var(--color-danger);
+  background: color-mix(in srgb, var(--color-danger) 18%, transparent);
+}
+
 .learning-code {
   display: block;
   overflow-x: auto;
   padding: 1rem 1.1rem;
-  border: 1px solid color-mix(in srgb, var(--color-accent) 34%, var(--color-border));
-  border-radius: 18px;
-  background: color-mix(in srgb, #020617 86%, var(--bg-secondary));
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   color: #dff7ff;
   font: 0.95rem/1.65 "Cascadia Code", Consolas, monospace;
 }
@@ -552,6 +604,7 @@ body.light_theme .learning-article,
 body.light_theme .learning-table-wrap,
 body.light_theme .learning-table th,
 body.light_theme .learning-table td,
+body.light_theme .learning-code-block,
 body.light_theme .learning-flow,
 body.light_theme .learning-flow__steps span,
 body.light_theme .learning-aside__card {
