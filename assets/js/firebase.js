@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
-import { GoogleAuthProvider, signInWithPopup, getAuth} from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
+import { GoogleAuthProvider, signInWithPopup, getAuth } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -124,6 +124,8 @@ function updateUserInterface(user) {
     userAvatar.src = user.photoURL;
     userAvatar.style.display = 'block';
   }
+
+  updateLearningAuthPanel(user);
 }
 
 // Function to clear user interface
@@ -140,6 +142,8 @@ function clearUserInterface() {
   
   // Clear stored user data
   localStorage.removeItem('currentUser');
+
+  updateLearningAuthPanel(null);
 }
 
 window.signOut = function() {
@@ -154,11 +158,18 @@ window.signOut = function() {
   });
 }
 auth.onAuthStateChanged(user => {
+  const protectedContent = document.getElementById("protected-content");
+  const loginUi = document.getElementById("login-ui");
+
   if (user) {
     // User is signed in, show protected content
     console.log("User is signed in:", user.displayName);
-    document.getElementById("protected-content").style.display = "flex";
-    document.getElementById("login-ui").style.display = "none";
+    if (protectedContent) {
+      protectedContent.style.display = "flex";
+    }
+    if (loginUi) {
+      loginUi.style.display = "none";
+    }
     
     // Store user info and update UI
     localStorage.setItem('currentUser', JSON.stringify({
@@ -170,8 +181,12 @@ auth.onAuthStateChanged(user => {
   } else {
     // User is signed out, show login button
     console.log("No user is signed in.");
-    document.getElementById("protected-content").style.display = "none";
-    document.getElementById("login-ui").style.display = "block";
+    if (protectedContent) {
+      protectedContent.style.display = "none";
+    }
+    if (loginUi) {
+      loginUi.style.display = "block";
+    }
     clearUserInterface();
   }
 });
@@ -184,6 +199,67 @@ window.restoreUserInterface = function() {
     updateUserInterface(user);
   }
 };
+
+function getFirstName(user) {
+  if (!user) {
+    return '';
+  }
+
+  if (user.displayName) {
+    return user.displayName.trim().split(/\s+/)[0];
+  }
+
+  if (user.email) {
+    return user.email.split('@')[0];
+  }
+
+  return 'membre';
+}
+
+function updateLearningAuthPanel(user) {
+  const panel = document.querySelector('[data-learning-auth]');
+
+  if (!panel) {
+    return;
+  }
+
+  const guestState = panel.querySelector('[data-learning-auth-guest]');
+  const memberState = panel.querySelector('[data-learning-auth-member]');
+  const nameTarget = panel.querySelector('[data-learning-auth-name]');
+
+  if (user) {
+    const firstName = getFirstName(user);
+
+    if (nameTarget) {
+      nameTarget.textContent = firstName;
+    }
+
+    if (guestState) {
+      guestState.hidden = true;
+    }
+
+    if (memberState) {
+      memberState.hidden = false;
+    }
+
+    panel.dataset.authState = 'connected';
+    return;
+  }
+
+  if (guestState) {
+    guestState.hidden = false;
+  }
+
+  if (memberState) {
+    memberState.hidden = true;
+  }
+
+  if (nameTarget) {
+    nameTarget.textContent = '';
+  }
+
+  panel.dataset.authState = 'guest';
+}
 
 // Dropdown functionality
 window.toggleUserDropdown = function() {

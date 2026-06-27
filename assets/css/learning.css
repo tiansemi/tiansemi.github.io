@@ -318,6 +318,43 @@ a {
   line-height: 1.7;
 }
 
+.learning-auth-card {
+  max-width: 760px;
+  padding: var(--space-3);
+  border: 1px solid color-mix(in srgb, var(--color-success) 38%, var(--color-border));
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--color-success) 10%, transparent), transparent 68%),
+    color-mix(in srgb, var(--bg-primary) 42%, transparent);
+}
+
+.learning-auth-card > div {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.learning-auth-card h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.45rem, 3vw, 2.1rem);
+  letter-spacing: -0.035em;
+}
+
+.learning-auth-card p {
+  max-width: 660px;
+  margin: 0;
+  color: var(--color-secondary);
+  line-height: 1.7;
+}
+
+.learning-auth-card [hidden] {
+  display: none;
+}
+
+.learning-auth-card[data-auth-state="loading"] {
+  opacity: 0.88;
+}
+
 .learning-article {
   margin-top: var(--space-4);
   padding: var(--space-5);
@@ -510,6 +547,7 @@ body.light_theme .track-list li,
 body.light_theme .resource-list li,
 body.light_theme .track-note,
 body.light_theme .learning-context,
+body.light_theme .learning-auth-card,
 body.light_theme .learning-article,
 body.light_theme .learning-table-wrap,
 body.light_theme .learning-table th,
