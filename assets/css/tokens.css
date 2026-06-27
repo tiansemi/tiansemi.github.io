@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Saira+Stencil+One&family=Space+Grotesk:wght@500;600;700&display=swap");
+
 /* TianSemi design tokens
  * Use semantic tokens in new components. Legacy aliases support existing style.css components.
  */
@@ -25,17 +27,17 @@
   --color-danger: #c4453f;
 
   /* Light theme */
-  --color-bg-light: #f3f6f9;
-  --color-surface-light: #ffffff;
-  --color-surface-input-light: #e8eef5;
-  --color-text-light: #142033;
-  --color-text-muted-light: #536174;
-  --color-border-light: #cbd5e1;
+  --color-bg-light: #f7f1e8;
+  --color-surface-light: #fffaf2;
+  --color-surface-input-light: #f1eadf;
+  --color-text-light: #172033;
+  --color-text-muted-light: #667085;
+  --color-border-light: #e4d8c7;
 
   /* Typography */
   --font-display: "Saira Stencil One", sans-serif;
-  --font-heading: "Poppins", sans-serif;
-  --font-body: "Roboto", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Manrope", sans-serif;
 
   --font-size-1: 2rem;
   --font-size-2: calc(1.813rem + 1vw);
@@ -60,7 +62,7 @@
   --radius-sm: 4px;
   --radius-md: 12px;
   --shadow-color-dark: rgb(0 0 0 / 40%);
-  --shadow-color-light: rgb(15 23 42 / 12%);
+  --shadow-color-light: rgb(93 64 33 / 13%);
   --shadow-color-subtle: rgb(0 0 0 / 20%);
   --overlay-light: rgb(255 255 255 / 10%);
   --overlay-dark: rgb(0 0 0 / 62%);
