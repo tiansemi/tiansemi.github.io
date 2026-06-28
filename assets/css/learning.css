@@ -106,6 +106,19 @@ a {
   color: #101827;
 }
 
+.learning-button--danger {
+  border-color: color-mix(in srgb, var(--color-danger) 72%, var(--color-border));
+  background: color-mix(in srgb, var(--color-danger) 14%, transparent);
+  color: #ffd7d7;
+}
+
+.learning-button--danger:hover,
+.learning-button--danger:focus-visible {
+  border-color: var(--color-danger);
+  background: color-mix(in srgb, var(--color-danger) 24%, transparent);
+  color: #ffffff;
+}
+
 .learning-section {
   margin-top: var(--space-5);
 }
@@ -645,6 +658,26 @@ body.light_theme .learning-flow,
 body.light_theme .learning-flow__steps span,
 body.light_theme .learning-aside__card {
   border-color: var(--color-border-light);
+}
+
+body.light_theme .learning-button {
+  color: var(--color-text-light);
+}
+
+body.light_theme .learning-button--primary {
+  color: #101827;
+}
+
+body.light_theme .learning-button--danger {
+  border-color: color-mix(in srgb, var(--color-danger) 68%, var(--color-border-light));
+  background: color-mix(in srgb, var(--color-danger) 9%, var(--color-surface-light));
+  color: #7f1d1d;
+}
+
+body.light_theme .learning-button--danger:hover,
+body.light_theme .learning-button--danger:focus-visible {
+  background: color-mix(in srgb, var(--color-danger) 17%, var(--color-surface-light));
+  color: #5f1010;
 }
 
 @media (max-width: 920px) {
