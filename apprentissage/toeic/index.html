@@ -889,7 +889,7 @@
           <div>
             <h2 id="studyTitle">Toutes les cartes</h2>
             <div class="study-meta">
-              <span class="badge" id="activeMode">Anglais â†’ Français</span>
+              <span class="badge" id="activeMode">Anglais → Français</span>
               <span id="progressText">0 / 0</span>
             </div>
           </div>
@@ -1382,7 +1382,7 @@
       const englishActive = startSide === "en";
       els.englishFirst.classList.toggle("active", englishActive);
       els.frenchFirst.classList.toggle("active", !englishActive);
-      els.activeMode.textContent = englishActive ? "Anglais â†’ Français" : "Français â†’ Anglais";
+      els.activeMode.textContent = englishActive ? "Anglais → Français" : "Français → Anglais";
       els.audioButton.title = "Lire le mot en anglais";
     }
 

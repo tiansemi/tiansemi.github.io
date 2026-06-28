@@ -291,6 +291,19 @@ Après ajout, déplacement ou suppression d'une page :
 3. conserver `robots.txt` avec `Allow: /` et `Sitemap: https://tiansemi.github.io/sitemap.xml` ;
 4. soumettre de nouveau le sitemap dans Google Search Console si le changement est important.
 
+### Langue et bilinguisme
+
+Décision Sprint 6 : le site conserve pour l'instant le switch de langue JavaScript existant. La migration vers des URLs distinctes `/fr/` et `/en/` est reportée à une phase dédiée, car elle demande une stratégie complète de contenus, redirections, canonicals et maintenance éditoriale.
+
+Règles actuelles :
+
+- chaque page publique est servie en `lang="fr"` par défaut ;
+- le switch JS peut adapter les textes disponibles côté client ;
+- les balises `hreflang="fr"` et `hreflang="x-default"` pointent vers l'URL canonique actuelle ;
+- aucune URL `/en/` ne doit être déclarée tant que la version anglaise n'existe pas réellement.
+
+Si la migration bilingue est engagée plus tard, créer d'abord les pages prioritaires `/fr/` et `/en/` pour l'accueil, le portfolio et les pages d'apprentissage principales, avec des balises `hreflang` réciproques.
+
 Dev - how to run locally
 
 If you edit files and open them directly with the file:// protocol some browsers (or DevTools) may display or interpret file encoding differently which can make JS/CSS appear corrupted in DevTools. To avoid this, serve the site with a simple local HTTP server when developing:

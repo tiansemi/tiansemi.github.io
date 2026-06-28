@@ -106,7 +106,7 @@
             <table>
               <thead>
                 <tr>
-                  <th>Ã‰tape</th>
+                  <th>Étape</th>
                   <th>Question</th>
                   <th>Commande utile</th>
                 </tr>
@@ -135,7 +135,7 @@
               </tbody>
             </table>
 
-            <h2>Ã‰tape 1 : vérifier la configuration locale</h2>
+            <h2>Étape 1 : vérifier la configuration locale</h2>
             <p>
               Commencez par lire l’adresse IP, le masque, la passerelle et les DNS. Si l’adresse est absente, incohérente
               ou dans un réseau inattendu, le reste des tests sera difficile à interpréter.
@@ -150,7 +150,7 @@
 ip addr
 ip route</code></pre>
 
-            <h2>Ã‰tape 2 : tester la passerelle</h2>
+            <h2>Étape 2 : tester la passerelle</h2>
             <p>
               La passerelle est souvent la première sortie vers le reste du réseau. Si elle ne répond pas, le problème
               peut venir du Wi-Fi, du câble, du VLAN, de l’adresse IP ou de la passerelle elle-même.
@@ -162,7 +162,7 @@ ip route</code></pre>
             </p>
             <pre><code class="language-bash" data-label="Test passerelle">ping 192.168.1.1</code></pre>
 
-            <h2>Ã‰tape 3 : tester Internet sans DNS</h2>
+            <h2>Étape 3 : tester Internet sans DNS</h2>
             <p>
               Tester une adresse IP publique permet de savoir si la sortie réseau fonctionne sans dépendre de la
               résolution de nom. Si <code>ping 8.8.8.8</code> répond mais qu’un site ne s’ouvre pas, le DNS devient une
@@ -170,12 +170,12 @@ ip route</code></pre>
             </p>
             <p>
               Si ce test échoue alors que la passerelle répond, la panne peut se situer plus loin : règle de filtrage,
-              route absente, problème NAT ou coupure côté fournisseur. Ã€ ce stade, vous savez au moins que la machine
+              route absente, problème NAT ou coupure côté fournisseur. À ce stade, vous savez au moins que la machine
               locale et le lien vers la passerelle ne sont probablement pas la première cause.
             </p>
             <pre><code class="language-bash" data-label="Test Internet">ping 8.8.8.8</code></pre>
 
-            <h2>Ã‰tape 4 : tester le DNS</h2>
+            <h2>Étape 4 : tester le DNS</h2>
             <p>
               Le DNS transforme un nom en adresse IP. Une panne DNS donne souvent l’impression qu’Internet est coupé,
               alors que la connectivité IP fonctionne encore.
