@@ -5,6 +5,8 @@
   if (!mount) return;
 
   const root = mount.dataset.siteRoot || "./";
+  const main = document.querySelector("main");
+  if (main && !main.id) main.id = "main-content";
   const normalise = (path) => path.replace(/index\.html$/, "").replace(/\/+$/, "") || "/";
   const currentPath = normalise(window.location.pathname);
   const items = [
@@ -12,7 +14,7 @@
     ["Blog", `${root}blog/`], ["Portfolio", `${root}portfolio/`], ["Contact", `${root}#contact`]
   ];
   const isActive = (label, href) => label !== "Contact" && normalise(new URL(href, window.location.href).pathname) === currentPath;
-  const markup = `<header class="site-nav" data-header><div class="site-nav__inner"><a class="site-nav__brand" href="${root}" aria-label="Accueil TianSemi">TianSemi<span>.</span></a><button class="site-nav__toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-nav-toggle-btn><span></span><span></span><span></span></button><nav class="site-nav__links" aria-label="Navigation principale" data-navbar>${items.map(([label, href]) => `<a href="${href}"${isActive(label, href) ? ' aria-current="page"' : ""}>${label}</a>`).join("")}<label class="sr-only" for="lang">Langue du site</label><select class="site-nav__language" id="lang" aria-label="Langue du site"><option value="fr">FR</option><option value="en">EN</option></select><button class="site-nav__theme" type="button" aria-label="Changer de thème" data-theme-btn></button></nav></div></header>`;
+  const markup = `<header class="site-nav" data-header><a class="site-nav__skip" href="#main-content">Aller au contenu principal</a><div class="site-nav__inner"><a class="site-nav__brand" href="${root}" aria-label="Accueil TianSemi">TianSemi<span>.</span></a><button class="site-nav__toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle-btn><span></span><span></span><span></span></button><nav class="site-nav__links" id="site-navigation" aria-label="Navigation principale" data-navbar>${items.map(([label, href]) => `<a href="${href}"${isActive(label, href) ? ' aria-current="page"' : ""}>${label}</a>`).join("")}<label class="sr-only" for="lang">Langue du site</label><select class="site-nav__language" id="lang" aria-label="Langue du site"><option value="fr">FR</option><option value="en">EN</option></select><button class="site-nav__theme" type="button" aria-label="Changer de thème" data-theme-btn></button></nav></div></header>`;
   const replaceHeader = mount.tagName === "HEADER";
   if (replaceHeader) mount.outerHTML = markup;
   else mount.innerHTML = markup;

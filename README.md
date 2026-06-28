@@ -352,6 +352,48 @@ Après minification :
 3. relancer Lighthouse sur mobile ;
 4. vérifier que `firebase.min.js` n'est pas chargé sur les pages qui n'utilisent pas l'authentification.
 
+## Accessibilité
+
+Le Sprint 6 vise un score Lighthouse Accessibilité ≥ 90 sur les pages principales et l'absence d'erreur critique axe-core.
+
+### Pages à auditer manuellement
+
+- Accueil : `/`
+- Club : `/club/`
+- Portfolio : `/portfolio/`
+- Apprentissage : `/apprentissage/`
+- Blog : `/blog/`
+- Pages interactives : `/apprentissage/quiz/` et `/apprentissage/toeic/`
+
+### Protocole manuel recommandé
+
+1. Ouvrir chaque page en mobile et desktop.
+2. Lancer Lighthouse en mode mobile, sans extensions si possible.
+3. Lancer axe DevTools ou l'audit Accessibilité des DevTools.
+4. Tester au clavier uniquement :
+   - `Tab` pour avancer ;
+   - `Shift + Tab` pour revenir ;
+   - `Entrée` ou `Espace` pour activer les boutons ;
+   - `Échap` pour fermer le menu mobile.
+5. Vérifier que le focus reste toujours visible.
+6. Vérifier que le menu mobile affiche tous les liens, le sélecteur de langue et le bouton de thème.
+7. Tester le lien d'évitement : au premier `Tab`, “Aller au contenu principal” doit apparaître.
+8. Vérifier les contrastes avec Lighthouse ou axe :
+   - texte courant : ≥ 4,5:1 ;
+   - grands textes et icônes utiles : ≥ 3:1.
+9. Avec NVDA + Firefox :
+   - lire les titres avec `H` ;
+   - naviguer entre liens avec `K` ;
+   - vérifier que le menu annonce son état ouvert/fermé via `aria-expanded`.
+10. Noter chaque anomalie avec :
+    - URL ;
+    - sélecteur ou zone ;
+    - impact utilisateur ;
+    - capture ;
+    - correction proposée.
+
+Les corrections critiques WCAG AA sont prioritaires sur les warnings d'amélioration continue.
+
 Dev - how to run locally
 
 If you edit files and open them directly with the file:// protocol some browsers (or DevTools) may display or interpret file encoding differently which can make JS/CSS appear corrupted in DevTools. To avoid this, serve the site with a simple local HTTP server when developing:
