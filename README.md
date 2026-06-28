@@ -304,6 +304,54 @@ Règles actuelles :
 
 Si la migration bilingue est engagée plus tard, créer d'abord les pages prioritaires `/fr/` et `/en/` pour l'accueil, le portfolio et les pages d'apprentissage principales, avec des balises `hreflang` réciproques.
 
+## Performance
+
+Le Sprint 6 privilégie des optimisations compatibles GitHub Pages, sans pipeline de build continu.
+
+### Images
+
+- Les images critiques visibles au chargement utilisent `loading="eager"` et `fetchpriority="high"`.
+- Les images secondaires utilisent `loading="lazy"` et `decoding="async"`.
+- Les images HTML déclarent `width` et `height` pour limiter le CLS.
+- Les images PNG lourdes disposent d'une version WebP avec fallback PNG :
+  - `assets/images/hero-banner.webp` ;
+  - `assets/images/hero-banner-md.webp` ;
+  - `assets/images/hero-banner-sm.webp` ;
+  - `assets/images/toeic-study-banner.webp` ;
+  - `assets/images/about-banner.webp`.
+
+La page Portfolio utilise `<picture>` avec WebP prioritaire et PNG fallback. La page TOEIC utilise également une image hero HTML prioritaire au lieu d'un simple background CSS, afin d'exposer `loading`, `fetchpriority`, `width` et `height` au navigateur.
+
+### CSS et JavaScript
+
+Les pages publiques chargent les fichiers minifiés `.min.css` et `.min.js`. Les fichiers sources non minifiés restent dans le dépôt pour faciliter la maintenance.
+
+Objectif de taille : raisonner par page chargée, pas par somme de tous les fichiers du dépôt. Chaque page ne charge qu'un sous-ensemble des ressources :
+
+- navigation commune ;
+- feuille de style de section ;
+- script de section si nécessaire ;
+- `firebase.min.js` uniquement sur les pages qui utilisent l'authentification Google.
+
+### Régénérer les ressources minifiées
+
+Procédure utilisée :
+
+```powershell
+# JS : exemple pour un fichier
+npx.cmd --yes terser assets/js/navigation.js -c -o assets/js/navigation.min.js
+
+# CSS : minifier sans inliner tokens.css, afin d'éviter de dupliquer les design tokens.
+# Si clean-css est utilisé, vérifier que les @import vers tokens.min.css restent conservés.
+```
+
+Après minification :
+
+1. vérifier les pages principales en local ;
+2. tester le menu, le thème, les formulaires, le Quiz et TOEIC ;
+3. relancer Lighthouse sur mobile ;
+4. vérifier que `firebase.min.js` n'est pas chargé sur les pages qui n'utilisent pas l'authentification.
+
 Dev - how to run locally
 
 If you edit files and open them directly with the file:// protocol some browsers (or DevTools) may display or interpret file encoding differently which can make JS/CSS appear corrupted in DevTools. To avoid this, serve the site with a simple local HTTP server when developing:

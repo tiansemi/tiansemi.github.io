@@ -19,8 +19,8 @@
     <meta name="twitter:description" content="Découvrez le portfolio de Moulo Oholo Jean Noël : profil réseau et cybersécurité, parcours, CV, projets, compétences et contact professionnel.">
     <meta name="twitter:image" content="https://tiansemi.github.io/assets/images/og-cover.png">
     <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../assets/css/navigation.css">
-    <link rel="stylesheet" href="../assets/css/portfolio.css">
+    <link rel="stylesheet" href="../assets/css/navigation.min.css">
+    <link rel="stylesheet" href="../assets/css/portfolio.min.css">
     <script type="application/ld+json" data-schema="person">
 {
   "@context": "https://schema.org",
@@ -111,11 +111,24 @@
           </div>
 
           <figure class="portfolio-portrait-card">
-            <img
-              src="../assets/images/hero-banner.png"
-              alt="Illustration professionnelle utilisée pour représenter le portfolio de Moulo Oholo Jean Noël"
-              loading="lazy"
-            >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="../assets/images/hero-banner-sm.webp 500w, ../assets/images/hero-banner-md.webp 800w, ../assets/images/hero-banner.webp 1920w"
+                sizes="(max-width: 768px) 85vw, 420px"
+              >
+              <img
+                src="../assets/images/hero-banner.png"
+                srcset="../assets/images/hero-banner-sm.png 500w, ../assets/images/hero-banner-md.png 800w, ../assets/images/hero-banner.png 1920w"
+                sizes="(max-width: 768px) 85vw, 420px"
+                width="1920"
+                height="1200"
+                alt="Illustration professionnelle utilisée pour représenter le portfolio de Moulo Oholo Jean Noël"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+              >
+            </picture>
           </figure>
         </section>
 
@@ -204,10 +217,9 @@
       </div>
     </main>
 
-    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/navigation.min.js"></script>
   </body>
 </html>
-
 
 
 
