@@ -394,6 +394,28 @@ Le Sprint 6 vise un score Lighthouse Accessibilité ≥ 90 sur les pages princip
 
 Les corrections critiques WCAG AA sont prioritaires sur les warnings d'amélioration continue.
 
+## Sécurité front-end
+
+Le site applique une Content Security Policy via balise meta sur les pages HTML publiées. Le fichier de validation Google Search Console reste volontairement minimal et ne doit pas être modifié.
+
+Origines explicitement autorisées :
+
+- scripts locaux ;
+- Highlight.js via `cdnjs.cloudflare.com` ;
+- Ionicons via `unpkg.com` ;
+- modules Firebase via `www.gstatic.com` ;
+- Google Fonts via `fonts.googleapis.com` et `fonts.gstatic.com` ;
+- formulaires Formspree via `formspree.io`.
+
+Avant d'ajouter un nouveau CDN ou un nouveau service externe :
+
+1. ajouter son domaine dans la directive CSP strictement nécessaire ;
+2. ajouter `integrity` et `crossorigin="anonymous"` sur les scripts CDN statiques ;
+3. tester la console navigateur en production et en local ;
+4. vérifier que Formspree, Firebase, le menu, le thème, le Quiz, TOEIC et les articles de blog fonctionnent encore.
+
+Les scripts inline existants sont encore autorisés pour compatibilité avec les données structurées JSON-LD, les redirections historiques et le module TOEIC. À long terme, déplacer ces scripts dans des fichiers `.js` permettrait de retirer `'unsafe-inline'` de `script-src`.
+
 Dev - how to run locally
 
 If you edit files and open them directly with the file:// protocol some browsers (or DevTools) may display or interpret file encoding differently which can make JS/CSS appear corrupted in DevTools. To avoid this, serve the site with a simple local HTTP server when developing:

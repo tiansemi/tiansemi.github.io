@@ -1397,7 +1397,7 @@ Rapport Lighthouse en direct sur les 5 pages principales, montrant les scores ci
 
 ---
 
-# Sprint 7 — Tests, Corrections & Déploiement
+# Sprint 7 — Tests, Corrections & Déploiement [à faire]
 
 ## Vision du Sprint
 Valider la qualité globale de la plateforme reconstituée sur l'ensemble des sprints précédents, corriger les régressions ou incohérences résiduelles, mettre en place le pipeline CI/CD pérenne, et procéder à la mise en production officielle avec une communication coordonnée.
