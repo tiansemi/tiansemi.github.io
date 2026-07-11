@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com https://www.gstatic.com https://apis.google.com https://accounts.google.com https://www.google.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://cdnjs.cloudflare.com https://unpkg.com https://www.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://*.googleapis.com https://*.gstatic.com https://*.firebaseio.com https://*.firebaseapp.com https://www.google-analytics.com https://analytics.google.com; frame-src 'self' https://accounts.google.com https://apis.google.com https://www.google.com https://*.firebaseapp.com; form-action 'self' https://formspree.io https://accounts.google.com; upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HCIA-Datacom : comprendre les réseaux de communication de données — TianSemi</title>
+    <meta name="description" content="Comprendre ce qu'est un réseau de communication de données, les équipements essentiels, les types de réseaux et les bases pratiques du parcours HCIA-Datacom.">
+    <link rel="canonical" href="https://tiansemi.github.io/apprentissage/reseaux/hcia-datacom-comprendre-reseaux-communication-donnees/">
+    <link rel="alternate" hreflang="fr" href="https://tiansemi.github.io/apprentissage/reseaux/hcia-datacom-comprendre-reseaux-communication-donnees/">
+    <link rel="alternate" hreflang="x-default" href="https://tiansemi.github.io/apprentissage/reseaux/hcia-datacom-comprendre-reseaux-communication-donnees/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="TianSemi">
+    <meta property="og:title" content="HCIA-Datacom : comprendre les réseaux de communication de données">
+    <meta property="og:description" content="Un premier article pratique pour comprendre les rôles des équipements, les types de réseaux et les réflexes de diagnostic Datacom.">
+    <meta property="og:url" content="https://tiansemi.github.io/apprentissage/reseaux/hcia-datacom-comprendre-reseaux-communication-donnees/">
+    <meta property="og:image" content="https://tiansemi.github.io/assets/images/hcia-datacom-enterprise-topology.svg">
+    <meta property="article:published_time" content="2026-07-11">
+    <meta property="article:author" content="MOULO OHOLO Jean Noel">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HCIA-Datacom : comprendre les réseaux de communication de données">
+    <meta name="twitter:description" content="Comprendre les bases Datacom avec une approche visuelle et pratique.">
+    <meta name="twitter:image" content="https://tiansemi.github.io/assets/images/hcia-datacom-enterprise-topology.svg">
+    <link rel="shortcut icon" href="../../../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../../assets/css/navigation.min.css">
+    <link rel="stylesheet" href="../../../assets/css/learning.min.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "HCIA-Datacom : comprendre les réseaux de communication de données",
+        "description": "Comprendre ce qu'est un réseau de communication de données, les équipements essentiels et les premiers réflexes pratiques HCIA-Datacom.",
+        "learningResourceType": "Article",
+        "educationalLevel": "Beginner",
+        "inLanguage": "fr",
+        "author": {"@type": "Person", "name": "MOULO OHOLO Jean Noel"},
+        "publisher": {"@type": "Organization", "name": "TianSemi", "url": "https://tiansemi.github.io/"},
+        "url": "https://tiansemi.github.io/apprentissage/reseaux/hcia-datacom-comprendre-reseaux-communication-donnees/"
+      }
+    </script>
+    <script type="application/ld+json" data-schema="breadcrumb">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://tiansemi.github.io/"},
+          {"@type": "ListItem", "position": 2, "name": "Apprentissage", "item": "https://tiansemi.github.io/apprentissage/"},
+          {"@type": "ListItem", "position": 3, "name": "Réseaux", "item": "https://tiansemi.github.io/apprentissage/reseaux/"},
+          {"@type": "ListItem", "position": 4, "name": "HCIA-Datacom", "item": "https://tiansemi.github.io/apprentissage/reseaux/hcia-datacom-comprendre-reseaux-communication-donnees/"}
+        ]
+      }
+    </script>
+  </head>
+  <body class="dark_theme">
+    <div data-site-nav data-site-root="../../../"></div>
+
+    <main class="learning-page">
+      <div class="learning-shell">
+        <article class="learning-article">
+          <header class="learning-article__header">
+            <p class="learning-eyebrow">Huawei HCIA-Datacom · Débutant</p>
+            <h1>Comprendre les réseaux de communication de données.</h1>
+            <p class="learning-article__lead">
+              Le premier réflexe d’un futur ingénieur Datacom n’est pas de configurer : c’est de voir le chemin de la donnée, reconnaître les rôles des équipements et vérifier dans le bon ordre.
+            </p>
+            <div class="learning-article__meta" aria-label="Métadonnées de la ressource">
+              <span class="learning-tag">Durée : 12 min</span>
+              <span class="learning-tag">Niveau : HCIA</span>
+              <span class="learning-tag">Sujet : Datacom</span>
+            </div>
+          </header>
+
+          <figure style="margin: 0 0 2rem;">
+            <img src="../../../assets/images/hcia-datacom-data-flow.svg" width="1200" height="520" loading="eager" decoding="async" alt="Schéma Source, Canal, Destination pour expliquer une communication de données." style="display:block;width:100%;height:auto;border-radius:24px;border:1px solid var(--color-border);">
+          </figure>
+
+          <div class="learning-article__grid">
+            <div class="learning-prose">
+              <section aria-labelledby="definition-title">
+                <h2 id="definition-title">1. Qu’est-ce qu’un réseau de communication de données ?</h2>
+                <p>Un réseau de communication de données est un ensemble d’équipements, de supports et de règles permettant à des systèmes d’échanger de l’information.</p>
+                <p>Une communication simple contient toujours une source, un canal et une destination. La source envoie, le canal transporte, la destination reçoit.</p>
+                <p>L’image du colis aide : l’expéditeur est la source, la route est le canal, et le destinataire est la destination. Dans un réseau, le colis devient une donnée, et la route devient une suite de liens Ethernet, Wi‑Fi, fibre, switches, routeurs et règles de sécurité.</p>
+              </section>
+
+              <section aria-labelledby="roles-title">
+                <h2 id="roles-title">2. Les rôles essentiels dans un réseau Datacom</h2>
+                <div class="learning-table-wrap">
+                  <table class="learning-table">
+                    <thead><tr><th>Élément</th><th>Rôle</th><th>Erreur fréquente</th></tr></thead>
+                    <tbody>
+                      <tr><td>Terminal</td><td>Produit ou consomme les données.</td><td>Oublier que la panne peut venir du poste.</td></tr>
+                      <tr><td>Switch</td><td>Connecte les équipements d’un LAN.</td><td>Le confondre avec un routeur.</td></tr>
+                      <tr><td>Routeur</td><td>Relie plusieurs réseaux IP.</td><td>Croire qu’il remplace toujours le firewall.</td></tr>
+                      <tr><td>Firewall</td><td>Filtre et sécurise les flux.</td><td>Oublier les règles de sécurité.</td></tr>
+                      <tr><td>AP / WAC</td><td>Fournit et centralise l’accès Wi‑Fi.</td><td>Ne pas vérifier l’association Wi‑Fi.</td></tr>
+                      <tr><td>Serveur</td><td>Fournit un service : DNS, DHCP, web, fichiers.</td><td>L’accuser avant de vérifier le chemin réseau.</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section aria-labelledby="topology-title">
+                <h2 id="topology-title">3. Voir la topologie avant de configurer</h2>
+                <p>Une topologie montre comment les équipements sont organisés. Elle peut être physique, avec câbles et ports, ou logique, avec rôles, VLAN, sous-réseaux et chemins.</p>
+                <figure style="margin:1.5rem 0;">
+                  <img src="../../../assets/images/hcia-datacom-enterprise-topology.svg" width="1200" height="680" loading="lazy" decoding="async" alt="Topologie Datacom avec PC, switch, routeur, firewall, AP, WAC, serveur et Internet." style="display:block;width:100%;height:auto;border-radius:24px;border:1px solid var(--color-border);">
+                </figure>
+                <p>Avant de toucher à la configuration, identifiez les terminaux, les switches d’accès, la passerelle, la sortie Internet, le firewall, les AP, le WAC et les serveurs.</p>
+              </section>
+
+              <section aria-labelledby="scale-title">
+                <h2 id="scale-title">4. LAN, MAN, WAN : comprendre l’échelle</h2>
+                <div class="learning-table-wrap">
+                  <table class="learning-table">
+                    <thead><tr><th>Type</th><th>Portée</th><th>Exemple</th></tr></thead>
+                    <tbody>
+                      <tr><td>LAN</td><td>Zone locale.</td><td>Bureau, salle, campus proche.</td></tr>
+                      <tr><td>MAN</td><td>Zone métropolitaine.</td><td>Sites d’une ville ou grande université.</td></tr>
+                      <tr><td>WAN</td><td>Grande distance.</td><td>Agences, villes, pays, opérateur.</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section aria-labelledby="troubleshooting-title">
+                <h2 id="troubleshooting-title">5. Penser comme un ingénieur HCIA-Datacom</h2>
+                <p>Quand une communication échoue, avancez dans cet ordre : terminal, câble ou Wi‑Fi, switch d’accès, VLAN ou segment réseau, adressage IP, routage, firewall, serveur ou application.</p>
+                <p>Cette méthode évite de commencer par des commandes avancées alors que la panne vient parfois d’un câble, d’un port down, d’une mauvaise IP ou d’une passerelle absente.</p>
+              </section>
+
+              <section aria-labelledby="commands-title">
+                <h2 id="commands-title">6. Premières commandes Huawei à connaître</h2>
+                <pre class="learning-code" data-code-label="Observation Huawei"><code>display version
+display device
+display interface brief
+display ip interface brief
+display current-configuration
+display this
+ping
+tracert</code></pre>
+                <p>Une commande doit répondre à une hypothèse. On ne dépanne pas au hasard : on vérifie un point précis du chemin.</p>
+              </section>
+
+              <section aria-labelledby="lab-title">
+                <h2 id="lab-title">7. Mini-lab TianSemi</h2>
+                <p>Dessinez un petit bureau avec 10 PC, 2 imprimantes, 2 AP, 1 switch d’accès, 1 routeur, 1 firewall et 1 serveur interne.</p>
+                <ol>
+                  <li>Nommez chaque équipement.</li>
+                  <li>Indiquez son rôle.</li>
+                  <li>Tracez le chemin d’un PC vers Internet.</li>
+                  <li>Identifiez trois points de panne possibles.</li>
+                  <li>Associez une commande Huawei à chaque vérification.</li>
+                </ol>
+              </section>
+
+              <section aria-labelledby="next-title">
+                <h2 id="next-title">Suite du training</h2>
+                <p>La suite du parcours abordera les modèles de référence, l’encapsulation, VRP, les opérations de base sur équipements Huawei et la configuration VLAN.</p>
+              </section>
+            </div>
+
+            <aside class="learning-aside" aria-label="Résumé de la fiche HCIA-Datacom">
+              <div class="learning-aside__card">
+                <h2>À retenir</h2>
+                <ul>
+                  <li>Un réseau Datacom transporte des données.</li>
+                  <li>Chaque équipement a un rôle distinct.</li>
+                  <li>La topologie précède la configuration.</li>
+                  <li>Le dépannage suit un ordre simple.</li>
+                </ul>
+              </div>
+              <div class="learning-aside__card">
+                <h2>Réflexe pratique</h2>
+                <p>Si un utilisateur n’accède pas au réseau, commencez par le terminal, le câble ou le Wi‑Fi, puis remontez vers le switch, la passerelle et le firewall.</p>
+              </div>
+              <div class="learning-aside__card">
+                <h2>Continuer</h2>
+                <p>Revenez au parcours Réseaux ou entraînez-vous avec les quiz TianSemi.</p>
+                <div class="learning-actions">
+                  <a class="learning-button learning-button--primary" href="../../quiz/">Faire le quiz</a>
+                  <a class="learning-button" href="../">Retour Réseaux</a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <script src="../../../assets/js/navigation.min.js"></script>
+    <script src="../../../assets/js/learning.min.js"></script>
+    <script src="../../../assets/js/i18n.min.js"></script>
+  </body>
+</html>
