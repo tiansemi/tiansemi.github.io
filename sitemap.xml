@@ -34,11 +34,11 @@
   </url>
   <url>
     <loc>https://tiansemi.github.io/apprentissage/quiz/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-07-19</lastmod>
   </url>
   <url>
     <loc>https://tiansemi.github.io/apprentissage/reseaux/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-07-19</lastmod>
   </url>
   <url>
     <loc>https://tiansemi.github.io/apprentissage/reseaux/adressage-ip/</loc>
@@ -95,4 +95,9 @@
   <url>
     <loc>https://tiansemi.github.io/apprentissage/reseaux/hcia-datacom-comprendre-reseaux-communication-donnees/</loc>
     <lastmod>2026-07-11</lastmod>
-  </url></urlset>
+  </url>
+  <url>
+    <loc>https://tiansemi.github.io/apprentissage/reseaux/hcia-datacom-ingenierie-reseau-ingenieur-reseau/</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+</urlset>

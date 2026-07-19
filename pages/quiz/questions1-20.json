@@ -377,5 +377,149 @@
     "explanationEN": "The PVID is explicitly shown as 1.",
     "explanationFR": "Le PVID indiqué est clairement 1.",
     "image_path": "images/page14_img_37_f1e647f50265.png"
+  },
+
+  {
+    "id": 21,
+    "series": "hcia-network-engineering",
+    "type": "single-choice",
+    "correctAnswer": 1,
+    "questionEn": "Which set of activities best describes network engineering according to the HCIA-Datacom course?",
+    "questionFr": "Quel ensemble d’activités décrit le mieux l’ingénierie réseau selon le cours HCIA-Datacom ?",
+    "optionsEn": [
+      "Purchasing, invoicing, recruitment, and marketing",
+      "Planning, design, implementation, testing, and troubleshooting",
+      "Only configuring routers and switches",
+      "Only monitoring links after deployment"
+    ],
+    "optionsFr": [
+      "Achats, facturation, recrutement et marketing",
+      "Planification, conception, mise en œuvre, tests et dépannage",
+      "Uniquement la configuration des routeurs et des commutateurs",
+      "Uniquement la supervision des liaisons après le déploiement"
+    ],
+    "explanationEN": "Network engineering covers the complete lifecycle from planning and design to implementation, testing, and troubleshooting.",
+    "explanationFR": "L’ingénierie réseau couvre le cycle complet, de la planification et la conception jusqu’à la mise en œuvre, aux tests et au dépannage.",
+    "image_path": null
+  },
+
+  {
+    "id": 22,
+    "series": "hcia-network-engineering",
+    "type": "multiple-choice",
+    "correctAnswers": [0, 1, 2],
+    "questionEn": "Which three dimensions form the comprehensive capability model of a network engineer?",
+    "questionFr": "Quelles sont les trois dimensions du modèle global de compétences d’un ingénieur réseau ?",
+    "optionsEn": [
+      "Professional knowledge",
+      "Professional skills",
+      "Basic qualifications",
+      "Sales revenue"
+    ],
+    "optionsFr": [
+      "Connaissances professionnelles",
+      "Compétences professionnelles",
+      "Qualifications de base",
+      "Chiffre d’affaires commercial"
+    ],
+    "explanationEN": "The model combines professional knowledge, professional skills, and basic qualifications. Technical knowledge alone is not sufficient.",
+    "explanationFR": "Le modèle associe connaissances professionnelles, compétences professionnelles et qualifications de base. La technique seule ne suffit pas.",
+    "image_path": null
+  },
+
+  {
+    "id": 23,
+    "series": "hcia-network-engineering",
+    "type": "single-choice",
+    "correctAnswer": 2,
+    "questionEn": "What does the learning path ‘from the big picture to the details and back again’ mean?",
+    "questionFr": "Que signifie la progression « de la vue d’ensemble vers les détails, puis retour à la vue d’ensemble » ?",
+    "optionsEn": [
+      "Memorize commands before understanding the technology",
+      "Study packet formats only and ignore network design",
+      "Understand the purpose, study configuration and mechanisms, then reuse those details to engineer a complete network",
+      "Avoid protocols until the deployment phase"
+    ],
+    "optionsFr": [
+      "Mémoriser les commandes avant de comprendre la technologie",
+      "Étudier uniquement les formats de paquets et ignorer la conception",
+      "Comprendre le rôle, étudier la configuration et les mécanismes, puis réutiliser ces détails pour concevoir un réseau complet",
+      "Éviter les protocoles jusqu’à la phase de déploiement"
+    ],
+    "explanationEN": "The engineer first builds a global understanding, explores operation and packet-level mechanisms, and then returns to an engineering view of the complete network.",
+    "explanationFR": "L’ingénieur construit d’abord une compréhension globale, étudie le fonctionnement et les mécanismes des paquets, puis revient à une vision d’ingénierie du réseau complet.",
+    "image_path": null
+  },
+
+  {
+    "id": 24,
+    "series": "hcia-network-engineering",
+    "type": "multiple-choice",
+    "correctAnswers": [0, 2],
+    "questionEn": "Why are routing and switching considered foundations of computer networks?",
+    "questionFr": "Pourquoi le routage et la commutation sont-ils considérés comme les fondations des réseaux informatiques ?",
+    "optionsEn": [
+      "Switching mainly supports communication within a local network",
+      "Switching replaces all security functions",
+      "Routing enables communication between different networks",
+      "Routing is only used for wireless authentication"
+    ],
+    "optionsFr": [
+      "La commutation assure principalement les échanges dans un réseau local",
+      "La commutation remplace toutes les fonctions de sécurité",
+      "Le routage permet la communication entre différents réseaux",
+      "Le routage sert uniquement à l’authentification sans fil"
+    ],
+    "explanationEN": "Switching organizes local exchanges, while routing forwards traffic between networks. Together they provide the basic data path.",
+    "explanationFR": "La commutation organise les échanges locaux, tandis que le routage achemine le trafic entre les réseaux. Ensemble, ils constituent le chemin de données fondamental.",
+    "image_path": null
+  },
+
+  {
+    "id": 25,
+    "series": "hcia-network-engineering",
+    "type": "single-choice",
+    "correctAnswer": 1,
+    "questionEn": "Which description correctly matches the Huawei Datacom certification levels?",
+    "questionFr": "Quelle description associe correctement les niveaux de certification Huawei Datacom ?",
+    "optionsEn": [
+      "HCIA: expert; HCIP: beginner; HCIE: associate",
+      "HCIA: fundamentals; HCIP: advanced knowledge and deployment; HCIE: solid theory and cross-domain solution deployment",
+      "HCIA: wireless only; HCIP: security only; HCIE: cloud only",
+      "All three levels validate exactly the same capabilities"
+    ],
+    "optionsFr": [
+      "HCIA : expert ; HCIP : débutant ; HCIE : associate",
+      "HCIA : fondamentaux ; HCIP : connaissances avancées et déploiement ; HCIE : théorie solide et solutions interdomaines",
+      "HCIA : uniquement WLAN ; HCIP : uniquement sécurité ; HCIE : uniquement cloud",
+      "Les trois niveaux valident exactement les mêmes capacités"
+    ],
+    "explanationEN": "Huawei Datacom progresses from fundamental theory and basic deployment to advanced deployment, then to expert-level cross-domain solutions.",
+    "explanationFR": "Huawei Datacom progresse des théories fondamentales et du déploiement de base vers le déploiement avancé, puis les solutions interdomaines de niveau expert.",
+    "image_path": null
+  },
+
+  {
+    "id": 26,
+    "series": "hcia-network-engineering",
+    "type": "single-choice",
+    "correctAnswer": 2,
+    "questionEn": "Which sequence is the most coherent for deploying and improving a new network service?",
+    "questionFr": "Quel enchaînement est le plus cohérent pour déployer puis améliorer un nouveau service réseau ?",
+    "optionsEn": [
+      "Troubleshoot, purchase, advertise, and stop monitoring",
+      "Configure immediately, then identify requirements after deployment",
+      "Analyze requirements, plan, design, implement, test, operate, troubleshoot, and optimize",
+      "Test, remove documentation, and avoid stakeholder approval"
+    ],
+    "optionsFr": [
+      "Dépanner, acheter, communiquer puis arrêter la supervision",
+      "Configurer immédiatement, puis identifier les exigences après le déploiement",
+      "Analyser les exigences, planifier, concevoir, mettre en œuvre, tester, exploiter, dépanner et optimiser",
+      "Tester, supprimer la documentation et éviter la validation des parties prenantes"
+    ],
+    "explanationEN": "A controlled engineering lifecycle starts with requirements and continues through design, implementation, validation, operation, troubleshooting, and optimization.",
+    "explanationFR": "Un cycle d’ingénierie maîtrisé part des exigences et se poursuit par la conception, la mise en œuvre, la validation, l’exploitation, le dépannage et l’optimisation.",
+    "image_path": null
   }
 ]

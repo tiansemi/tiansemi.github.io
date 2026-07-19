@@ -24,6 +24,7 @@
     <link rel="shortcut icon" href="../../favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="../../assets/css/style.min.css" />
     <link rel="stylesheet" href="../../assets/css/quiz.min.css" />
+    <link rel="stylesheet" href="../../assets/css/network-engineering-quiz.min.css" />
     <link rel="stylesheet" href="../../assets/css/navigation.min.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -219,7 +220,37 @@
             </div>
           </div>
 
-          <div class="quiz-container">
+          <aside class="quiz-series-promo" data-series-promo aria-labelledby="network-engineering-promo-title">
+            <h3 id="network-engineering-promo-title">Nouvelle série HCIA-Datacom : ingénierie réseau</h3>
+            <p>Six questions directement issues des flashcards TianSemi, disponibles en français et en anglais avec correction détaillée.</p>
+            <div class="quiz-series-promo__actions">
+              <a class="quiz-series-link" href="?serie=hcia-network-engineering">Lancer la série dédiée</a>
+              <a class="quiz-series-link quiz-series-link--secondary" href="../reseaux/hcia-datacom-ingenierie-reseau-ingenieur-reseau/">Réviser le cours</a>
+            </div>
+          </aside>
+
+          <section class="quiz-series-panel" data-series-panel hidden aria-labelledby="network-engineering-series-title">
+            <div class="quiz-series-header">
+              <div class="quiz-series-header__meta">
+                <span class="quiz-series-badge">Huawei HCIA-Datacom</span>
+                <span class="quiz-series-badge">6 questions</span>
+                <span class="quiz-series-badge">Français / English</span>
+              </div>
+              <h3 id="network-engineering-series-title" data-series-title>HCIA-Datacom : ingénierie réseau</h3>
+              <p data-series-intro>Six questions issues des cartes de révision TianSemi. Sélectionnez les réponses, puis affichez la correction.</p>
+              <p><a href="./">Retour au quiz général</a> · <a href="../reseaux/hcia-datacom-ingenierie-reseau-ingenieur-reseau/">Revoir le cours</a></p>
+            </div>
+            <form class="quiz-series-form" data-series-form>
+              <div data-series-questions></div>
+              <div class="quiz-series-result" data-series-result hidden aria-live="polite"></div>
+              <div class="quiz-series-actions">
+                <button class="btn btn-primary" type="submit" data-series-submit>Corriger mes réponses</button>
+                <button class="btn btn-secondary" type="button" data-series-restart hidden>Recommencer</button>
+              </div>
+            </form>
+          </section>
+
+          <div class="quiz-container" data-general-quiz>
             <!-- Quiz Start Screen -->
             <div id="quiz-start" class="quiz-start">
               <h3 class="h3" data-i18n="quiz-welcome">Bienvenue au Quiz!</h3>
@@ -367,6 +398,7 @@
     <script src="../../assets/js/script.min.js"></script>
     <script src="../../assets/js/quiz.min.js"></script>
     <script src="../../assets/js/i18n.min.js"></script>
+    <script src="../../assets/js/network-engineering-quiz.min.js"></script>
   </body>
 </html>
 
