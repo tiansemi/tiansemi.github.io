@@ -210,6 +210,10 @@
   line-height: 1.6;
 }
 
+.quiz-series-container .explanation {
+  color: var(--color-primary);
+}
+
 @media (max-width: 620px) {
   .quiz-series-promo,
   .quiz-series-header {
