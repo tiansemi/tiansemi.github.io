@@ -557,6 +557,10 @@
   const SKIP_SELECTOR = "script, style, code, pre, svg, canvas, textarea, input, select";
   const ATTRS = ["title", "aria-label", "alt", "placeholder"];
   const originals = new WeakMap();
+  if (window.TianSemiNetworkEngineeringTranslations) {
+    Object.assign(TRANSLATIONS.en, window.TianSemiNetworkEngineeringTranslations);
+  }
+
   const reverseEn = Object.fromEntries(Object.entries(TRANSLATIONS.en).map(([fr, en]) => [en, fr]));
 
   function normalize(text) {
