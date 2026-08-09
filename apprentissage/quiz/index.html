@@ -237,17 +237,55 @@
                 <span class="quiz-series-badge">Français / English</span>
               </div>
               <h3 id="network-engineering-series-title" data-series-title>HCIA-Datacom : ingénierie réseau</h3>
-              <p data-series-intro>Six questions issues des cartes de révision TianSemi. Sélectionnez les réponses, puis affichez la correction.</p>
-              <p><a href="./">Retour au quiz général</a> · <a href="../reseaux/hcia-datacom-ingenierie-reseau-ingenieur-reseau/">Revoir le cours</a></p>
+              <p data-series-intro>Répondez aux six questions une par une, puis consultez votre résultat et la correction détaillée.</p>
+              <p><a href="./" data-series-general-link>Retour au quiz général</a> · <a href="../reseaux/hcia-datacom-ingenierie-reseau-ingenieur-reseau/" data-series-course-link>Revoir le cours</a></p>
             </div>
-            <form class="quiz-series-form" data-series-form>
-              <div data-series-questions></div>
-              <div class="quiz-series-result" data-series-result hidden aria-live="polite"></div>
-              <div class="quiz-series-actions">
-                <button class="btn btn-primary" type="submit" data-series-submit>Corriger mes réponses</button>
-                <button class="btn btn-secondary" type="button" data-series-restart hidden>Recommencer</button>
+
+            <div class="quiz-container quiz-series-container" data-series-form>
+              <div class="quiz-start" data-series-start>
+                <span class="quiz-series-kicker" data-series-kicker>Série ciblée · 6 questions</span>
+                <h3 class="h3" data-series-start-title>Prêt à vérifier vos acquis ?</h3>
+                <p data-series-start-text>Une seule question est affichée à la fois. Vos réponses sont conservées lorsque vous revenez en arrière.</p>
+                <button class="btn btn-primary" type="button" data-series-start-button>Commencer la série</button>
               </div>
-            </form>
+
+              <div class="quiz-questions" data-series-questions-screen hidden>
+                <div class="quiz-progress">
+                  <div class="progress-bar" aria-hidden="true">
+                    <div class="progress-fill" data-series-progress></div>
+                  </div>
+                  <p class="progress-text">
+                    <span data-series-question-label>Question</span>
+                    <span data-series-current>1</span> /
+                    <span data-series-total>6</span>
+                  </p>
+                </div>
+
+                <div class="question-container" data-series-question></div>
+
+                <div class="quiz-navigation">
+                  <button class="btn btn-secondary" type="button" data-series-prev disabled>Précédent</button>
+                  <button class="btn btn-primary" type="button" data-series-next>Suivant</button>
+                  <button class="btn btn-primary" type="button" data-series-submit hidden>Terminer</button>
+                </div>
+              </div>
+
+              <div class="quiz-results" data-series-results hidden aria-live="polite">
+                <h3 class="h3" data-series-results-title>Votre résultat</h3>
+                <div class="results-content">
+                  <div class="score-display">
+                    <p class="score-text" data-series-score-label>Votre score</p>
+                    <p class="score-value"><span data-series-score>0</span> / <span data-series-score-max>6</span></p>
+                    <span class="score-percentage" data-series-percentage>0%</span>
+                  </div>
+                  <p class="score-message" data-series-message></p>
+                </div>
+                <div class="quiz-actions">
+                  <button class="btn btn-primary" type="button" data-series-correction>Voir la correction</button>
+                  <button class="btn btn-secondary" type="button" data-series-restart>Recommencer</button>
+                </div>
+              </div>
+            </div>
           </section>
 
           <div class="quiz-container" data-general-quiz>
